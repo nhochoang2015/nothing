@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-lg-4 mb-5">
                     <div class="card border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="img/class-1.jpg" alt="">
+                        <img class="card-img-top mb-2" src="user_page/img/class-1.jpg" alt="">
                         <div class="card-body text-center">
                             <h4 class="card-title">Drawing Class</h4>
                             <p class="card-text">Justo ea diam stet diam ipsum no sit, ipsum vero et et diam ipsum duo et no et, ipsum ipsum erat duo amet clita duo</p>
@@ -42,12 +42,12 @@
                                 <div class="col-6 py-1">$290 / Month</div>
                             </div>
                         </div>
-                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
+                        <a href="user_page/" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-5">
                     <div class="card border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="img/class-2.jpg" alt="">
+                        <img class="card-img-top mb-2" src="user_page/img/class-2.jpg" alt="">
                         <div class="card-body text-center">
                             <h4 class="card-title">Language Learning</h4>
                             <p class="card-text">Justo ea diam stet diam ipsum no sit, ipsum vero et et diam ipsum duo et no et, ipsum ipsum erat duo amet clita duo</p>
@@ -70,12 +70,12 @@
                                 <div class="col-6 py-1">$290 / Month</div>
                             </div>
                         </div>
-                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
+                        <a href="user_page/" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-5">
                     <div class="card border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="img/class-3.jpg" alt="">
+                        <img class="card-img-top mb-2" src="user_page/img/class-3.jpg" alt="">
                         <div class="card-body text-center">
                             <h4 class="card-title">Basic Science</h4>
                             <p class="card-text">Justo ea diam stet diam ipsum no sit, ipsum vero et et diam ipsum duo et no et, ipsum ipsum erat duo amet clita duo</p>
@@ -98,7 +98,7 @@
                                 <div class="col-6 py-1">$290 / Month</div>
                             </div>
                         </div>
-                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
+                        <a href="user_page/" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
                     </div>
                 </div>
             </div>
@@ -122,7 +122,7 @@
                         <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Etsea et sit dolor amet ipsum</li>
                         <li class="py-2"><i class="fa fa-check text-success mr-3"></i>Diam dolor diam elitripsum vero.</li>
                     </ul>
-                    <a href="" class="btn btn-primary mt-4 py-2 px-4">Book Now</a>
+                    <a href="user_page/" class="btn btn-primary mt-4 py-2 px-4">Book Now</a>
                 </div>
                 <div class="col-lg-5">
                     <div class="card border-0">

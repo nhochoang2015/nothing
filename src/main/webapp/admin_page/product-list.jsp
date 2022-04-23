@@ -9,7 +9,7 @@
 
 <body>
 	<!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="admin_page/http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 	<%@ include file="menu-bar.jsp"%>s
 	<!-- Start Welcome area -->
@@ -25,8 +25,8 @@
 							<!--                            <h4>Products List</h4>-->
 							<div class="add-product">
 								<!--                                //////////////////////////////THÃM Sáº¢N PHáº¨M-->
-								<a href="product-edit.html">ThÃªm sáº£n pháº©m</a>
-								<!--                                <a href="product-edit.html">Add Product</a>-->
+								<a href="admin_page/product-edit.html">ThÃªm sáº£n pháº©m</a>
+								<!--                                <a href="admin_page/product-edit.html">Add Product</a>-->
 							</div>
 							<table>
 								<tr>
@@ -50,8 +50,8 @@
 								<!--                                    <th>Setting</th>-->
 								<!--                                </tr>-->
 
-								<td><img src="img/IMG_BOOK/Sach3.jpg" alt="" /></td>
-								<!--                                    <td><img src="img/new-product/5-small.jpg" alt="" /></td>-->
+								<td><img src="admin_page/img/IMG_BOOK/Sach3.jpg" alt="" /></td>
+								<!--                                    <td><img src="admin_page/img/new-product/5-small.jpg" alt="" /></td>-->
 								<td>SÃ¡ch 1</td>
 								<td>
 									<button class="pd-setting">Báº­t</button>
@@ -74,7 +74,7 @@
 								<tr>
 
 									<!--                                <tr>-->
-									<!--                                    <td><img src="img/new-product/5-small.jpg" alt="" /></td>-->
+									<!--                                    <td><img src="admin_page/img/new-product/5-small.jpg" alt="" /></td>-->
 									<!--                                    <td>Jewelery Title 1</td>-->
 									<!--                                    <td>-->
 									<!--                                        <button class="pd-setting">Active</button>-->
@@ -90,8 +90,8 @@
 									<!--                                </tr>-->
 
 
-									<td><img src="img/IMG_BOOK/Sach3.jpg" alt="" /></td>
-									<!--                                    <td><img src="img/new-product/5-small.jpg" alt="" /></td>-->
+									<td><img src="admin_page/img/IMG_BOOK/Sach3.jpg" alt="" /></td>
+									<!--                                    <td><img src="admin_page/img/new-product/5-small.jpg" alt="" /></td>-->
 									<td>SÃ¡ch 1</td>
 									<td>
 										<button class="pd-setting">Táº¡m ngÆ°ng</button>
@@ -120,7 +120,7 @@
 
 
 									<!--                                <tr>-->
-									<!--                                    <td><img src="img/new-product/6-small.jpg" alt="" /></td>-->
+									<!--                                    <td><img src="admin_page/img/new-product/6-small.jpg" alt="" /></td>-->
 									<!--                                    <td>Jewelery Title 2</td>-->
 									<!--                                    <td>-->
 									<!--                                        <button class="ps-setting">Paused</button>-->
@@ -138,8 +138,8 @@
 
 
 
-									<td><img src="img/IMG_BOOK/Sach3.jpg" alt="" /></td>
-									<!--                                    <td><img src="img/new-product/5-small.jpg" alt="" /></td>-->
+									<td><img src="admin_page/img/IMG_BOOK/Sach3.jpg" alt="" /></td>
+									<!--                                    <td><img src="admin_page/img/new-product/5-small.jpg" alt="" /></td>-->
 									<td>SÃ¡ch 1</td>
 									<td>
 										<button class="pd-setting">Táº¯t</button>
@@ -165,7 +165,7 @@
 
 
 								<tr>
-									<td><img src="img/new-product/7-small.jpg" alt="" /></td>
+									<td><img src="admin_page/img/new-product/7-small.jpg" alt="" /></td>
 									<td>Jewelery Title 3</td>
 									<td>
 										<button class="ds-setting">Disabled</button>
@@ -187,8 +187,8 @@
 								</tr>
 
 
-								<td><img src="img/IMG_BOOK/Sach3.jpg" alt="" /></td>
-								<!--                                    <td><img src="img/new-product/5-small.jpg" alt="" /></td>-->
+								<td><img src="admin_page/img/IMG_BOOK/Sach3.jpg" alt="" /></td>
+								<!--                                    <td><img src="admin_page/img/new-product/5-small.jpg" alt="" /></td>-->
 								<td>SÃ¡ch 1</td>
 								<td>
 									<button class="pd-setting">Báº­t</button>
@@ -213,7 +213,7 @@
 
 
 									<!--                                <tr>-->
-									<!--                                    <td><img src="img/new-product/5-small.jpg" alt="" /></td>-->
+									<!--                                    <td><img src="admin_page/img/new-product/5-small.jpg" alt="" /></td>-->
 									<!--                                    <td>Jewelery Title 4</td>-->
 									<!--                                    <td>-->
 									<!--                                        <button class="pd-setting">Active</button>-->
@@ -228,7 +228,7 @@
 									<!--                                    </td>-->
 									<!--                                </tr>-->
 									<!--                                <tr>-->
-									<!--                                    <td><img src="img/new-product/6-small.jpg" alt="" /></td>-->
+									<!--                                    <td><img src="admin_page/img/new-product/6-small.jpg" alt="" /></td>-->
 									<!--                                    <td>Jewelery Title 5</td>-->
 									<!--                                    <td>-->
 									<!--                                        <button class="pd-setting">Active</button>-->
@@ -243,7 +243,7 @@
 									<!--                                    </td>-->
 									<!--                                </tr>-->
 									<!--                                <tr>-->
-									<!--                                    <td><img src="img/new-product/7-small.jpg" alt="" /></td>-->
+									<!--                                    <td><img src="admin_page/img/new-product/7-small.jpg" alt="" /></td>-->
 									<!--                                    <td>Jewelery Title 6</td>-->
 									<!--                                    <td>-->
 									<!--                                        <button class="ps-setting">Paused</button>-->
@@ -261,13 +261,13 @@
 							<div class="custom-pagination">
 								<nav aria-label="Page navigation example">
 									<ul class="pagination">
-										<li class="page-item"><a class="page-link" href="#">TrÆ°á»c</a></li>
-										<!--                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>-->
-										<li class="page-item"><a class="page-link" href="#">1</a></li>
-										<li class="page-item"><a class="page-link" href="#">2</a></li>
-										<li class="page-item"><a class="page-link" href="#">3</a></li>
-										<li class="page-item"><a class="page-link" href="#">Tiáº¿p</a></li>
-										<!--                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>-->
+										<li class="page-item"><a class="page-link" href="admin_page/#">TrÆ°á»c</a></li>
+										<!--                                        <li class="page-item"><a class="page-link" href="admin_page/#">Previous</a></li>-->
+										<li class="page-item"><a class="page-link" href="admin_page/#">1</a></li>
+										<li class="page-item"><a class="page-link" href="admin_page/#">2</a></li>
+										<li class="page-item"><a class="page-link" href="admin_page/#">3</a></li>
+										<li class="page-item"><a class="page-link" href="admin_page/#">Tiáº¿p</a></li>
+										<!--                                        <li class="page-item"><a class="page-link" href="admin_page/#">Next</a></li>-->
 									</ul>
 								</nav>
 							</div>

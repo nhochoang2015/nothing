@@ -7,7 +7,7 @@
 
 <body>
 	<!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="admin_page/http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 	<%@ include file="menu-bar.jsp"%>
 
@@ -81,16 +81,16 @@
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<div class="product-payment-inner-st">
 							<ul id="myTab4" class="tab-review-design">
-								<li class="active"><a href="#description">Thẻ tín
+								<li class="active"><a href="admin_page/#description">Thẻ tín
 										dụng</a></li>
-								<!--                                <li class="active"><a href="#description">Credit Card</a></li>-->
-								<li><a href="#reviews">Thẻ ghi nợ</a></li>
-								<!--                                <li><a href="#reviews"> Debit Card</a></li>-->
-								<!--                                <li><a href="#INFORMATION">EMI</a></li>-->
-								<li><a href="#netbanking">Ngân hàng</a></li>
-								<!--                                <li><a href="#netbanking">Banking</a></li>-->
-								<li><a href="#cod">Địa chỉ</a></li>
-								<!--                                <li><a href="#cod">Address</a></li>-->
+								<!--                                <li class="active"><a href="admin_page/#description">Credit Card</a></li>-->
+								<li><a href="admin_page/#reviews">Thẻ ghi nợ</a></li>
+								<!--                                <li><a href="admin_page/#reviews"> Debit Card</a></li>-->
+								<!--                                <li><a href="admin_page/#INFORMATION">EMI</a></li>-->
+								<li><a href="admin_page/#netbanking">Ngân hàng</a></li>
+								<!--                                <li><a href="admin_page/#netbanking">Banking</a></li>-->
+								<li><a href="admin_page/#cod">Địa chỉ</a></li>
+								<!--                                <li><a href="admin_page/#cod">Address</a></li>-->
 							</ul>
 							<div id="myTabContent" class="tab-content custom-product-edit">
 								<div class="product-tab-list tab-pane fade active in"
@@ -119,9 +119,9 @@
 																placeholder="CVC">
 														</div>
 														<div class="text-center credit-card-custom">
-															<a href="#!"
+															<a href="admin_page/#!"
 																class="btn btn-primary waves-effect waves-light">Gửi</a>
-															<!--                                                            <a href="#!" class="btn btn-primary waves-effect waves-light">Submit</a>-->
+															<!--                                                            <a href="admin_page/#!" class="btn btn-primary waves-effect waves-light">Submit</a>-->
 														</div>
 													</form>
 												</div>
@@ -182,9 +182,9 @@
 																	class="fa fa-credit-card" aria-hidden="true"></i></span> <span><i
 																	class="fa fa-cc-mastercard" aria-hidden="true"></i></span>
 															</div>
-															<a href="#!"
+															<a href="admin_page/#!"
 																class="btn btn-primary waves-effect waves-light mg-b-15">Gửi</a>
-															<!--                                                            <a href="#!" class="btn btn-primary waves-effect waves-light mg-b-15">Submit</a>-->
+															<!--                                                            <a href="admin_page/#!" class="btn btn-primary waves-effect waves-light mg-b-15">Submit</a>-->
 														</div>
 													</div>
 													<div class="col-lg-3"></div>

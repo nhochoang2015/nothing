@@ -8,7 +8,7 @@
 
 <body>
 	<!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="admin_page/http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
 	<%@ include file="menu-bar.jsp"%>
@@ -52,8 +52,8 @@
 										<!--                                    ====-->
 										<div class="add-product">
 											<!--                                //////////////////////////////Sửa lại Link Now-->
-											<a href="product-edit.html">Thêm</a>
-											<!--                                <a href="product-edit.html">Add Product</a>-->
+											<a href="admin_page/product-edit.html">Thêm</a>
+											<!--                                <a href="admin_page/product-edit.html">Add Product</a>-->
 										</div>
 										<!--                                    ===-->
 										<thead>

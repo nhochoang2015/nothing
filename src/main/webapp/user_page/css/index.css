@@ -1,0 +1,111 @@
+#leader-board-container {
+	background: url("../img/black_board.jpg");
+	background-size: contain;
+	font-family: chalktastic_italic1;
+	color: white;
+}
+
+#leader-board-title {
+	text-align: center;
+	font-size: xxx-large;
+	font-family: chalktastic_italic1;
+	color: white;
+}
+
+.leader-board {
+	
+}
+
+.leader-board-row {
+	/* background: url("../img/leader_board_background3.jpg");
+ */
+	color: white;
+	border-top: 2px solid;
+}
+
+.leader-board-title {
+	vertical-align: top;
+	text-align: center;
+	/* background: url("../img/leader_board_background3.jpg"); */
+}
+
+.leader-board-title span {
+	font-size: xx-large;
+	font-family: chalktastic_italic1;
+	color: white;
+}
+
+.leader-board-rank {
+	text-align: center;
+	display: flex;
+	align-items: center; /* Vertical center alignment */
+	justify-content: center;
+	text-align: center;
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	border-color: white;
+	border-right: 2px solid;
+}
+
+.leader-board-rank p {
+	text-align: center;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.leader-board-avatar {
+	height: 100px;
+	width: 100px;
+	border-right: 2px solid;
+}
+
+.leader-board-avatar img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.leader-board-name {
+	text-align: center;
+	display: flex;
+	align-items: center; /* Vertical center alignment */
+	justify-content: center;
+	text-align: center;
+	border-right: 2px solid;
+}
+
+.leader-board-name p {
+	text-align: center
+}
+
+.leader-board-point {
+	text-align: center;
+	display: flex;
+	align-items: center; /* Vertical center alignment */
+	justify-content: center;
+	text-align: center
+}
+
+.leader-board-point p {
+	text-align: center
+}
+
+#leader-board-button {
+	margin-top: 25px;
+	text-align: center;
+}
+
+/*Thông báo*/
+#notification-title {
+	vertical-align: top;
+	text-align: center;
+}
+#notification-title span {
+	font-size: xx-large;
+	font-family: chalktastic_italic1;
+	color: white;
+}
+
+.notification-image {
+	height: 500px;
+}

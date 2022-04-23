@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +31,7 @@
 					</div>
 				</div>
 				<div class="mb-5">
-					<img class="img-fluid rounded w-100 mb-4" src="img/detail.jpg"
+					<img class="img-fluid rounded w-100 mb-4" src="user_page/img/detail.jpg"
 						alt="Image">
 					<p>Sadipscing labore amet rebum est et justo gubergren. Et
 						eirmod ipsum sit diam ut magna lorem. Nonumy vero labore lorem
@@ -49,7 +49,7 @@
 						sit. Dolor erat justo dolore sit invidunt.</p>
 					<h2 class="mb-4">Est dolor lorem et ea</h2>
 					<img class="img-fluid rounded w-50 float-left mr-4 mb-3"
-						src="img/blog-1.jpg" alt="Image">
+						src="user_page/img/blog-1.jpg" alt="Image">
 					<p>Diam dolor est labore duo invidunt ipsum clita et, sed et
 						lorem voluptua tempor invidunt at est sanctus sanctus. Clita
 						dolores sit kasd diam takimata justo diam lorem sed. Magna amet
@@ -69,7 +69,7 @@
 						voluptua magna eos magna, justo gubergren labore sit voluptua eos.</p>
 					<h3 class="mb-4">Est dolor lorem et ea</h3>
 					<img class="img-fluid rounded w-50 float-right ml-4 mb-3"
-						src="img/blog-2.jpg" alt="Image">
+						src="user_page/img/blog-2.jpg" alt="Image">
 					<p>Diam dolor est labore duo invidunt ipsum clita et, sed et
 						lorem voluptua tempor invidunt at est sanctus sanctus. Clita
 						dolores sit kasd diam takimata justo diam lorem sed. Magna amet
@@ -94,7 +94,7 @@
 					<div class="owl-carousel post-carousel position-relative">
 						<div
 							class="d-flex align-items-center bg-light shadow-sm rounded overflow-hidden mx-3">
-							<img class="img-fluid" src="img/post-1.jpg"
+							<img class="img-fluid" src="user_page/img/post-1.jpg"
 								style="width: 80px; height: 80px;">
 							<div class="pl-3">
 								<h5 class="">Diam amet eos at no eos</h5>
@@ -109,7 +109,7 @@
 						</div>
 						<div
 							class="d-flex align-items-center bg-light shadow-sm rounded overflow-hidden mx-3">
-							<img class="img-fluid" src="img/post-2.jpg"
+							<img class="img-fluid" src="user_page/img/post-2.jpg"
 								style="width: 80px; height: 80px;">
 							<div class="pl-3">
 								<h5 class="">Diam amet eos at no eos</h5>
@@ -124,7 +124,7 @@
 						</div>
 						<div
 							class="d-flex align-items-center bg-light shadow-sm rounded overflow-hidden mx-3">
-							<img class="img-fluid" src="img/post-3.jpg"
+							<img class="img-fluid" src="user_page/img/post-3.jpg"
 								style="width: 80px; height: 80px;">
 							<div class="pl-3">
 								<h5 class="">Diam amet eos at no eos</h5>
@@ -144,7 +144,7 @@
 				<div class="mb-5">
 					<h2 class="mb-4">3 Comments</h2>
 					<div class="media mb-4">
-						<img src="img/user.jpg" alt="Image"
+						<img src="user_page/img/user.jpg" alt="Image"
 							class="img-fluid rounded-circle mr-3 mt-1" style="width: 45px;">
 						<div class="media-body">
 							<h6>
@@ -159,7 +159,7 @@
 						</div>
 					</div>
 					<div class="media mb-4">
-						<img src="img/user.jpg" alt="Image"
+						<img src="user_page/img/user.jpg" alt="Image"
 							class="img-fluid rounded-circle mr-3 mt-1" style="width: 45px;">
 						<div class="media-body">
 							<h6>
@@ -172,7 +172,7 @@
 								consetetur at sit.</p>
 							<button class="btn btn-sm btn-light">Reply</button>
 							<div class="media mt-4">
-								<img src="img/user.jpg" alt="Image"
+								<img src="user_page/img/user.jpg" alt="Image"
 									class="img-fluid rounded-circle mr-3 mt-1" style="width: 45px;">
 								<div class="media-body">
 									<h6>
@@ -222,7 +222,7 @@
 				<!-- Author Bio -->
 				<div
 					class="d-flex flex-column text-center bg-primary rounded mb-5 py-5 px-4">
-					<img src="img/user.jpg"
+					<img src="user_page/img/user.jpg"
 						class="img-fluid rounded-circle mx-auto mb-3"
 						style="width: 100px;">
 					<h3 class="text-secondary mb-3">John Doe</h3>
@@ -251,27 +251,27 @@
 					<ul class="list-group list-group-flush">
 						<li
 							class="list-group-item d-flex justify-content-between align-items-center px-0">
-							<a href="">Web Design</a> <span
+							<a href="user_page/">Web Design</a> <span
 							class="badge badge-primary badge-pill">150</span>
 						</li>
 						<li
 							class="list-group-item d-flex justify-content-between align-items-center px-0">
-							<a href="">Web Development</a> <span
+							<a href="user_page/">Web Development</a> <span
 							class="badge badge-primary badge-pill">131</span>
 						</li>
 						<li
 							class="list-group-item d-flex justify-content-between align-items-center px-0">
-							<a href="">Online Marketing</a> <span
+							<a href="user_page/">Online Marketing</a> <span
 							class="badge badge-primary badge-pill">78</span>
 						</li>
 						<li
 							class="list-group-item d-flex justify-content-between align-items-center px-0">
-							<a href="">Keyword Research</a> <span
+							<a href="user_page/">Keyword Research</a> <span
 							class="badge badge-primary badge-pill">56</span>
 						</li>
 						<li
 							class="list-group-item d-flex justify-content-between align-items-center px-0">
-							<a href="">Email Marketing</a> <span
+							<a href="user_page/">Email Marketing</a> <span
 							class="badge badge-primary badge-pill">98</span>
 						</li>
 					</ul>
@@ -279,7 +279,7 @@
 
 				<!-- Single Image -->
 				<div class="mb-5">
-					<img src="img/blog-1.jpg" alt="" class="img-fluid rounded">
+					<img src="user_page/img/blog-1.jpg" alt="" class="img-fluid rounded">
 				</div>
 
 				<!-- Recent Post -->
@@ -287,7 +287,7 @@
 					<h2 class="mb-4">Recent Post</h2>
 					<div
 						class="d-flex align-items-center bg-light shadow-sm rounded overflow-hidden mb-3">
-						<img class="img-fluid" src="img/post-1.jpg"
+						<img class="img-fluid" src="user_page/img/post-1.jpg"
 							style="width: 80px; height: 80px;">
 						<div class="pl-3">
 							<h5 class="">Diam amet eos at no eos</h5>
@@ -302,7 +302,7 @@
 					</div>
 					<div
 						class="d-flex align-items-center bg-light shadow-sm rounded overflow-hidden mb-3">
-						<img class="img-fluid" src="img/post-2.jpg"
+						<img class="img-fluid" src="user_page/img/post-2.jpg"
 							style="width: 80px; height: 80px;">
 						<div class="pl-3">
 							<h5 class="">Diam amet eos at no eos</h5>
@@ -317,7 +317,7 @@
 					</div>
 					<div
 						class="d-flex align-items-center bg-light shadow-sm rounded overflow-hidden mb-3">
-						<img class="img-fluid" src="img/post-3.jpg"
+						<img class="img-fluid" src="user_page/img/post-3.jpg"
 							style="width: 80px; height: 80px;">
 						<div class="pl-3">
 							<h5 class="">Diam amet eos at no eos</h5>
@@ -334,25 +334,25 @@
 
 				<!-- Single Image -->
 				<div class="mb-5">
-					<img src="img/blog-2.jpg" alt="" class="img-fluid rounded">
+					<img src="user_page/img/blog-2.jpg" alt="" class="img-fluid rounded">
 				</div>
 
 				<!-- Tag Cloud -->
 				<div class="mb-5">
 					<h2 class="mb-4">Tag Cloud</h2>
 					<div class="d-flex flex-wrap m-n1">
-						<a href="" class="btn btn-outline-primary m-1">Design</a> <a
+						<a href="user_page/" class="btn btn-outline-primary m-1">Design</a> <a
 							href="" class="btn btn-outline-primary m-1">Development</a> <a
 							href="" class="btn btn-outline-primary m-1">Marketing</a> <a
-							href="" class="btn btn-outline-primary m-1">SEO</a> <a href=""
-							class="btn btn-outline-primary m-1">Writing</a> <a href=""
+							href="" class="btn btn-outline-primary m-1">SEO</a> <a href="user_page/"
+							class="btn btn-outline-primary m-1">Writing</a> <a href="user_page/"
 							class="btn btn-outline-primary m-1">Consulting</a>
 					</div>
 				</div>
 
 				<!-- Single Image -->
 				<div class="mb-5">
-					<img src="img/blog-3.jpg" alt="" class="img-fluid rounded">
+					<img src="user_page/img/blog-3.jpg" alt="" class="img-fluid rounded">
 				</div>
 
 				<!-- Plain Text -->

@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,10 +31,10 @@
 			<div class="row portfolio-container">
 				<div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
 					<div class="position-relative overflow-hidden mb-2">
-						<img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
+						<img class="img-fluid w-100" src="user_page/img/portfolio-1.jpg" alt="">
 						<div
 							class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-							<a href="img/portfolio-1.jpg" data-lightbox="portfolio"> <i
+							<a href="user_page/img/portfolio-1.jpg" data-lightbox="portfolio"> <i
 								class="fa fa-plus text-white" style="font-size: 60px;"></i>
 							</a>
 						</div>
@@ -42,10 +42,10 @@
 				</div>
 				<div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
 					<div class="position-relative overflow-hidden mb-2">
-						<img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
+						<img class="img-fluid w-100" src="user_page/img/portfolio-2.jpg" alt="">
 						<div
 							class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-							<a href="img/portfolio-2.jpg" data-lightbox="portfolio"> <i
+							<a href="user_page/img/portfolio-2.jpg" data-lightbox="portfolio"> <i
 								class="fa fa-plus text-white" style="font-size: 60px;"></i>
 							</a>
 						</div>
@@ -53,10 +53,10 @@
 				</div>
 				<div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
 					<div class="position-relative overflow-hidden mb-2">
-						<img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
+						<img class="img-fluid w-100" src="user_page/img/portfolio-3.jpg" alt="">
 						<div
 							class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-							<a href="img/portfolio-3.jpg" data-lightbox="portfolio"> <i
+							<a href="user_page/img/portfolio-3.jpg" data-lightbox="portfolio"> <i
 								class="fa fa-plus text-white" style="font-size: 60px;"></i>
 							</a>
 						</div>
@@ -64,10 +64,10 @@
 				</div>
 				<div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
 					<div class="position-relative overflow-hidden mb-2">
-						<img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
+						<img class="img-fluid w-100" src="user_page/img/portfolio-4.jpg" alt="">
 						<div
 							class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-							<a href="img/portfolio-4.jpg" data-lightbox="portfolio"> <i
+							<a href="user_page/img/portfolio-4.jpg" data-lightbox="portfolio"> <i
 								class="fa fa-plus text-white" style="font-size: 60px;"></i>
 							</a>
 						</div>
@@ -75,10 +75,10 @@
 				</div>
 				<div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
 					<div class="position-relative overflow-hidden mb-2">
-						<img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
+						<img class="img-fluid w-100" src="user_page/img/portfolio-5.jpg" alt="">
 						<div
 							class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-							<a href="img/portfolio-5.jpg" data-lightbox="portfolio"> <i
+							<a href="user_page/img/portfolio-5.jpg" data-lightbox="portfolio"> <i
 								class="fa fa-plus text-white" style="font-size: 60px;"></i>
 							</a>
 						</div>
@@ -86,10 +86,10 @@
 				</div>
 				<div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
 					<div class="position-relative overflow-hidden mb-2">
-						<img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
+						<img class="img-fluid w-100" src="user_page/img/portfolio-6.jpg" alt="">
 						<div
 							class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-							<a href="img/portfolio-6.jpg" data-lightbox="portfolio"> <i
+							<a href="user_page/img/portfolio-6.jpg" data-lightbox="portfolio"> <i
 								class="fa fa-plus text-white" style="font-size: 60px;"></i>
 							</a>
 						</div>

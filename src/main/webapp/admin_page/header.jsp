@@ -12,63 +12,63 @@
 	href="img/IMG_BOOK/favicon.ico">
 <!-- Google Fonts
 		============================================ -->
-<link href="https://fonts.googleapis.com/css?family=Play:400,700"
+<link href="admin_page/https://fonts.googleapis.com/css?family=Play:400,700"
 	rel="stylesheet">
 <!-- Bootstrap CSS
 		============================================ -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="admin_page/css/bootstrap.min.css">
 <!-- Bootstrap CSS
 		============================================ -->
-<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="admin_page/css/font-awesome.min.css">
 <!-- owl.carousel CSS
 		============================================ -->
-<link rel="stylesheet" href="css/owl.carousel.css">
-<link rel="stylesheet" href="css/owl.theme.css">
-<link rel="stylesheet" href="css/owl.transitions.css">
+<link rel="stylesheet" href="admin_page/css/owl.carousel.css">
+<link rel="stylesheet" href="admin_page/css/owl.theme.css">
+<link rel="stylesheet" href="admin_page/css/owl.transitions.css">
 <!-- animate CSS
 		============================================ -->
-<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="admin_page/css/animate.css">
 <!-- normalize CSS
 		============================================ -->
-<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="admin_page/css/normalize.css">
 <!-- meanmenu icon CSS
 		============================================ -->
-<link rel="stylesheet" href="css/meanmenu.min.css">
+<link rel="stylesheet" href="admin_page/css/meanmenu.min.css">
 <!-- main CSS
 		============================================ -->
-<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="admin_page/css/main.css">
 <!-- morrisjs CSS
 		============================================ -->
-<link rel="stylesheet" href="css/morrisjs/morris.css">
+<link rel="stylesheet" href="admin_page/css/morrisjs/morris.css">
 <!-- mCustomScrollbar CSS
 		============================================ -->
 <link rel="stylesheet"
 	href="css/scrollbar/jquery.mCustomScrollbar.min.css">
 <!-- metisMenu CSS
 		============================================ -->
-<link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
-<link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
+<link rel="stylesheet" href="admin_page/css/metisMenu/metisMenu.min.css">
+<link rel="stylesheet" href="admin_page/css/metisMenu/metisMenu-vertical.css">
 <!-- calendar CSS
 		============================================ -->
-<link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
-<link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
+<link rel="stylesheet" href="admin_page/css/calendar/fullcalendar.min.css">
+<link rel="stylesheet" href="admin_page/css/calendar/fullcalendar.print.min.css">
 <!-- style CSS
 		============================================ -->
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="admin_page/css/style.css">
 <!-- responsive CSS
 		============================================ -->
-<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="admin_page/css/responsive.css">
 <!-- modernizr JS
 		============================================ -->
-<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+<script src="admin_page/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="logo-pro">
-					<a href="index.html"><img class="main-logo"
-						src="img/logo/logo.png" alt="" /></a>
+					<a href="admin_page/index.html"><img class="main-logo"
+						src="admin_page/img/logo/logo.png" alt="" /></a>
 				</div>
 			</div>
 		</div>
@@ -91,13 +91,13 @@
 								<div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
 									<div class="header-top-menu tabl-d-n">
 										<ul class="nav navbar-nav mai-top-nav">
-											<li class="nav-item"><a href="#" class="nav-link">Trang
+											<li class="nav-item"><a href="admin_page/#" class="nav-link">Trang
 													chủ</a></li>
-											<li class="nav-item"><a href="#" class="nav-link">Thông
+											<li class="nav-item"><a href="admin_page/#" class="nav-link">Thông
 													tin</a></li>
-											<li class="nav-item"><a href="#" class="nav-link">Dịch
+											<li class="nav-item"><a href="admin_page/#" class="nav-link">Dịch
 													vụ</a></li>
-											<li class="nav-item"><a href="#" class="nav-link">Hỗ
+											<li class="nav-item"><a href="admin_page/#" class="nav-link">Hỗ
 													trợ</a></li>
 										</ul>
 									</div>
@@ -108,7 +108,7 @@
 								<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
 									<div class="header-right-info">
 										<ul class="nav navbar-nav mai-top-nav header-right-menu">
-											<li class="nav-item dropdown"><a href="#"
+											<li class="nav-item dropdown"><a href="admin_page/#"
 												data-toggle="dropdown" role="button" aria-expanded="false"
 												class="nav-link dropdown-toggle"><i
 													class="fa fa-envelope-o adminpro-chat-pro"
@@ -120,9 +120,9 @@
 
 													</div>
 													<ul class="message-menu">
-														<li><a href="#">
+														<li><a href="admin_page/#">
 																<div class="message-img">
-																	<img src="img/contact/1.jpg" alt="">
+																	<img src="admin_page/img/contact/1.jpg" alt="">
 																</div>
 																<div class="message-content">
 																	<span class="message-date">16 Sept</span> <br>
@@ -136,10 +136,10 @@
 														</a></li>
 													</ul>
 													<div class="message-view">
-														<a href="#">Nhiều hơn</a>
+														<a href="admin_page/#">Nhiều hơn</a>
 													</div>
 												</div></li>
-											<li class="nav-item"><a href="#" data-toggle="dropdown"
+											<li class="nav-item"><a href="admin_page/#" data-toggle="dropdown"
 												role="button" aria-expanded="false"
 												class="nav-link dropdown-toggle"><i class="fa fa-bell-o"
 													aria-hidden="true"></i><span class="indicator-nt"></span></a>
@@ -150,7 +150,7 @@
 
 													</div>
 													<ul class="notification-menu">
-														<li><a href="#">
+														<li><a href="admin_page/#">
 																<div class="notification-icon">
 																	<i
 																		class="fa fa-check adminpro-checked-pro admin-check-pro"
@@ -164,11 +164,11 @@
 														</a></li>
 													</ul>
 													<div class="notification-view">
-														<a href="#">Nhiều hơn</a>
+														<a href="admin_page/#">Nhiều hơn</a>
 
 													</div>
 												</div></li>
-											<li class="nav-item"><a href="#" data-toggle="dropdown"
+											<li class="nav-item"><a href="admin_page/#" data-toggle="dropdown"
 												role="button" aria-expanded="false"
 												class="nav-link dropdown-toggle"> <i
 													class="fa fa-user adminpro-user-rounded header-riht-inf"
@@ -179,13 +179,13 @@
 											</a>
 												<ul role="menu"
 													class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-													<li><a href="register.html"><span
+													<li><a href="admin_page/register.html"><span
 															class="fa fa-home author-log-ic"></span>Đăng ký</a></li>
-													<li><a href="#"><span
+													<li><a href="admin_page/#"><span
 															class="fa fa-user author-log-ic"></span>Thông tin</a>
-													<li><a href="#"><span
+													<li><a href="admin_page/#"><span
 															class="fa fa-cog author-log-ic"></span>Cài đặt</a></li>
-													<li><a href="login.html"><span
+													<li><a href="admin_page/login.html"><span
 															class="fa fa-lock author-log-ic"></span>Đăng xuất</a></li>
 												</ul></li>
 											</li>
@@ -209,37 +209,37 @@
 									<li><a data-toggle="collapse" data-target="#Charts"
 										href="#">Trang chủ<span
 											class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-									<li><a href="index-3.html">Dashboard</a></li>
+									<li><a href="admin_page/index-3.html">Dashboard</a></li>
 
 
-									<li><a href="product-list.html">Danh sách sản phẩm</a></li>
-									<li><a href="product-edit.html">Thay đổi sản phẩm</a></li>
-									<li><a href="ADM-User.html">Quản lý User</a></li>
-									<li><a href="product-cart.html">Giỏ hàng</a></li>
-									<li><a href="product-payment.html">Thanh toán</a></li>
-									<li><a href="analytics.html">Phân tích</a></li>
+									<li><a href="admin_page/product-list.html">Danh sách sản phẩm</a></li>
+									<li><a href="admin_page/product-edit.html">Thay đổi sản phẩm</a></li>
+									<li><a href="admin_page/ADM-User.html">Quản lý User</a></li>
+									<li><a href="admin_page/product-cart.html">Giỏ hàng</a></li>
+									<li><a href="admin_page/product-payment.html">Thanh toán</a></li>
+									<li><a href="admin_page/analytics.html">Phân tích</a></li>
 
 
 
 								</ul>
 								</li>
 								<li><a data-toggle="collapse"
-									data-target="#Miscellaneousmob" href="#">Giao diện <span
+									data-target="#Miscellaneousmob" href="admin_page/#">Giao diện <span
 										class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
 									<ul id="Miscellaneousmob" class="collapse dropdown-header-top">
-										<li><a href="google-map.html">Bản đồ google</a></li>
+										<li><a href="admin_page/google-map.html">Bản đồ google</a></li>
 
-										<li><a href="images-cropper.html">Hình ảnh</a></li>
+										<li><a href="admin_page/images-cropper.html">Hình ảnh</a></li>
 									</ul></li>
 
 								<li><a data-toggle="collapse" data-target="#Chartsmob"
 									href="#">Biểu đồ <span
 										class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
 									<ul id="Chartsmob" class="collapse dropdown-header-top">
-										<li><a href="bar-charts.html">Biểu đồ thanh</a></li>
-										<li><a href="line-charts.html">Biểu đồ đường</a></li>
+										<li><a href="admin_page/bar-charts.html">Biểu đồ thanh</a></li>
+										<li><a href="admin_page/line-charts.html">Biểu đồ đường</a></li>
 
-										<li><a href="rounded-chart.html">Biểu đồ tròn</a></li>
+										<li><a href="admin_page/rounded-chart.html">Biểu đồ tròn</a></li>
 
 									</ul></li>
 								<li><a data-toggle="collapse" data-target="#Tablesmob"
@@ -247,7 +247,7 @@
 										class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
 									<ul id="Tablesmob" class="collapse dropdown-header-top">
 
-										<li><a href="data-table.html">Dữ liệu</a></li>
+										<li><a href="admin_page/data-table.html">Dữ liệu</a></li>
 									</ul></li>
 
 
@@ -255,10 +255,10 @@
 									href="#">Trang <span
 										class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
 									<ul id="Pagemob" class="collapse dropdown-header-top">
-										<li><a href="login.html">Đăng nhập</a></li>
-										<li><a href="register.html">Đăng ký</a></li>
+										<li><a href="admin_page/login.html">Đăng nhập</a></li>
+										<li><a href="admin_page/register.html">Đăng ký</a></li>
 
-										<li><a href="password-recovery.html">Khôi phục mật
+										<li><a href="admin_page/password-recovery.html">Khôi phục mật
 												khẩu</a></li>
 									</ul></li>
 								</ul>
@@ -279,15 +279,15 @@
 									<div class="breadcome-heading">
 										<form role="search" class="">
 											<input type="text" placeholder="Search..."
-												class="form-control"> <a href=""><i
+												class="form-control"> <a href="admin_page/"><i
 												class="fa fa-search"></i></a>
 										</form>
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 									<ul class="breadcome-menu">
-										<li><a href="#">Ten Trang</a> <span class="bread-slash">/</span>
-											<!--                                            <li><a href="#">Home</a> <span class="bread-slash">/</span>-->
+										<li><a href="admin_page/#">Ten Trang</a> <span class="bread-slash">/</span>
+											<!--                                            <li><a href="admin_page/#">Home</a> <span class="bread-slash">/</span>-->
 										</li>
 										<li><span class="bread-blod">Phan</span> <!--                                            <li><span class="bread-blod">Analytics</span>-->
 

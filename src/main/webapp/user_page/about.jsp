@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +13,7 @@
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-5">
-					<img class="img-fluid rounded mb-5 mb-lg-0" src="img/about-1.jpg"
+					<img class="img-fluid rounded mb-5 mb-lg-0" src="user_page/img/about-1.jpg"
 						alt="">
 				</div>
 				<div class="col-lg-7">
@@ -28,7 +27,7 @@
 						est dolor</p>
 					<div class="row pt-2 pb-4">
 						<div class="col-6 col-md-4">
-							<img class="img-fluid rounded" src="img/about-2.jpg" alt="">
+							<img class="img-fluid rounded" src="user_page/img/about-2.jpg" alt="">
 						</div>
 						<div class="col-6 col-md-8">
 							<ul class="list-inline m-0">
@@ -44,7 +43,7 @@
 							</ul>
 						</div>
 					</div>
-					<a href="" class="btn btn-primary mt-2 py-2 px-4">Learn More</a>
+					<a href="user_page/" class="btn btn-primary mt-2 py-2 px-4">Learn More</a>
 				</div>
 			</div>
 		</div>
@@ -147,17 +146,17 @@
 				<div class="col-md-6 col-lg-3 text-center team mb-5">
 					<div class="position-relative overflow-hidden mb-4"
 						style="border-radius: 100%;">
-						<img class="img-fluid w-100" src="img/team-1.jpg" alt="">
+						<img class="img-fluid w-100" src="user_page/img/team-1.jpg" alt="">
 						<div
 							class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
 							<a class="btn btn-outline-light text-center mr-2 px-0"
-								style="width: 38px; height: 38px;" href="#"><i
+								style="width: 38px; height: 38px;" href="user_page/#"><i
 								class="fab fa-twitter"></i></a> <a
 								class="btn btn-outline-light text-center mr-2 px-0"
-								style="width: 38px; height: 38px;" href="#"><i
+								style="width: 38px; height: 38px;" href="user_page/#"><i
 								class="fab fa-facebook-f"></i></a> <a
 								class="btn btn-outline-light text-center px-0"
-								style="width: 38px; height: 38px;" href="#"><i
+								style="width: 38px; height: 38px;" href="user_page/#"><i
 								class="fab fa-linkedin-in"></i></a>
 						</div>
 					</div>
@@ -167,17 +166,17 @@
 				<div class="col-md-6 col-lg-3 text-center team mb-5">
 					<div class="position-relative overflow-hidden mb-4"
 						style="border-radius: 100%;">
-						<img class="img-fluid w-100" src="img/team-2.jpg" alt="">
+						<img class="img-fluid w-100" src="user_page/img/team-2.jpg" alt="">
 						<div
 							class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
 							<a class="btn btn-outline-light text-center mr-2 px-0"
-								style="width: 38px; height: 38px;" href="#"><i
+								style="width: 38px; height: 38px;" href="user_page/#"><i
 								class="fab fa-twitter"></i></a> <a
 								class="btn btn-outline-light text-center mr-2 px-0"
-								style="width: 38px; height: 38px;" href="#"><i
+								style="width: 38px; height: 38px;" href="user_page/#"><i
 								class="fab fa-facebook-f"></i></a> <a
 								class="btn btn-outline-light text-center px-0"
-								style="width: 38px; height: 38px;" href="#"><i
+								style="width: 38px; height: 38px;" href="user_page/#"><i
 								class="fab fa-linkedin-in"></i></a>
 						</div>
 					</div>
@@ -187,17 +186,17 @@
 				<div class="col-md-6 col-lg-3 text-center team mb-5">
 					<div class="position-relative overflow-hidden mb-4"
 						style="border-radius: 100%;">
-						<img class="img-fluid w-100" src="img/team-3.jpg" alt="">
+						<img class="img-fluid w-100" src="user_page/img/team-3.jpg" alt="">
 						<div
 							class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
 							<a class="btn btn-outline-light text-center mr-2 px-0"
-								style="width: 38px; height: 38px;" href="#"><i
+								style="width: 38px; height: 38px;" href="user_page/#"><i
 								class="fab fa-twitter"></i></a> <a
 								class="btn btn-outline-light text-center mr-2 px-0"
-								style="width: 38px; height: 38px;" href="#"><i
+								style="width: 38px; height: 38px;" href="user_page/#"><i
 								class="fab fa-facebook-f"></i></a> <a
 								class="btn btn-outline-light text-center px-0"
-								style="width: 38px; height: 38px;" href="#"><i
+								style="width: 38px; height: 38px;" href="user_page/#"><i
 								class="fab fa-linkedin-in"></i></a>
 						</div>
 					</div>
@@ -207,17 +206,17 @@
 				<div class="col-md-6 col-lg-3 text-center team mb-5">
 					<div class="position-relative overflow-hidden mb-4"
 						style="border-radius: 100%;">
-						<img class="img-fluid w-100" src="img/team-4.jpg" alt="">
+						<img class="img-fluid w-100" src="user_page/img/team-4.jpg" alt="">
 						<div
 							class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
 							<a class="btn btn-outline-light text-center mr-2 px-0"
-								style="width: 38px; height: 38px;" href="#"><i
+								style="width: 38px; height: 38px;" href="user_page/#"><i
 								class="fab fa-twitter"></i></a> <a
 								class="btn btn-outline-light text-center mr-2 px-0"
-								style="width: 38px; height: 38px;" href="#"><i
+								style="width: 38px; height: 38px;" href="user_page/#"><i
 								class="fab fa-facebook-f"></i></a> <a
 								class="btn btn-outline-light text-center px-0"
-								style="width: 38px; height: 38px;" href="#"><i
+								style="width: 38px; height: 38px;" href="user_page/#"><i
 								class="fab fa-linkedin-in"></i></a>
 						</div>
 					</div>
