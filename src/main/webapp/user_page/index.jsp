@@ -8,7 +8,7 @@
 
 <body>
 	<%@include file="header.jsp"%>
-	<!-- Facilities Start -->
+	<!--
 	<div class="container-fluid pt-5">
 		<div class="container pb-3">
 			<div class="row">
@@ -86,12 +86,9 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- Facilities Start -->
+	</div> -->
 
-
-
-	<!-- About Start -->
+	<!-- Bảng xếp hạng -->
 	<div class="container-fluid py-5" id="leader-board-container">
 		<div class="container">
 			<div class="row">
@@ -269,68 +266,18 @@
 		</div>
 	</div>
 
-	<!-- About End -->
-
-	<div class="container-fluid py-5">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12" id="notification-title">
-					<span>BẢNG XẾP HẠNG</span>
-				</div>
-			</div>
-			<div class="row align-items-center">
-				<div class="col-lg-12 notification-image">
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-lg-12" id="leader-board-button">
-				<button>Xem Thêm</button>
-			</div>
-		</div>
-		<!-- <div class="col-lg-7">
-				<p class="section-title pr-5">
-					<span class="pr-2">Learn About Us</span>
-				</p>
-				<h1 class="mb-4">Best School For Your Kids</h1>
-				<p>Invidunt lorem justo sanctus clita. Erat lorem labore ea,
-					justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea
-					justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum
-					est dolor</p>
-				<div class="row pt-2 pb-4">
-					<div class="col-6 col-md-4">
-						<img class="img-fluid rounded" src="user_page/img/about-2.jpg" alt="">
-					</div>
-					<div class="col-6 col-md-8">
-						<ul class="list-inline m-0">
-							<li class="py-2 border-top border-bottom"><i
-								class="fa fa-check text-primary mr-3"></i>Labore eos amet dolor
-								amet diam</li>
-							<li class="py-2 border-bottom"><i
-								class="fa fa-check text-primary mr-3"></i>Etsea et sit dolor
-								amet ipsum</li>
-							<li class="py-2 border-bottom"><i
-								class="fa fa-check text-primary mr-3"></i>Diam dolor diam
-								elitripsum vero.</li>
-						</ul>
-					</div>
-				</div>
-				<a href="user_page/" class="btn btn-primary mt-2 py-2 px-4">Learn More</a>
-			</div> -->
-	</div>
-	</div>
 
 
 
-	<!-- Class Start -->
+
+
+	<!-- Môn học -->
 	<div class="container-fluid pt-5">
 		<div class="container">
 			<div class="text-center pb-2">
 				<p class="section-title px-5">
-					<span class="px-2">Popular Classes</span>
+					<span class="px-2">MÔN HỌC</span>
 				</p>
-				<h1 class="mb-4">Classes for Your Kids</h1>
 			</div>
 			<div class="row">
 				<div class="col-lg-4 mb-5">
@@ -378,7 +325,7 @@
 						<img class="card-img-top mb-2" src="user_page/img/class-1.jpg"
 							alt="">
 						<div class="card-body text-center">
-							<h4 class="card-title">TOÁN</h4>
+							<h4 class="card-title">TIẾNG VIỆT</h4>
 
 						</div>
 						<div class="card-footer bg-transparent py-4 px-5">
@@ -455,10 +402,10 @@
 			</div>
 		</div>
 	</div>
-	<!-- Class End -->
 
 
-	<!-- Registration Start -->
+
+	<!-- 
 	<div class="container-fluid py-5">
 		<div class="container">
 			<div class="row align-items-center">
@@ -517,10 +464,8 @@
 			</div>
 		</div>
 	</div>
-	<!-- Registration End -->
-
-
-	<!-- Team Start -->
+	-->
+	<!-- 	
 	<div class="container-fluid pt-5">
 		<div class="container">
 			<div class="text-center pb-2">
@@ -612,11 +557,8 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- Team End -->
-
-
-	<!-- Testimonial Start -->
+	</div> -->
+	<!--
 	<div class="container-fluid py-5">
 		<div class="container p-0">
 			<div class="text-center pb-2">
@@ -689,10 +631,8 @@
 			</div>
 		</div>
 	</div>
-	<!-- Testimonial End -->
-
-
-	<!-- Blog Start -->
+	Testimonial End -->
+	<!--
 	<div class="container-fluid pt-5">
 		<div class="container">
 			<div class="text-center pb-2">
@@ -768,7 +708,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- Blog End -->
+	Blog End -->
 	<%@include file="footer.jsp"%>
 </body>
 

@@ -3,6 +3,8 @@
  */
 
 $(document).ready(function() {
-	$(".notification-carousel").owlCarousel({
+	$(".notification").slick({
+		prevArrow: false,
+		nextArrow: false
 	});
 });
