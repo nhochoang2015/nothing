@@ -4,12 +4,12 @@
 <html class="no-js" lang="en">
 
 <head>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="admin_page/https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+        <link rel="stylesheet" href="admin_page/https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="admin_page/https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="admin_page/https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <script src="admin_page/https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="admin_page/https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>Product List | jeweler - Material Admin Template</title>
 </head>
 
@@ -29,14 +29,14 @@
 							<!--                            <h4>Products List</h4>-->
 							<!-- <div class="add-product">
 								 //////////////////////////////thêm vật phẩm
-								<a href="product-edit.html">Thêm vật phẩm</a>								
-								<a href="product-edit.html">Add Product</a>
-								<a href="#">Xóa</a>
+								<a href="admin_page/product-edit.html">Thêm vật phẩm</a>								
+								<a href="admin_page/product-edit.html">Add Product</a>
+								<a href="admin_page/#">Xóa</a>
 							</div> 
 							-->
 							<div class="col-sm-6">
-                            <a href="#addproductmodel"  class="btn btn-success" data-toggle="modal"><i class="material-icons"></i> <span>Thêm vật phẩm</span></a>
-                            <a href="#" class="btn btn-danger" data-toggle="modal"><i class="material-icons"></i> <span>Xóa vật phẩm</span></a>						
+                            <a href="admin_page/#addproductmodel"  class="btn btn-success" data-toggle="modal"><i class="material-icons"></i> <span>Thêm vật phẩm</span></a>
+                            <a href="admin_page/#" class="btn btn-danger" data-toggle="modal"><i class="material-icons"></i> <span>Xóa vật phẩm</span></a>						
                         </div>
 							<table>
 								<tr>
@@ -49,7 +49,7 @@
 								</tr>
 								
 								<td><input type="checkbox"></td>
-								<td><img src="img/IMG_BOOK/Sach3.jpg" alt="" /></td>
+								<td><img src="admin_page/img/IMG_BOOK/Sach3.jpg" alt="" /></td>
 								
 								
 								<td>Khung hỏa long</td>								
@@ -62,8 +62,8 @@
 
 
 									<td><input type="checkbox"></td>
-								<td><img src="img/IMG_BOOK/Sach3.jpg" alt="" /></td>
-								<!--                                    <td><img src="img/new-product/5-small.jpg" alt="" /></td>-->
+								<td><img src="admin_page/img/IMG_BOOK/Sach3.jpg" alt="" /></td>
+								<!--                                    <td><img src="admin_page/img/new-product/5-small.jpg" alt="" /></td>-->
 								
 								<td>Khung hỏa long</td>								
 								<td>Khung</td>
@@ -82,7 +82,7 @@
 
 
 									<td><input type="checkbox"></td>
-								<td><img src="img/IMG_BOOK/Sach3.jpg" alt="" /></td>
+								<td><img src="admin_page/img/IMG_BOOK/Sach3.jpg" alt="" /></td>
 								
 								
 								<td>Khung hỏa long</td>								
@@ -97,7 +97,7 @@
 
 								<tr>
 									<td><input type="checkbox"></td>
-								<td><img src="img/IMG_BOOK/Sach3.jpg" alt="" /></td>
+								<td><img src="admin_page/img/IMG_BOOK/Sach3.jpg" alt="" /></td>
 								
 								
 								<td>Khung hỏa long</td>								
@@ -107,8 +107,8 @@
 
 
 								<td><input type="checkbox"></td>
-								<td><img src="img/IMG_BOOK/Sach3.jpg" alt="" /></td>
-								<!--                                    <td><img src="img/new-product/5-small.jpg" alt="" /></td>-->
+								<td><img src="admin_page/img/IMG_BOOK/Sach3.jpg" alt="" /></td>
+								<!--                                    <td><img src="admin_page/img/new-product/5-small.jpg" alt="" /></td>-->
 								
 								<td>Khung hỏa long</td>								
 								<td>Khung</td>
@@ -123,12 +123,12 @@
 							<div class="custom-pagination">
 								<nav aria-label="Page navigation example">
 									<ul class="pagination">
-										<li class="page-item disabled" ><a class="page-link" href="#" >trước</a></li>
-										<!--                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>-->
-										<li class="page-item active" ><a class="page-link" href="#" >1</a></li>
-										<li class="page-item"><a class="page-link" href="#">2</a></li>
-										<li class="page-item"><a class="page-link" href="#">3</a></li>
-										<li class="page-item"><a class="page-link" href="#">Tiếp</a></li>
+										<li class="page-item disabled" ><a class="page-link" href="admin_page/#" >trước</a></li>
+										<!--                                        <li class="page-item"><a class="page-link" href="admin_page/#">Previous</a></li>-->
+										<li class="page-item active" ><a class="page-link" href="admin_page/#" >1</a></li>
+										<li class="page-item"><a class="page-link" href="admin_page/#">2</a></li>
+										<li class="page-item"><a class="page-link" href="admin_page/#">3</a></li>
+										<li class="page-item"><a class="page-link" href="admin_page/#">Tiếp</a></li>
 										
 									</ul>
 								</nav>

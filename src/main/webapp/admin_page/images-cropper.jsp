@@ -11,7 +11,7 @@
 
 <body>
 	<!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="admin_page/http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 	<%@ include file="menu-bar.jsp"%>
 	<!-- Start Welcome area -->
@@ -37,7 +37,7 @@
 												<div class="row">
 													<div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
 														<div class="image-crop">
-															<img src="img/cropper/1.jpg" alt="">
+															<img src="admin_page/img/cropper/1.jpg" alt="">
 														</div>
 													</div>
 													<div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
