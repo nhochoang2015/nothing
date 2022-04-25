@@ -25,33 +25,23 @@
 						</a>
 							<ul class="submenu-angle" aria-expanded="true">
 
-								<li><a title="Dashboard v.3" href="admin_page/index-2.html"><i
-										class="fa fa-cube sub-icon-mg" aria-hidden="true"></i> <span
-										class="mini-sub-pro">Dashboard</span></a></li>
+								<li class="list-group-item"><a title="Dashboard v.3" href="admin_page/index-2.html"><i
+										class="fa fa-cube sub-icon-mg active" aria-hidden="true"></i> <span
+										class="mini-sub-pro">Quản lý môn học</span></a></li>
 
-								<li><a title="Product List" href="admin_page/product-list.html"><i
+								<li class="list-group-item"><a title="Product List" href="admin_page/Notification-list.jsp"><i
 										class="fa fa-female sub-icon-mg" aria-hidden="true"></i> <span
-										class="mini-sub-pro">Danh sách sản phẩm</span></a></li>
+										class="mini-sub-pro">Quản lý thông báo</span></a></li>
 
-								<li><a title="Product Edit" href="admin_page/product-edit.html"><i
+								<li class="list-group-item active"><a title="Product Edit" href="admin_page/product-edit.html"><i
 										class="fa fa-bolt sub-icon-mg" aria-hidden="true"></i> <span
-										class="mini-sub-pro">Thay đổi sản phẩm</span></a></li>
+										class="mini-sub-pro">Quản lý tài khoản</span></a></li>
 
-								<li><a title="Product Detail" href="admin_page/ADM-User.html"><i
+								<li class="list-group-item"><a title="Product Detail" href="admin_page/product-list.jsp"><i
 										class="fa fa-heart-o sub-icon-mg" aria-hidden="true"></i> <span
-										class="mini-sub-pro">Quản lý User</span></a></li>
+										class="mini-sub-pro">Quản lý vật phẩm</span></a></li>
 
-								<li><a title="Product Cart" href="admin_page/product-cart.html"><i
-										class="fa fa-level-down sub-icon-mg" aria-hidden="true"></i> <span
-										class="mini-sub-pro">Giỏ hàng</span></a></li>
-
-								<li><a title="Product Payment" href="admin_page/product-payment.html"><i
-										class="fa fa-location-arrow sub-icon-mg" aria-hidden="true"></i>
-										<span class="mini-sub-pro">Thanh toán</span></a></li>
-
-								<li><a title="Analytics" href="admin_page/analytics.html"><i
-										class="fa fa-line-chart sub-icon-mg" aria-hidden="true"></i> <span
-										class="mini-sub-pro">Phân tích</span></a></li>
+							
 
 							</ul></li>
 						<li><a class="has-arrow" href="admin_page/mailbox.html"
@@ -69,25 +59,7 @@
 
 							</ul></li>
 
-						<li><a class="has-arrow" href="admin_page/mailbox.html"
-							aria-expanded="false"><i
-								class="fa big-icon fa-bar-chart-o icon-wrap"></i> <span
-								class="mini-click-non">Biểu đồ</span></a>
-
-							<ul class="submenu-angle" aria-expanded="false">
-								<li><a title="Bar Charts" href="admin_page/bar-charts.html"><i
-										class="fa fa-line-chart sub-icon-mg" aria-hidden="true"></i> <span
-										class="mini-sub-pro">Biểu đồ thanh</span></a></li>
-
-								<li><a title="Line Charts" href="admin_page/line-charts.html"><i
-										class="fa fa-area-chart sub-icon-mg" aria-hidden="true"></i> <span
-										class="mini-sub-pro">Biểu đồ đường</span></a></li>
-
-								<li><a title="Rounded Charts" href="admin_page/rounded-chart.html"><i
-										class="fa fa-signal sub-icon-mg" aria-hidden="true"></i> <span
-										class="mini-sub-pro">Biểu đồ tròn</span></a></li>
-
-							</ul></li>
+						
 						<li><a class="has-arrow" href="admin_page/mailbox.html"
 							aria-expanded="false"><i
 								class="fa big-icon fa-table icon-wrap"></i> <span
@@ -115,7 +87,7 @@
 										class="mini-sub-pro">Đăng ký</span></a></li>
 
 								<li><a title="Password Recovery"
-									href="password-recovery.html"><i
+									href="admin_page/password-recovery.html"><i
 										class="fa fa-wheelchair sub-icon-mg" aria-hidden="true"></i><span
 										class="mini-sub-pro">Khôi phục mật khẩu</span></a></li>
 

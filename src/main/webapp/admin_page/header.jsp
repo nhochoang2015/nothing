@@ -9,7 +9,7 @@
 <!-- favicon
 		============================================ -->
 <link rel="shortcut icon" type="image/x-icon"
-	href="img/IMG_BOOK/favicon.ico">
+	href="admin_page/img/IMG_BOOK/favicon.ico">
 <!-- Google Fonts
 		============================================ -->
 <link href="admin_page/https://fonts.googleapis.com/css?family=Play:400,700"
@@ -43,7 +43,7 @@
 <!-- mCustomScrollbar CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+	href="admin_page/css/scrollbar/jquery.mCustomScrollbar.min.css">
 <!-- metisMenu CSS
 		============================================ -->
 <link rel="stylesheet" href="admin_page/css/metisMenu/metisMenu.min.css">
@@ -207,7 +207,7 @@
 							<nav id="dropdown">
 								<ul class="mobile-menu-nav">
 									<li><a data-toggle="collapse" data-target="#Charts"
-										href="#">Trang chủ<span
+										href="admin_page/#">Trang chủ<span
 											class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
 									<li><a href="admin_page/index-3.html">Dashboard</a></li>
 
@@ -233,7 +233,7 @@
 									</ul></li>
 
 								<li><a data-toggle="collapse" data-target="#Chartsmob"
-									href="#">Biểu đồ <span
+									href="admin_page/#">Biểu đồ <span
 										class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
 									<ul id="Chartsmob" class="collapse dropdown-header-top">
 										<li><a href="admin_page/bar-charts.html">Biểu đồ thanh</a></li>
@@ -243,7 +243,7 @@
 
 									</ul></li>
 								<li><a data-toggle="collapse" data-target="#Tablesmob"
-									href="#">Bảng dữ liệu <span
+									href="admin_page/#">Bảng dữ liệu <span
 										class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
 									<ul id="Tablesmob" class="collapse dropdown-header-top">
 
@@ -252,7 +252,7 @@
 
 
 								<li><a data-toggle="collapse" data-target="#Pagemob"
-									href="#">Trang <span
+									href="admin_page/#">Trang <span
 										class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
 									<ul id="Pagemob" class="collapse dropdown-header-top">
 										<li><a href="admin_page/login.html">Đăng nhập</a></li>
@@ -299,6 +299,7 @@
 					</div>
 				</div>
 			</div>
+			
 		</div>
 	</div>
 
