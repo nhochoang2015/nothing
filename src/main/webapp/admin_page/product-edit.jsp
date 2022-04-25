@@ -11,7 +11,7 @@
 
 <body>
 	<!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="admin_page/http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 	<%@ include file="menu-bar.jsp"%>
 
@@ -28,17 +28,17 @@
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							<div class="review-tab-pro-inner">
 								<ul id="myTab3" class="tab-review-design">
-									<li class="active"><a href="admin_page/#description"><i
+									<li class="active"><a href="#description"><i
 											class="fa fa-pencil" aria-hidden="true"></i>Thay Äá»i sáº£n
 											pháº©m</a></li>
-									<!--                                    <li class="active"><a href="admin_page/#description"><i class="fa fa-pencil" aria-hidden="true"></i> Product Edit</a></li>-->
-									<li><a href="admin_page/#reviews"><i class="fa fa-file-image-o"
+									<!--                                    <li class="active"><a href="#description"><i class="fa fa-pencil" aria-hidden="true"></i> Product Edit</a></li>-->
+									<li><a href="#reviews"><i class="fa fa-file-image-o"
 											aria-hidden="true"></i> HÃ¬nh áº£nh</a></li>
-									<li><a href="admin_page/#INFORMATION"><i class="fa fa-commenting"
+									<li><a href="#INFORMATION"><i class="fa fa-commenting"
 											aria-hidden="true"></i>ÄÃ¡nh giÃ¡</a></li>
 
-									<!--                                    <li><a href="admin_page/#reviews"><i class="fa fa-file-image-o" aria-hidden="true"></i> Pictures</a></li>-->
-									<!--                                    <li><a href="admin_page/#INFORMATION"><i class="fa fa-commenting" aria-hidden="true"></i> Review</a></li>-->
+									<!--                                    <li><a href="#reviews"><i class="fa fa-file-image-o" aria-hidden="true"></i> Pictures</a></li>-->
+									<!--                                    <li><a href="#INFORMATION"><i class="fa fa-commenting" aria-hidden="true"></i> Review</a></li>-->
 								</ul>
 								<div id="myTabContent" class="tab-content custom-product-edit">
 									<div class="product-tab-list tab-pane fade active in"
@@ -136,7 +136,7 @@
 													<div class="row">
 														<div class="col-lg-4">
 															<div class="pro-edt-img">
-																<img src="admin_page/img/new-product/5-small.jpg" alt="" />
+																<img src="img/new-product/5-small.jpg" alt="" />
 															</div>
 														</div>
 														<div class="col-lg-8">
@@ -192,7 +192,7 @@
 													<div class="row">
 														<div class="col-lg-4">
 															<div class="pro-edt-img">
-																<img src="admin_page/img/new-product/6-small.jpg" alt="" />
+																<img src="img/new-product/6-small.jpg" alt="" />
 															</div>
 														</div>
 														<div class="col-lg-8">
@@ -245,7 +245,7 @@
 													<div class="row">
 														<div class="col-lg-4">
 															<div class="pro-edt-img">
-																<img src="admin_page/img/new-product/7-small.jpg" alt="" />
+																<img src="img/new-product/7-small.jpg" alt="" />
 															</div>
 														</div>
 														<div class="col-lg-8">

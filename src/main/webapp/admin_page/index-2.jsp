@@ -9,7 +9,7 @@
 
 <body>
 	<!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="admin_page/http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 	<%@ include file="menu-bar.jsp"%>
 
@@ -230,21 +230,21 @@
 						<div class="single-new-trend mg-t-30">
 
 
-							<a href="admin_page/#"><img src="admin_page/img/IMG_BOOK/Sach3.jpg" alt=""></a>
+							<a href="#"><img src="img/IMG_BOOK/Sach3.jpg" alt=""></a>
 
 							<div class="overlay-content">
-								<a href="admin_page/#">
+								<a href="#">
 									<h2>70,000 VND</h2>
-								</a> <a href="admin_page/#" class="btn-small">Hiện tại</a>
+								</a> <a href="#" class="btn-small">Hiện tại</a>
 								<div class="product-action">
 									<ul>
-										<li><a data-toggle="tooltip" title="Shopping" href="admin_page/#"><i
+										<li><a data-toggle="tooltip" title="Shopping" href="#"><i
 												class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
-										<li><a data-toggle="tooltip" title="Quick view" href="admin_page/#"><i
+										<li><a data-toggle="tooltip" title="Quick view" href="#"><i
 												class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
 								</div>
-								<a href="admin_page/#"> <br>
+								<a href="#"> <br>
 									<h4>65,000 VND</h4> <strike>
 										<h5>80,000</h5>
 								</strike>
@@ -261,20 +261,20 @@
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 						<div class="single-new-trend mg-t-30">
 
-							<a href="admin_page/#"><img src="admin_page/img/IMG_BOOK/SachP.jpg" alt=""></a>
+							<a href="#"><img src="img/IMG_BOOK/SachP.jpg" alt=""></a>
 							<div class="overlay-content">
-								<a href="admin_page/#">
+								<a href="#">
 									<h2>90,000 VND</h2>
-								</a> <a href="admin_page/#" class="btn-small">Hiện tại</a>
+								</a> <a href="#" class="btn-small">Hiện tại</a>
 								<div class="product-action">
 									<ul>
-										<li><a data-toggle="tooltip" title="Shopping" href="admin_page/#"><i
+										<li><a data-toggle="tooltip" title="Shopping" href="#"><i
 												class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
-										<li><a data-toggle="tooltip" title="Quick view" href="admin_page/#"><i
+										<li><a data-toggle="tooltip" title="Quick view" href="#"><i
 												class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
 								</div>
-								<a href="admin_page/#"> <br>
+								<a href="#"> <br>
 									<h4>65,000 VND</h4> <strike>
 										<h5>80,000</h5>
 								</strike> <!--                                    <h4>Princes Diamond</h4>-->
@@ -290,23 +290,23 @@
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 						<div class="single-new-trend mg-t-30">
 
-							<a href="admin_page/#"><img
-								src="admin_page/img/IMG_BOOK/[www.fahasa.com]SACH_MEDOTHAIDAYCONTULAP.jpg"
+							<a href="#"><img
+								src="img/IMG_BOOK/[www.fahasa.com]SACH_MEDOTHAIDAYCONTULAP.jpg"
 								alt=""></a>
-							<!--                                 width="270"/><a href="admin_page/#"><img src="admin_page/img/new-product/7.jpg" alt=""></a>-->
+							<!--                                 width="270"/><a href="#"><img src="img/new-product/7.jpg" alt=""></a>-->
 							<div class="overlay-content">
-								<a href="admin_page/#">
+								<a href="#">
 									<h2>99,000 VND</h2>
-								</a> <a href="admin_page/#" class="btn-small">Hiện tại</a>
+								</a> <a href="#" class="btn-small">Hiện tại</a>
 								<div class="product-action">
 									<ul>
-										<li><a data-toggle="tooltip" title="Shopping" href="admin_page/#"><i
+										<li><a data-toggle="tooltip" title="Shopping" href="#"><i
 												class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
-										<li><a data-toggle="tooltip" title="Quick view" href="admin_page/#"><i
+										<li><a data-toggle="tooltip" title="Quick view" href="#"><i
 												class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
 								</div>
-								<a href="admin_page/#"> <br>
+								<a href="#"> <br>
 									<h4>65,000 VND</h4> <!--                                    <br>-->
 									<strike>
 										<h5>80,000</h5>
@@ -324,21 +324,21 @@
 						<div class="single-new-trend mg-t-30">
 
 
-							<a href="admin_page/#"><img src="admin_page/img/IMG_BOOK/Sach3.jpg" alt=""></a>
-							<!--                            <a href="admin_page/#"><img src="admin_page/img/new-product/5.jpg" alt=""></a>-->
+							<a href="#"><img src="img/IMG_BOOK/Sach3.jpg" alt=""></a>
+							<!--                            <a href="#"><img src="img/new-product/5.jpg" alt=""></a>-->
 							<div class="overlay-content">
-								<a href="admin_page/#">
+								<a href="#">
 									<h2>70,000 VND</h2>
-								</a> <a href="admin_page/#" class="btn-small">Hiện tại</a>
+								</a> <a href="#" class="btn-small">Hiện tại</a>
 								<div class="product-action">
 									<ul>
-										<li><a data-toggle="tooltip" title="Shopping" href="admin_page/#"><i
+										<li><a data-toggle="tooltip" title="Shopping" href="#"><i
 												class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
-										<li><a data-toggle="tooltip" title="Quick view" href="admin_page/#"><i
+										<li><a data-toggle="tooltip" title="Quick view" href="#"><i
 												class="fa fa-heart" aria-hidden="true"></i></a></li>
 									</ul>
 								</div>
-								<a href="admin_page/#"> <br>
+								<a href="#"> <br>
 									<h4>65,000 VND</h4> <!--                                    <br>-->
 									<strike>
 										<h5>80,000</h5>
@@ -373,14 +373,14 @@
 									</div>
 									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 										<div class="actions graph-rp">
-											<a href="admin_page/#"
+											<a href="#"
 												class="btn btn-dark-blue btn-circle active tip-top"
-												data-toggle="tooltip" title="Upload"> <!--                                            <a href="admin_page/#" class="btn btn-dark-blue btn-circle active tip-top" data-toggle="tooltip" title="Upload">-->
+												data-toggle="tooltip" title="Upload"> <!--                                            <a href="#" class="btn btn-dark-blue btn-circle active tip-top" data-toggle="tooltip" title="Upload">-->
 												<i class="fa fa-cloud-download" aria-hidden="true"></i>
-											</a> <a href="admin_page/#" class="btn btn-dark btn-circle active tip-top"
+											</a> <a href="#" class="btn btn-dark btn-circle active tip-top"
 												data-toggle="tooltip" title="Refresh"> <i
 												class="fa fa-reply" aria-hidden="true"></i>
-											</a> <a href="admin_page/#"
+											</a> <a href="#"
 												class="btn btn-blue-grey btn-circle active tip-top"
 												data-toggle="tooltip" title="Delete"> <i
 												class="fa fa-trash-o" aria-hidden="true"></i>

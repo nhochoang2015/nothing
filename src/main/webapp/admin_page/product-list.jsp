@@ -4,13 +4,17 @@
 <html class="no-js" lang="en">
 
 <head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>Product List | jeweler - Material Admin Template</title>
 </head>
 
 <body>
-	<!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="admin_page/http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+	
 	<%@ include file="menu-bar.jsp"%>s
 	<!-- Start Welcome area -->
 	<div class="all-content-wrapper">
@@ -21,95 +25,49 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<div class="product-status-wrap">
-							<h4>Danh sÃ¡ch sáº£n pháº©m</h4>
+							<h4>Danh sách vật phẩm</h4>
 							<!--                            <h4>Products List</h4>-->
-							<div class="add-product">
-								<!--                                //////////////////////////////THÃM Sáº¢N PHáº¨M-->
-								<a href="admin_page/product-edit.html">ThÃªm sáº£n pháº©m</a>
-								<!--                                <a href="admin_page/product-edit.html">Add Product</a>-->
-							</div>
+							<!-- <div class="add-product">
+								 //////////////////////////////thêm vật phẩm
+								<a href="product-edit.html">Thêm vật phẩm</a>								
+								<a href="product-edit.html">Add Product</a>
+								<a href="#">Xóa</a>
+							</div> 
+							-->
+							<div class="col-sm-6">
+                            <a href="#addproductmodel"  class="btn btn-success" data-toggle="modal"><i class="material-icons"></i> <span>Thêm vật phẩm</span></a>
+                            <a href="#" class="btn btn-danger" data-toggle="modal"><i class="material-icons"></i> <span>Xóa vật phẩm</span></a>						
+                        </div>
 							<table>
 								<tr>
-									<th>HÃ¬nh áº£nh</th>
-									<th>TiÃªu Äá»</th>
-									<th>Tráº¡ng thÃ¡i</th>
-									<th>Mua hÃ ng</th>
-									<th>BÃ¡n sáº£n pháº©m</th>
-									<th>Kho</th>
-									<th>GiÃ¡</th>
-									<th>CÃ i Äáº·t</th>
+									<th></th>
+									<th>Hình ảnh</th>
+									<th>Tên</th>
+									<th>Loại</th>
+									<th>Số điểm cần thiết</th>
+									
 								</tr>
-								<!--                                <tr>-->
-								<!--                                    <th>Image</th>-->
-								<!--                                    <th>Product Title</th>-->
-								<!--                                    <th>Status</th>-->
-								<!--                                    <th>Purchases</th>-->
-								<!--                                    <th>Product sales</th>-->
-								<!--                                    <th>Stock</th>-->
-								<!--                                    <th>Price</th>-->
-								<!--                                    <th>Setting</th>-->
-								<!--                                </tr>-->
-
-								<td><img src="admin_page/img/IMG_BOOK/Sach3.jpg" alt="" /></td>
-								<!--                                    <td><img src="admin_page/img/new-product/5-small.jpg" alt="" /></td>-->
-								<td>SÃ¡ch 1</td>
-								<td>
-									<button class="pd-setting">Báº­t</button>
-								</td>
-								<td>50</td>
-								<td>65,000 VND</td>
-								<td>Háº¿t hÃ ng</td>
-								<td>50,000 VND</td>
-								<td>
-									<button data-toggle="tooltip" title="Edit"
-										class="pd-setting-ed">
-										<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-									</button>
-									<button data-toggle="tooltip" title="Trash"
-										class="pd-setting-ed">
-										<i class="fa fa-trash-o" aria-hidden="true"></i>
-									</button>
-								</td>
+								
+								<td><input type="checkbox"></td>
+								<td><img src="img/IMG_BOOK/Sach3.jpg" alt="" /></td>
+								
+								
+								<td>Khung hỏa long</td>								
+								<td>Khung</td>
+								<td>1000 điểm</td>
 								</tr>
 								<tr>
 
-									<!--                                <tr>-->
-									<!--                                    <td><img src="admin_page/img/new-product/5-small.jpg" alt="" /></td>-->
-									<!--                                    <td>Jewelery Title 1</td>-->
-									<!--                                    <td>-->
-									<!--                                        <button class="pd-setting">Active</button>-->
-									<!--                                    </td>-->
-									<!--                                    <td>50</td>-->
-									<!--                                    <td>$750</td>-->
-									<!--                                    <td>Out Of Stock</td>-->
-									<!--                                    <td>$15</td>-->
-									<!--                                    <td>-->
-									<!--                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>-->
-									<!--                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>-->
-									<!--                                    </td>-->
-									<!--                                </tr>-->
+									
 
 
-									<td><img src="admin_page/img/IMG_BOOK/Sach3.jpg" alt="" /></td>
-									<!--                                    <td><img src="admin_page/img/new-product/5-small.jpg" alt="" /></td>-->
-									<td>SÃ¡ch 1</td>
-									<td>
-										<button class="pd-setting">Táº¡m ngÆ°ng</button>
-									</td>
-									<td>50</td>
-									<td>65,000 VND</td>
-									<td>CÃ²n hÃ ng</td>
-									<td>50,000 VND</td>
-									<td>
-										<button data-toggle="tooltip" title="Edit"
-											class="pd-setting-ed">
-											<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-										</button>
-										<button data-toggle="tooltip" title="Trash"
-											class="pd-setting-ed">
-											<i class="fa fa-trash-o" aria-hidden="true"></i>
-										</button>
-									</td>
+									<td><input type="checkbox"></td>
+								<td><img src="img/IMG_BOOK/Sach3.jpg" alt="" /></td>
+								<!--                                    <td><img src="img/new-product/5-small.jpg" alt="" /></td>-->
+								
+								<td>Khung hỏa long</td>								
+								<td>Khung</td>
+								<td>1000 điểm</td>
 								</tr>
 								<tr>
 
@@ -119,155 +77,59 @@
 
 
 
-									<!--                                <tr>-->
-									<!--                                    <td><img src="admin_page/img/new-product/6-small.jpg" alt="" /></td>-->
-									<!--                                    <td>Jewelery Title 2</td>-->
-									<!--                                    <td>-->
-									<!--                                        <button class="ps-setting">Paused</button>-->
-									<!--                                    </td>-->
-									<!--                                    <td>60</td>-->
-									<!--                                    <td>$1020</td>-->
-									<!--                                    <td>In Stock</td>-->
-									<!--                                    <td>$17</td>-->
-									<!--                                    <td>-->
-									<!--                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>-->
-									<!--                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>-->
-									<!--                                    </td>-->
-									<!--                                </tr>-->
+									
 
 
 
-
-									<td><img src="admin_page/img/IMG_BOOK/Sach3.jpg" alt="" /></td>
-									<!--                                    <td><img src="admin_page/img/new-product/5-small.jpg" alt="" /></td>-->
-									<td>SÃ¡ch 1</td>
-									<td>
-										<button class="pd-setting">Táº¯t</button>
-									</td>
-									<td>50</td>
-									<td>65,000 VND</td>
-									<td>Sáº¯p háº¿t hÃ ng</td>
-									<td>50,000 VND</td>
-									<td>
-										<button data-toggle="tooltip" title="Edit"
-											class="pd-setting-ed">
-											<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-										</button>
-										<button data-toggle="tooltip" title="Trash"
-											class="pd-setting-ed">
-											<i class="fa fa-trash-o" aria-hidden="true"></i>
-										</button>
+									<td><input type="checkbox"></td>
+								<td><img src="img/IMG_BOOK/Sach3.jpg" alt="" /></td>
+								
+								
+								<td>Khung hỏa long</td>								
+								<td>Khung</td>
+								<td>1000 điểm</td>
 									</td>
 								</tr>
-								<!--                                <tr>-->
+								
 
 
 
 
 								<tr>
-									<td><img src="admin_page/img/new-product/7-small.jpg" alt="" /></td>
-									<td>Jewelery Title 3</td>
-									<td>
-										<button class="ds-setting">Disabled</button>
-									</td>
-									<td>70</td>
-									<td>$1050</td>
-									<td>Low Stock</td>
-									<td>$15</td>
-									<td>
-										<button data-toggle="tooltip" title="Edit"
-											class="pd-setting-ed">
-											<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-										</button>
-										<button data-toggle="tooltip" title="Trash"
-											class="pd-setting-ed">
-											<i class="fa fa-trash-o" aria-hidden="true"></i>
-										</button>
-									</td>
+									<td><input type="checkbox"></td>
+								<td><img src="img/IMG_BOOK/Sach3.jpg" alt="" /></td>
+								
+								
+								<td>Khung hỏa long</td>								
+								<td>Khung</td>
+								<td>1000 điểm</td>
 								</tr>
 
 
-								<td><img src="admin_page/img/IMG_BOOK/Sach3.jpg" alt="" /></td>
-								<!--                                    <td><img src="admin_page/img/new-product/5-small.jpg" alt="" /></td>-->
-								<td>SÃ¡ch 1</td>
-								<td>
-									<button class="pd-setting">Báº­t</button>
-								</td>
-								<td>50</td>
-								<td>65,000 VND</td>
-								<td>CÃ²n hÃ ng</td>
-								<td>50,000 VND</td>
-								<td>
-									<button data-toggle="tooltip" title="Edit"
-										class="pd-setting-ed">
-										<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-									</button>
-									<button data-toggle="tooltip" title="Trash"
-										class="pd-setting-ed">
-										<i class="fa fa-trash-o" aria-hidden="true"></i>
-									</button>
-								</td>
+								<td><input type="checkbox"></td>
+								<td><img src="img/IMG_BOOK/Sach3.jpg" alt="" /></td>
+								<!--                                    <td><img src="img/new-product/5-small.jpg" alt="" /></td>-->
+								
+								<td>Khung hỏa long</td>								
+								<td>Khung</td>
+								<td>1000 điểm</td>
 								</tr>
 								<tr>
 
 
 
-									<!--                                <tr>-->
-									<!--                                    <td><img src="admin_page/img/new-product/5-small.jpg" alt="" /></td>-->
-									<!--                                    <td>Jewelery Title 4</td>-->
-									<!--                                    <td>-->
-									<!--                                        <button class="pd-setting">Active</button>-->
-									<!--                                    </td>-->
-									<!--                                    <td>120</td>-->
-									<!--                                    <td>$1440</td>-->
-									<!--                                    <td>In Stock</td>-->
-									<!--                                    <td>$12</td>-->
-									<!--                                    <td>-->
-									<!--                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>-->
-									<!--                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>-->
-									<!--                                    </td>-->
-									<!--                                </tr>-->
-									<!--                                <tr>-->
-									<!--                                    <td><img src="admin_page/img/new-product/6-small.jpg" alt="" /></td>-->
-									<!--                                    <td>Jewelery Title 5</td>-->
-									<!--                                    <td>-->
-									<!--                                        <button class="pd-setting">Active</button>-->
-									<!--                                    </td>-->
-									<!--                                    <td>30</td>-->
-									<!--                                    <td>$540</td>-->
-									<!--                                    <td>Out Of Stock</td>-->
-									<!--                                    <td>$18</td>-->
-									<!--                                    <td>-->
-									<!--                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>-->
-									<!--                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>-->
-									<!--                                    </td>-->
-									<!--                                </tr>-->
-									<!--                                <tr>-->
-									<!--                                    <td><img src="admin_page/img/new-product/7-small.jpg" alt="" /></td>-->
-									<!--                                    <td>Jewelery Title 6</td>-->
-									<!--                                    <td>-->
-									<!--                                        <button class="ps-setting">Paused</button>-->
-									<!--                                    </td>-->
-									<!--                                    <td>400</td>-->
-									<!--                                    <td>$4000</td>-->
-									<!--                                    <td>In Stock</td>-->
-									<!--                                    <td>$10</td>-->
-									<!--                                    <td>-->
-									<!--                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>-->
-									<!--                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>-->
-									<!--                                    </td>-->
-									<!--                                </tr>-->
+									
 							</table>
 							<div class="custom-pagination">
 								<nav aria-label="Page navigation example">
 									<ul class="pagination">
-										<li class="page-item"><a class="page-link" href="admin_page/#">TrÆ°á»c</a></li>
-										<!--                                        <li class="page-item"><a class="page-link" href="admin_page/#">Previous</a></li>-->
-										<li class="page-item"><a class="page-link" href="admin_page/#">1</a></li>
-										<li class="page-item"><a class="page-link" href="admin_page/#">2</a></li>
-										<li class="page-item"><a class="page-link" href="admin_page/#">3</a></li>
-										<li class="page-item"><a class="page-link" href="admin_page/#">Tiáº¿p</a></li>
-										<!--                                        <li class="page-item"><a class="page-link" href="admin_page/#">Next</a></li>-->
+										<li class="page-item disabled" ><a class="page-link" href="#" >trước</a></li>
+										<!--                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>-->
+										<li class="page-item active" ><a class="page-link" href="#" >1</a></li>
+										<li class="page-item"><a class="page-link" href="#">2</a></li>
+										<li class="page-item"><a class="page-link" href="#">3</a></li>
+										<li class="page-item"><a class="page-link" href="#">Tiếp</a></li>
+										
 									</ul>
 								</nav>
 							</div>
@@ -278,6 +140,60 @@
 		</div>
 		<%@ include file="footer.jsp"%>
 	</div>
+	<div id="addproductmodel" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form action="add" method="post">
+                        <div class="modal-header">						
+                            <h4 class="modal-title">Thêm vật phẩm</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">	
+                        	
+                        	<div class="form-group">
+                                    <label>ID</label>
+                                    <input value="1" name="id" type="text" class="form-control" readonly required>
+                                </div>
+                                				
+                            <div class="form-group">
+                                <label>Tên vật phẩm</label>
+                                <input name="name" type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Loại vật phẩm</label>
+                                <select name="loaivatpham" class="form-select" aria-label="Default select example">
+                                    <option>Avatar</option>
+                                    <option>Khung</option>
+                                    <option>Vật phẩm</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Hình ảnh</label>
+                                <table>
+                                	<tr>
+                                		<td><input name="image" type="text" class="form-control" required style="min-width:500px;"></td>
+                                		<td><button class="btn btn-primary">Tải lên</button></td>
+                                	</tr>
+                                </table>
+                                
+                                
+                            </div>
+                            <div class="form-group">
+                                <label>Điểm số</label>
+                                <input name="price" type="text" class="form-control" required>
+                            </div>
+                            
+                            
+
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn btn-success" value="Add">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
