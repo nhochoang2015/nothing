@@ -1,0 +1,81 @@
+#flipbook {
+	height: 1000px;
+}
+
+#flipbook:first-child .hard {
+	background: url("/elementary_web/user_page/img/book-cover.jpg");
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+#flip-control {
+	margin-top: 30px;
+}
+
+#prev {
+	color: blue;
+	float: left;
+}
+
+#next {
+	color: blue;
+	float: right;
+}
+
+.page {
+	background-color: white;
+	/* background: url("/elementary_web/user_page/img/page-back-ground.jpg");
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%; */
+}
+
+.question-container .row {
+	margin-top: 15px;
+}
+
+.question-number {
+	text-align: center;
+	font-size: large;
+	border: 5px solid;
+	border-radius: 30px;
+}
+
+.question-content {
+	text-align: center;
+	overflow: auto;
+	height: 200px;
+	font-size: large;
+	background-color: white;
+	border: 5px solid;
+	border-radius: 30px;
+}
+
+.question-answer {
+	text-align: center;
+	font-size: large;
+	border: 5px solid;
+	border-radius: 30px;
+}
+
+.explain-container .row {
+	margin-top: 15px;
+}
+
+.explain-title {
+	text-align: center;
+	font-size: large;
+	border: 5px solid;
+	border-radius: 30px;
+}
+
+.explain-content {
+	text-align: center;
+	overflow: auto;
+	height: 400px;
+	font-size: large;
+	background-color: white;
+	border: 5px solid;
+	border-radius: 30px;
+}

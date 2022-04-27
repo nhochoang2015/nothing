@@ -40,5 +40,10 @@ public class UserController {
 	public String homepage(Model model) {
 		return "./user_page/team";
 	}
+	
+	@GetMapping("/quiz")
+	public String quizPage(Model model) {
+		return "./user_page/quiz";
+	}
 
 }
