@@ -4,13 +4,20 @@
 <html lang="en">
 
 <head>
-<link rel="stylesheet" type="text/css" href="user_page/css/quiz.css" />
+<link rel="stylesheet" type="text/css" href="user_page/css/test.css" />
 </head>
 </head>
 
 <body>
 	<%@include file="header.jsp"%>
-	<div class="container py-5">
+	<div class="container py-5" id="count-down-container">
+		<div class="row pt-5">
+			<div class="col-lg-12" id="count-down-timer">
+				<span class="fa-solid fa-clock fa-2x"></span>
+				<p></p>
+			</div>
+		</div>
+
 		<div class="row pt-5">
 			<div class="col-lg-12" id="flipbook">
 				<div class="hard"></div>
@@ -93,10 +100,11 @@
 			</div>
 		</div>
 
+
 	</div>
 	<%@include file="footer.jsp"%>
 	<script type="text/javascript" src="user_page/lib/turnjs4/turn.js"></script>
-	<script type="text/javascript" src="user_page/js/quiz.js"></script>
+	<script type="text/javascript" src="user_page/js/test.js"></script>
 </body>
 
 </html>
