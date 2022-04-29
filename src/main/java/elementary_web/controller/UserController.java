@@ -55,4 +55,14 @@ public class UserController {
 	public String testPage(Model model) {
 		return "./user_page/test";
 	}
+	
+	@GetMapping("/monthly-ranking")
+	public String monthlyRankingPage(Model model) {
+		return "./user_page/monthly-ranking";
+	}
+	
+	@GetMapping("/weekly-ranking")
+	public String weeklyRankingPage(Model model) {
+		return "./user_page/weekly-ranking";
+	}
 }
