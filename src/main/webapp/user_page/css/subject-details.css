@@ -1,0 +1,7 @@
+.subject-title{
+	font-size: xx-large;
+}
+.subject-lessons{
+	height: 200px;
+	overflow: auto;
+}
