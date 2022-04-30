@@ -62,8 +62,8 @@
 				<div class="navbar-nav font-weight-bold mx-auto py-0">
 					<a href="user_page/index.jsp" class="nav-item nav-link active">Home</a>
 					<a href="about.jsp" class="nav-item nav-link">About</a> <a
-						href="class.jsp" class="nav-item nav-link">Classes</a> <a
-						href="team.jsp" class="nav-item nav-link">Teachers</a> <a
+						class="nav-item nav-link" data-toggle="modal" data-target="#store">Cửa
+						hàng</a> <a href="team.jsp" class="nav-item nav-link">Teachers</a> <a
 						href="gallery.jsp" class="nav-item nav-link">Gallery</a>
 					<div class="nav-item dropdown">
 						<a href="user_page/#" class="nav-link dropdown-toggle"
@@ -75,10 +75,11 @@
 					</div>
 					<a href="user_page/contact.jsp" class="nav-item nav-link">Contact</a>
 				</div>
-				<i class="fa-solid fa-user fa-2xl" id="user-icon"></i>
-				<a href="user_page/" class="btn btn-primary px-4" id="login-button">Đăng nhập</a>
-				<a href="user_page/" class="btn btn-primary px-4" id="sign-in-button">Đăng ký</a>
-				
+				<i class="fa-solid fa-user fa-2xl" id="user-icon"></i> <a
+					href="user_page/" class="btn btn-primary px-4" id="login-button">Đăng
+					nhập</a> <a href="user_page/" class="btn btn-primary px-4"
+					id="sign-in-button">Đăng ký</a>
+
 			</div>
 		</nav>
 	</div>
@@ -139,5 +140,287 @@
 
 	</div>
 	<!-- Header End -->
+
+	<div id="store" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title w-100 text-center">Cửa hàng</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+				</div>
+				<div class="modal-body">
+					<ul class="nav nav-tabs">
+						<li class="tabs" id="first-tab"><a data-toggle="tab"
+							href="#avatar-tab">Avatar</a></li>
+						<li class="tabs"><a data-toggle="tab" href="#frame-tab">Khung</a></li>
+						<li class="tabs"><a data-toggle="tab" href="#items-tab">Vật
+								phẩm</a></li>
+					</ul>
+					<div class="tab-content">
+						<div id="avatar-tab" class="tab-pane active in">
+							<div class="row store-container">
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+						<div id="frame-tab" class="tab-pane fade">
+							<div class="row store-container">
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div id="items-tab" class="tab-pane fade">
+							<div class="row store-container">
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+								<div class="col-3  store-items-container">
+									<div class="store-image">
+										<img alt="" src="user_page/img/frame.jpg">
+									</div>
+									<div class="store-infromation">
+										<p>Tên</p>
+										<p>Giá</p>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
 </body>
 </html>
