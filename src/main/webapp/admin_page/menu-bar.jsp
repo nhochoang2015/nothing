@@ -17,7 +17,7 @@
 			<div class="left-custom-menu-adp-wrap comment-scrollbar">
 				<nav class="sidebar-nav left-sidebar-menu-pro">
 					<ul class="metismenu" id="menu1">
-						<li class="active"><a class="has-arrow" href="admin_page/index.html">
+						<li class="active"><a class="has-arrow" href="/">
 								<i class="fa big-icon fa-home icon-wrap"></i> <!--                                -->
 
 								<span class="mini-click-non">Trang chủ</span>
@@ -25,19 +25,19 @@
 						</a>
 							<ul class="submenu-angle" aria-expanded="true">
 
-								<li class="list-group-item"><a title="Dashboard v.3" href="admin_page/index-2.html"><i
+								<li class="list-group-item"><a title="Quản lý môn học" href="index-2"><i
 										class="fa fa-cube sub-icon-mg active" aria-hidden="true"></i> <span
 										class="mini-sub-pro">Quản lý môn học</span></a></li>
 
-								<li class="list-group-item"><a title="Product List" href="admin_page/Notification-list.jsp"><i
+								<li class="list-group-item"><a title="Quản lý thông báo" href="Notification-list"><i
 										class="fa fa-female sub-icon-mg" aria-hidden="true"></i> <span
 										class="mini-sub-pro">Quản lý thông báo</span></a></li>
 
-								<li class="list-group-item active"><a title="Product Edit" href="admin_page/product-edit.html"><i
+								<li class="list-group-item active"><a title="Quản lý tài khoản" href="product-edit"><i
 										class="fa fa-bolt sub-icon-mg" aria-hidden="true"></i> <span
 										class="mini-sub-pro">Quản lý tài khoản</span></a></li>
 
-								<li class="list-group-item"><a title="Product Detail" href="admin_page/product-list.jsp"><i
+								<li class="list-group-item"><a title="Quản lý vật phẩm" href="product-list"><i
 										class="fa fa-heart-o sub-icon-mg" aria-hidden="true"></i> <span
 										class="mini-sub-pro">Quản lý vật phẩm</span></a></li>
 
