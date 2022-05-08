@@ -70,4 +70,19 @@ public class UserController {
 	public String subjectDetailsPage(Model model) {
 		return "./user_page/subject-details";
 	}
+	
+	@GetMapping("/mission")
+	public String mission(Model model) {
+		return "./user_page/mission";
+	}
+	
+	@GetMapping("/personal")
+	public String personalInformationManagement(Model model) {
+		return "./user_page/personal-information-management";
+	}
+	@GetMapping("/change-pass")
+	public String changePass(Model model) {
+		return "./user_page/change-password";
+	}
+	
 }
