@@ -2,60 +2,24 @@
  * 
  */
 $(document).ready(function() {
-	var oTurn = $("#flipbook").turn({
-		height: 500,
-		autoCenter: true,
-		next: true
-	});
-	oTurn.bind("turning", function(event, page, view) {
-		if (page == 1) {
-			event.preventDefault(); //will not happen at page 1
-		} else {
+	$("#questions-slick").slick({
+		prevArrow: false,
+		nextArrow: false,
+		infinite: false,
 
-			var questionNumber = page;
-
-			if (questionNumber % 2 === 0) {
-
-				questionNumber /= 2;
-			} else {
-				questionNumber -= 1;
-				questionNumber /= 2;
-			}
-
-			$(".page-number").each(function() {
-				var index = $(this).index();
-
-				if (index === questionNumber) {
-					$(this).css({ 'background-color': ' yellow', 'color': ' black' });
-
-				} else {
-					$(this).css({ 'background-color': ' white', 'color': ' black' });
-				}
-
-			});
-
-
-		}
 	});
 	$("#prev").click(function(e) {
-		e.preventDefault();
-		oTurn.turn("previous");
+		$("#questions-slick").slick('slickPrev');
 	});
 
 	$("#next").click(function(e) {
-		e.preventDefault();
-		oTurn.turn("next");
+		$("#questions-slick").slick('slickNext');
 	});
 
-	$(".page-number").click(function() {
-		var index = $(this).index() * 2;
-
-		console.log(index);
-		oTurn.turn("page", index);
-		$(".page-number").each(function() {
-			$(this).css({ 'background-color': ' white', 'color': ' black' });
-		});
-		$(this).css({ 'background-color': ' yellow', 'color': ' black' });
+	$(".page-number").click(function(e) {
+		var index = $(this).index();
+		e.preventDefault();
+		$('#questions-slick').slick('slickGoTo', index);
 
 	});
 	var countDownTime = new Date();

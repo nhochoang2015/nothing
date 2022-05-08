@@ -19,8 +19,7 @@
 		</div>
 
 		<div class="row pt-5">
-			<div class="col-lg-12" id="flipbook">
-				<div class="hard"></div>
+			<div class="col-lg-12" id="questions-slick">
 				<div class="page question">
 					<div class="col-lg-12 question-container">
 						<div class="row">
@@ -52,29 +51,131 @@
 
 					</div>
 				</div>
-				<div class="page explain">
-					<div class="col-lg-12 explain-container">
+				<div class="page question">
+					<div class="col-lg-12 question-container">
 						<div class="row">
-							<div class="col-lg-12 explain-title">
-								<span>Giải thích</span>
+							<div class="col-lg-12 question-number">
+								<span>Câu hỏi số 1</span>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-lg-12 explain-content">
-								<p>Giai thich Giai thich Giai thich Giai thich Giai
-									thichGiai thich</p>
+							<div class="col-lg-12 question-content">
+								<p>Nội dung câu hỏi.Nội dung câu hỏiNội dung câu hỏiNội dung
+									câu hỏiNội dung câu hỏiNội dung câu hỏiNội dung câu hỏiNội dung
+									câu hỏiNội dung câu hỏi</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 question-answer">
+								<input type="radio" id="answer1" name="answer" value="40">
+								<label for="answer1">Đáp án 1</label><br> <input
+									type="radio" id="answer2" name="answer" value="40"> <label
+									for="answer2">Đáp án 2</label><br> <input type="radio"
+									id="answer3" name="answer" value="40"> <label
+									for="answer3">Đáp án 3</label><br> <input type="radio"
+									id="answer4" name="answer" value="40"> <label
+									for="answer4">Đáp án 4</label><br>
+
 							</div>
 						</div>
 
+
 					</div>
 				</div>
-				<div class="page">Question 2</div>
-				<div class="page">Explain 2</div>
-				<div class="page">Question 3</div>
-				<div class="page">Explain 3</div>
-				<div class="page">Question 4</div>
-				<div class="page">Explain 4</div>
-				<div class="hard"></div>
+				<div class="page question">
+					<div class="col-lg-12 question-container">
+						<div class="row">
+							<div class="col-lg-12 question-number">
+								<span>Câu hỏi số 1</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 question-content">
+								<p>Nội dung câu hỏi.Nội dung câu hỏiNội dung câu hỏiNội dung
+									câu hỏiNội dung câu hỏiNội dung câu hỏiNội dung câu hỏiNội dung
+									câu hỏiNội dung câu hỏi</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 question-answer">
+								<input type="radio" id="answer1" name="answer" value="40">
+								<label for="answer1">Đáp án 1</label><br> <input
+									type="radio" id="answer2" name="answer" value="40"> <label
+									for="answer2">Đáp án 2</label><br> <input type="radio"
+									id="answer3" name="answer" value="40"> <label
+									for="answer3">Đáp án 3</label><br> <input type="radio"
+									id="answer4" name="answer" value="40"> <label
+									for="answer4">Đáp án 4</label><br>
+
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+				<div class="page question">
+					<div class="col-lg-12 question-container">
+						<div class="row">
+							<div class="col-lg-12 question-number">
+								<span>Câu hỏi số 1</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 question-content">
+								<p>Nội dung câu hỏi.Nội dung câu hỏiNội dung câu hỏiNội dung
+									câu hỏiNội dung câu hỏiNội dung câu hỏiNội dung câu hỏiNội dung
+									câu hỏiNội dung câu hỏi</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 question-answer">
+								<input type="radio" id="answer1" name="answer" value="40">
+								<label for="answer1">Đáp án 1</label><br> <input
+									type="radio" id="answer2" name="answer" value="40"> <label
+									for="answer2">Đáp án 2</label><br> <input type="radio"
+									id="answer3" name="answer" value="40"> <label
+									for="answer3">Đáp án 3</label><br> <input type="radio"
+									id="answer4" name="answer" value="40"> <label
+									for="answer4">Đáp án 4</label><br>
+
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+				<div class="page question">
+					<div class="col-lg-12 question-container">
+						<div class="row">
+							<div class="col-lg-12 question-number">
+								<span>Câu hỏi số 1</span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 question-content">
+								<p>Nội dung câu hỏi.Nội dung câu hỏiNội dung câu hỏiNội dung
+									câu hỏiNội dung câu hỏiNội dung câu hỏiNội dung câu hỏiNội dung
+									câu hỏiNội dung câu hỏi</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 question-answer">
+								<input type="radio" id="answer1" name="answer" value="40">
+								<label for="answer1">Đáp án 1</label><br> <input
+									type="radio" id="answer2" name="answer" value="40"> <label
+									for="answer2">Đáp án 2</label><br> <input type="radio"
+									id="answer3" name="answer" value="40"> <label
+									for="answer3">Đáp án 3</label><br> <input type="radio"
+									id="answer4" name="answer" value="40"> <label
+									for="answer4">Đáp án 4</label><br>
+
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+
 			</div>
 
 			<div class="col-lg-12" id="page-list">
