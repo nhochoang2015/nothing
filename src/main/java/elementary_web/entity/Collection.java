@@ -17,5 +17,23 @@ public class Collection {
 	@MapsId("itemID")
 	@JoinColumn(name = "MA_VAT_PHAM")
 	private Item item;
+	public CollectionKey getId() {
+		return id;
+	}
+	public void setId(CollectionKey id) {
+		this.id = id;
+	}
+	public Account getAccount() {
+		return account;
+	}
+	public void setAccount(Account account) {
+		this.account = account;
+	}
+	public Item getItem() {
+		return item;
+	}
+	public void setItem(Item item) {
+		this.item = item;
+	}
 
 }

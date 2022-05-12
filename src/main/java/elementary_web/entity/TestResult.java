@@ -29,4 +29,37 @@ public class TestResult {
 	private Test test;
 	@Column(name = "DIEM")
 	private int result;
+
+	public TestResultKey getId() {
+		return id;
+	}
+
+	public void setId(TestResultKey id) {
+		this.id = id;
+	}
+
+	public Account getAccount() {
+		return account;
+	}
+
+	public void setAccount(Account account) {
+		this.account = account;
+	}
+
+	public Test getTest() {
+		return test;
+	}
+
+	public void setTest(Test test) {
+		this.test = test;
+	}
+
+	public int getResult() {
+		return result;
+	}
+
+	public void setResult(int result) {
+		this.result = result;
+	}
+
 }

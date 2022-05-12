@@ -27,5 +27,29 @@ public class Chapter {
 	private Subject subject;
 	@OneToMany(mappedBy = "chapter")
 	private List<Lesson> lessonList;
+	public int getChapterID() {
+		return chapterID;
+	}
+	public void setChapterID(int chapterID) {
+		this.chapterID = chapterID;
+	}
+	public String getChapterName() {
+		return chapterName;
+	}
+	public void setChapterName(String chapterName) {
+		this.chapterName = chapterName;
+	}
+	public Subject getSubject() {
+		return subject;
+	}
+	public void setSubject(Subject subject) {
+		this.subject = subject;
+	}
+	public List<Lesson> getLessonList() {
+		return lessonList;
+	}
+	public void setLessonList(List<Lesson> lessonList) {
+		this.lessonList = lessonList;
+	}
 
 }

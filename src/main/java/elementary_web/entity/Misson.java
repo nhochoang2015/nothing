@@ -28,5 +28,35 @@ public class Misson {
 	private int reward;
     @OneToMany(mappedBy = "misson")
 	private List<AccountMisson> accountMissonList;
+	public int getMissonID() {
+		return missonID;
+	}
+	public void setMissonID(int missonID) {
+		this.missonID = missonID;
+	}
+	public String getMissonName() {
+		return missonName;
+	}
+	public void setMissonName(String missonName) {
+		this.missonName = missonName;
+	}
+	public int getTimeNeedToComplete() {
+		return timeNeedToComplete;
+	}
+	public void setTimeNeedToComplete(int timeNeedToComplete) {
+		this.timeNeedToComplete = timeNeedToComplete;
+	}
+	public int getReward() {
+		return reward;
+	}
+	public void setReward(int reward) {
+		this.reward = reward;
+	}
+	public List<AccountMisson> getAccountMissonList() {
+		return accountMissonList;
+	}
+	public void setAccountMissonList(List<AccountMisson> accountMissonList) {
+		this.accountMissonList = accountMissonList;
+	}
 
 }

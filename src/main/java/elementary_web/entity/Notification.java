@@ -19,5 +19,23 @@ public class Notification {
 	private String content;
 	@Column(name = "AN")
 	private boolean isShow;
+	public int getNotificationID() {
+		return notificationID;
+	}
+	public void setNotificationID(int notificationID) {
+		this.notificationID = notificationID;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public boolean isShow() {
+		return isShow;
+	}
+	public void setShow(boolean isShow) {
+		this.isShow = isShow;
+	}
 
 }

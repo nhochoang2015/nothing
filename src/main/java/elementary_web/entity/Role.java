@@ -15,4 +15,23 @@ public class Role {
 	private int roleName;
 	@OneToMany(mappedBy = "role")
 	private List<Account> accountList;
+	public int getRoleID() {
+		return roleID;
+	}
+	public void setRoleID(int roleID) {
+		this.roleID = roleID;
+	}
+	public int getRoleName() {
+		return roleName;
+	}
+	public void setRoleName(int roleName) {
+		this.roleName = roleName;
+	}
+	public List<Account> getAccountList() {
+		return accountList;
+	}
+	public void setAccountList(List<Account> accountList) {
+		this.accountList = accountList;
+	}
+	
 }

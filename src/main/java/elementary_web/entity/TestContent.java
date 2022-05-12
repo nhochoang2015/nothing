@@ -27,4 +27,23 @@ public class TestContent {
 	@MapsId("questionID")
 	@JoinColumn(name = "MA_CAU_HOI")
 	private Question question;
+	public TestContentKey getId() {
+		return id;
+	}
+	public void setId(TestContentKey id) {
+		this.id = id;
+	}
+	public Test getTest() {
+		return test;
+	}
+	public void setTest(Test test) {
+		this.test = test;
+	}
+	public Question getQuestion() {
+		return question;
+	}
+	public void setQuestion(Question question) {
+		this.question = question;
+	}
+	
 }

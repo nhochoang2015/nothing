@@ -16,5 +16,23 @@ public class Subject {
 	private int subjectName;
     @OneToMany(mappedBy = "subject")
 	private List<Chapter> chapterList;
+	public int getSubjectID() {
+		return subjectID;
+	}
+	public void setSubjectID(int subjectID) {
+		this.subjectID = subjectID;
+	}
+	public int getSubjectName() {
+		return subjectName;
+	}
+	public void setSubjectName(int subjectName) {
+		this.subjectName = subjectName;
+	}
+	public List<Chapter> getChapterList() {
+		return chapterList;
+	}
+	public void setChapterList(List<Chapter> chapterList) {
+		this.chapterList = chapterList;
+	}
 
 }

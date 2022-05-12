@@ -27,4 +27,23 @@ public class LessonComplete {
 	@MapsId("lessonID")
 	@JoinColumn(name = "MA_BAI_HOC")	
 	private Lesson lesson;
+	public LessonCompleteKey getId() {
+		return id;
+	}
+	public void setId(LessonCompleteKey id) {
+		this.id = id;
+	}
+	public Account getAccount() {
+		return account;
+	}
+	public void setAccount(Account account) {
+		this.account = account;
+	}
+	public Lesson getLesson() {
+		return lesson;
+	}
+	public void setLesson(Lesson lesson) {
+		this.lesson = lesson;
+	}
+	
 }

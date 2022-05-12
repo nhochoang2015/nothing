@@ -19,5 +19,29 @@ public class Item {
 	private ItemCategory itemCategory;
     @OneToMany(mappedBy = "item")
 	private List<Collection> collectionList;
+	public int getItemID() {
+		return itemID;
+	}
+	public void setItemID(int itemID) {
+		this.itemID = itemID;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public ItemCategory getItemCategory() {
+		return itemCategory;
+	}
+	public void setItemCategory(ItemCategory itemCategory) {
+		this.itemCategory = itemCategory;
+	}
+	public List<Collection> getCollectionList() {
+		return collectionList;
+	}
+	public void setCollectionList(List<Collection> collectionList) {
+		this.collectionList = collectionList;
+	}
 
 }

@@ -36,5 +36,41 @@ public class AccountMisson {
 	@MapsId("missonID")
 	@JoinColumn(name = "MA_NHIEM_VU")	
 	private Misson misson;
+	public AccountMissonKey getId() {
+		return id;
+	}
+	public void setId(AccountMissonKey id) {
+		this.id = id;
+	}
+	public int getTimesDone() {
+		return timesDone;
+	}
+	public void setTimesDone(int timesDone) {
+		this.timesDone = timesDone;
+	}
+	public Date getEndDate() {
+		return endDate;
+	}
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
+	}
+	public boolean isComplete() {
+		return isComplete;
+	}
+	public void setComplete(boolean isComplete) {
+		this.isComplete = isComplete;
+	}
+	public Account getAccount() {
+		return account;
+	}
+	public void setAccount(Account account) {
+		this.account = account;
+	}
+	public Misson getMisson() {
+		return misson;
+	}
+	public void setMisson(Misson misson) {
+		this.misson = misson;
+	}
 
 }
