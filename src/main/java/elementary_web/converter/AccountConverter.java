@@ -1,10 +1,13 @@
 package elementary_web.converter;
 
+import org.springframework.stereotype.Component;
+
 import elementary_web.dto.AccountDTO;
 import elementary_web.entity.Account;
 
+@Component
 public class AccountConverter {
-	public static AccountDTO toDTO(Account entity) {
+	public AccountDTO toDTO(Account entity) {
 		int accountID = entity.getAccountID();
 		String accountName = entity.getAccountName();
 		String nickName = entity.getNickName();
