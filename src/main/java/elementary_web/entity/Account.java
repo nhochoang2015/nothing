@@ -11,15 +11,15 @@ public class Account {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "MA_TAI_KHOAN")
 	private int accountID;
-	@Column(name = "TEN_TAI_KHOAN")
+	@Column(name = "TEN_TAI_KHOAN", unique = true)
 	private String accountName;
-	@Column(name = "NICK_NAME")
+	@Column(name = "NICK_NAME", unique = true)
 	private String nickName;
 	@Column(name = "MAT_KHAU")
 	private String password;
-	@Column(name = "EMAIL")
+	@Column(name = "EMAIL", unique = true)
 	private String email;
-	@Column(name = "SDT")
+	@Column(name = "SDT", unique = true)
 	private String phoneNumber;
 	@Column(name = "TIEN_XU")
 	private int coin;
