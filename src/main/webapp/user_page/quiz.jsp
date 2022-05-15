@@ -30,14 +30,22 @@
 						</div>
 						<div class="row">
 							<div class="col-lg-12 question-answer">
-								<input type="radio" id="answer1" name="answer" value="40">
-								<label for="answer1">Đáp án 1</label><br> <input
-									type="radio" id="answer2" name="answer" value="40"> <label
-									for="answer2">Đáp án 2</label><br> <input type="radio"
-									id="answer3" name="answer" value="40"> <label
-									for="answer3">Đáp án 3</label><br> <input type="radio"
-									id="answer4" name="answer" value="40"> <label
-									for="answer4">Đáp án 4</label><br>
+								<div class = "answer">
+									<input type="radio" id="answer1" name="answer" value="40" class ="radioButton">
+									<label for="answer1">Đáp án 1</label>
+								</div>
+								<div class = "answer">
+									<input type="radio" id="answer2" name="answer" value="40" class ="radioButton">
+									<label for="answer1">Đáp án 1</label>
+								</div>
+								<div class = "answer">
+									<input type="radio" id="answer3" name="answer" value="40" class ="radioButton"> 
+									<label for="answer1">Đáp án 1</label>
+								</div>
+								<div class = "answer">
+									<input type="radio" id="answer4" name="answer" value="40" class ="radioButton">
+									<label for="answer1">Đáp án 1</label>
+								</div>
 
 							</div>
 						</div>

@@ -3,10 +3,11 @@
  */
 $(document).ready(function() {
 	var oTurn = $("#flipbook").turn({
-		height: 500,
+		height: 600,
 		autoCenter: true,
 		next: true
 	});
+
 	oTurn.bind("turning", function(event, page, view) {
 		if (page == 1) {
 			event.preventDefault(); //will not happen at page 1
@@ -58,4 +59,7 @@ $(document).ready(function() {
 		$(this).css({ 'background-color': ' yellow', 'color': ' black' });
 
 	});
+	$(".answer").click(function() {
+		$(this).closest(".answer").find(".radioButton").prop("checked", true);
+	})
 })
