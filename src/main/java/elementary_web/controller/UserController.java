@@ -102,4 +102,9 @@ public class UserController {
 		return mav;
 	}
 
+	@RequestMapping("/signup")
+	public String signupPage(Model model) {
+		return "./user_page/signup";
+	}
+
 }
