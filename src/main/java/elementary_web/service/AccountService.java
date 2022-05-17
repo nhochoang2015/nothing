@@ -26,9 +26,8 @@ public class AccountService implements AccountServiceInterface {
 
 	// Sửa tài khoản
 	@Override
-	public void fixAccount(AccountDTO accountDTO) {
-		// TODO Auto-generated method stub
-
+	public void updateAccount(Account account) {
+		accountRepository.save(account);
 	}
 
 	// Xóa tài khoản
