@@ -12,10 +12,10 @@ public class AccountDTO {
 	private int totalPoint;
 	private int weeklyPoint;
 	private int monthlyPoint;
-	private int roleID;
+	private String roleName;
 
 	public AccountDTO(int accountID, String accountName, String nickName, String password, String email,
-			String phoneNumber, int coin, int totalPoint, int weeklyPoint, int monthlyPoint, int roleID) {
+			String phoneNumber, int coin, int totalPoint, int weeklyPoint, int monthlyPoint, String roleName) {
 		super();
 		this.accountID = accountID;
 		this.accountName = accountName;
@@ -27,7 +27,7 @@ public class AccountDTO {
 		this.totalPoint = totalPoint;
 		this.weeklyPoint = weeklyPoint;
 		this.monthlyPoint = monthlyPoint;
-		this.roleID = roleID;
+		this.roleName = roleName;
 	}
 
 	public int getAccountID() {
@@ -110,12 +110,12 @@ public class AccountDTO {
 		this.monthlyPoint = monthlyPoint;
 	}
 
-	public int getRoleID() {
-		return roleID;
+	public String getRoleName() {
+		return roleName;
 	}
 
-	public void setRoleID(int roleID) {
-		this.roleID = roleID;
+	public void setRoleID(String roleName) {
+		this.roleName = roleName;
 	}
 
 }

@@ -18,9 +18,9 @@ public class AccountConverter {
 		int totalPoint = entity.getTotalPoint();
 		int weeklyPoint = entity.getWeeklyPoint();
 		int monthlyPoint = entity.getMonthlyPoint();
-		int roleID = entity.getRole().getRoleID();
+		String roleName = entity.getRole().getRoleName();
 		AccountDTO dto = new AccountDTO(accountID, accountName, nickName, password, email, phoneNumber, coin,
-				totalPoint, weeklyPoint, monthlyPoint, roleID);
+				totalPoint, weeklyPoint, monthlyPoint, roleName);
 		return dto;
 	}
 

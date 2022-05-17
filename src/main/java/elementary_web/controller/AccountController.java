@@ -19,7 +19,7 @@ import elementary_web.service.serviceInterface.AccountServiceInterface;
 @Controller
 public class AccountController {
 	@Autowired
-	private AccountServiceInterface accountService;
+	private AccountServiceInterface accountService ;
 
 	@PostMapping("/handleLogin")
 	public String handleLogin(@RequestParam("username") String username, @RequestParam("password") String password,
