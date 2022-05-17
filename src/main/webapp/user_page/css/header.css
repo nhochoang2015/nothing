@@ -2,6 +2,31 @@
 	margin-right: 15px;
 }
 
+#login-container {
+	margin-top: 20px;
+	text-align: center;
+}
+
+#login-container #account-name {
+	margin-top: 10px;
+	font-size: large;
+	margin-bottom: 0;
+}
+
+#login-container #point {
+	margin-top: 10px;
+	font-size: large;
+	margin-bottom: 0;
+	font-size: small;
+}
+
+#logout-button {
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+
+
 #login-button {
 	margin-right: 5px;
 }

@@ -1,8 +1,13 @@
 package elementary_web.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class UserController {
@@ -70,19 +75,31 @@ public class UserController {
 	public String subjectDetailsPage(Model model) {
 		return "./user_page/subject-details";
 	}
-	
+
 	@GetMapping("/mission")
 	public String mission(Model model) {
 		return "./user_page/mission";
 	}
-	
+
 	@GetMapping("/personal")
 	public String personalInformationManagement(Model model) {
 		return "./user_page/personal-information-management";
 	}
+
 	@GetMapping("/change-pass")
 	public String changePass(Model model) {
 		return "./user_page/change-password";
 	}
-	
+
+	@RequestMapping("/login")
+	public ModelAndView loginPage(HttpServletRequest request) {
+		ModelAndView mav = new ModelAndView("user_page/login");
+		String status = request.getParameter("loginStatus");
+		if (status != null && status.equals("fail")) {
+			mav.addObject("loginStatus", "fail");
+			return mav;
+		}
+		return mav;
+	}
+
 }

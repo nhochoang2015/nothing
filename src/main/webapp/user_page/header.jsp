@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@page import="elementary_web.dto.AccountDTO"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -75,11 +76,29 @@
 					</div>
 					<a href="user_page/contact.jsp" class="nav-item nav-link">Contact</a>
 				</div>
+				<%
+				AccountDTO accountDTO = (AccountDTO) session.getAttribute("account");
+				if (accountDTO != null) {
+				%>
+				<div id="login-container">
+					<i class="fa-solid fa-user fa-2xl" id="user-icon"></i> <br>
+					<p id="account-name"><%=accountDTO.getNickName()%></p>
+					<p id="point">
+						ĐIỂM HIỆN CÓ:
+						<%=accountDTO.getCoin()%></p>
+				</div>
+				<a id="logout-button" href="./logout"
+					class="fa-solid fa-arrow-right-from-bracket fa-2xl"></a>
+				<%
+				} else {
+				%>
 				<i class="fa-solid fa-user fa-2xl" id="user-icon"></i> <a
-					href="user_page/" class="btn btn-primary px-4" id="login-button">Đăng
+					href="./login" class="btn btn-primary px-4" id="login-button">Đăng
 					nhập</a> <a href="user_page/" class="btn btn-primary px-4"
 					id="sign-in-button">Đăng ký</a>
-
+				<%
+				}
+				%>
 			</div>
 		</nav>
 	</div>
