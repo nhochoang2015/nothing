@@ -2,6 +2,7 @@ package elementary_web.controller;
 
 import java.security.NoSuchAlgorithmException;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,12 +15,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import elementary_web.Utility;
 import elementary_web.dto.AccountDTO;
 import elementary_web.service.AccountService;
-import elementary_web.service.serviceInterface.AccountServiceInterface;
 
 @Controller
 public class AccountController {
 	@Autowired
-	private AccountServiceInterface accountService ;
+	private AccountService accountService ;
 
 	@PostMapping("/handleLogin")
 	public String handleLogin(@RequestParam("username") String username, @RequestParam("password") String password,
@@ -42,6 +42,11 @@ public class AccountController {
 	public String logout(HttpSession session) {
 		session.removeAttribute("account");
 		return "redirect: ./";
+
+	}
+	@RequestMapping("/signUp")
+	public String signUp(HttpServletRequest request) {
+		return "";
 
 	}
 

@@ -7,54 +7,24 @@ import elementary_web.converter.AccountConverter;
 import elementary_web.dto.AccountDTO;
 import elementary_web.entity.Account;
 import elementary_web.repository.AccountRepository;
-import elementary_web.service.serviceInterface.AccountServiceInterface;
 
 @Service
-public class AccountService implements AccountServiceInterface {
+public class AccountService {
 
 	@Autowired
 	private AccountRepository accountRepository;
 	@Autowired
 	private AccountConverter accountConverter;
 
-	// Thêm tài khoản
-	@Override
-	public void addAccount(AccountDTO accountDTO) {
-		// TODO Auto-generated method stub
-
-	}
-
-	// Sửa tài khoản
-	@Override
+	// Dùng để thêm hoặc sửa thông tin tài khoản. Dùng cho quản lý tài khoản 
 	public void updateAccount(Account account) {
 		accountRepository.save(account);
 	}
 
-	// Xóa tài khoản
-	@Override
-	public void banAccount(AccountDTO accountDTO) {
-		// TODO Auto-generated method stub
-
+	// Dùng cho quản lý thông tin cá nhân
+	public void updateAccount(AccountDTO accountDTO) {
 	}
 
-	@Override
-	public AccountDTO findAccountByEmail(String email) {
-		return null;
-	}
-
-	@Override
-	public AccountDTO findAccountByUserName(String username) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public AccountDTO findAccountByPhoneNumber(String phoneNumber) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public AccountDTO findAccountByEmailOrUserOrPhoneNumber(String emailOrUserOrPhoneNumber) {
 		Account account = accountRepository.findByEmailOrUsernameOrPhoneNumber(emailOrUserOrPhoneNumber);
 		// Tim thay hay khong
