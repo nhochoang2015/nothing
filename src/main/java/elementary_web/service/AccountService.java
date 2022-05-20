@@ -39,19 +39,20 @@ public class AccountService implements AccountServiceInterface {
 
 	@Override
 	public AccountDTO findAccountByEmail(String email) {
-		return null;
+		return accountConverter.toDTO(accountRepository.findByEmailOrUsernameOrPhoneNumber(email));
 	}
 
 	@Override
 	public AccountDTO findAccountByUserName(String username) {
 		// TODO Auto-generated method stub
-		return null;
+		return accountConverter.toDTO(accountRepository.findByEmailOrUsernameOrPhoneNumber(username));
 	}
 
 	@Override
 	public AccountDTO findAccountByPhoneNumber(String phoneNumber) {
 		// TODO Auto-generated method stub
-		return null;
+		return accountConverter.toDTO(accountRepository.findByEmailOrUsernameOrPhoneNumber(phoneNumber));
+		
 	}
 
 	@Override
