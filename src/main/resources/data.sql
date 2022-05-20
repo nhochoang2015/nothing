@@ -1,3 +1,3 @@
 insert into VAI_TRO(TEN_VAI_TRO) values ('USER');
 insert into TAI_KHOAN(TEN_TAI_KHOAN, TIEN_XU, EMAIL, NICK_NAME, MAT_KHAU, SDT, DIEM_TICH_LUY, DIEM_TICH_LUY_TUAN, DIEM_TICH_LUY_THANG, MA_VAI_TRO) 
-values('user1',0,'17130238@st.hcmuaf.edu.vn','thuan','123456', '123456789', 0, 0, 0, 1);
+values('user1',0,'17130238@st.hcmuaf.edu.vn','thuan','E10ADC3949BA59ABBE56E057F20F883E', '123456789', 0, 0, 0, 1);
