@@ -29,6 +29,8 @@ public class Account {
 	private int weeklyPoint;
 	@Column(name = "DIEM_TICH_LUY_THANG")
 	private int monthlyPoint;
+	@Column(name = "HOAT_DONG")
+	private boolean active;
 	@ManyToOne
 	@JoinColumn(name = "MA_VAI_TRO", nullable = false)
 	private Role role;
@@ -106,6 +108,7 @@ public class Account {
 	public void setRole(Role role) {
 		this.role = role;
 	}
+	
 	public List<Collection> getCollectionList() {
 		return collectionList;
 	}
@@ -129,6 +132,12 @@ public class Account {
 	}
 	public void setLessonCompleteList(List<LessonComplete> lessonCompleteList) {
 		this.lessonCompleteList = lessonCompleteList;
+	}
+	public boolean isActive() {
+		return active;
+	}
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 
 }

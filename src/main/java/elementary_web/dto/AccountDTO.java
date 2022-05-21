@@ -13,9 +13,11 @@ public class AccountDTO {
 	private int weeklyPoint;
 	private int monthlyPoint;
 	private String roleName;
+	private boolean active;
 
 	public AccountDTO(int accountID, String accountName, String nickName, String password, String email,
-			String phoneNumber, int coin, int totalPoint, int weeklyPoint, int monthlyPoint, String roleName) {
+			String phoneNumber, int coin, int totalPoint, int weeklyPoint, int monthlyPoint, String roleName,
+			boolean active) {
 		super();
 		this.accountID = accountID;
 		this.accountName = accountName;
@@ -28,6 +30,7 @@ public class AccountDTO {
 		this.weeklyPoint = weeklyPoint;
 		this.monthlyPoint = monthlyPoint;
 		this.roleName = roleName;
+		this.active = active;
 	}
 
 	public int getAccountID() {
@@ -117,5 +120,10 @@ public class AccountDTO {
 	public void setRoleID(String roleName) {
 		this.roleName = roleName;
 	}
+
+	public boolean isActive() {
+		return active;
+	}
+
 
 }
