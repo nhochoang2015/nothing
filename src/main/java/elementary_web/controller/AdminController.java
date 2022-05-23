@@ -6,7 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class AdminController {
+	
 
+	
 	@GetMapping("/ADM-User")
 	public String homePage(Model model) {
 		return "./admin_page/ADM-User";
