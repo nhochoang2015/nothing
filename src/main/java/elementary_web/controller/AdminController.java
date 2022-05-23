@@ -54,9 +54,9 @@ public class AdminController {
 		return "./admin_page/product-edit";
 	}
 
-	@GetMapping("/product-list")
+	@GetMapping("/AccountMng")
 	public String productListPage(Model model) {
-		return "./admin_page/product-list";
+		return "./admin_page/AccountMng";
 	}
 
 	@GetMapping("/product-payment")

@@ -50,56 +50,64 @@
 								<tr>
 									<th>Mã tài khoản</th>
 									<th>Tên tài khoản</th>
-									<th>Ngày tạo</th>
-									<th> Chi tiết</th>
+									<th>Chi tiết</th>
 									<th>Xóa tài khoản</th>
 
 								</tr>
 								<tr>
-								<td>HS01</td>
-								<td>Tài khoản 01</td>
-								<td>03-05-2022</td>
-								<td><a href="admin_page/#" class="btn btn-info"
-									data-toggle="modal"><i class="material-icons"></i> <span> Xem </span></a></td>
-								<td><a href="admin_page/#" class="btn btn-danger"
-									data-toggle="modal"><i class="material-icons"></i> <span> Xóa</span></a></td>
+									<td>HS01</td>
+									<td>Tài khoản 01</td>
+
+									<td><a href="admin_page/#" class="btn btn-info"
+										data-toggle="modal"><i class="material-icons"></i> <span>
+												Xem </span></a></td>
+									<td><a href="admin_page/#" class="btn btn-danger"
+										data-toggle="modal"><i class="material-icons"></i> <span>
+												Xóa</span></a></td>
 								</tr>
 								<tr>
-								<td>HS02</td>
-								<td>Tài khoản 02</td>
-								<td>03-05-2022</td>
-								<td><a href="admin_page/#" class="btn btn-info"
-									data-toggle="modal"><i class="material-icons"></i> <span> Xem </span></a></td>
+									<td>HS02</td>
+									<td>Tài khoản 02</td>
+
+									<td><a href="admin_page/#" class="btn btn-info"
+										data-toggle="modal"><i class="material-icons"></i> <span>
+												Xem </span></a></td>
 									<td><a href="admin_page/#" class="btn btn-danger"
-									data-toggle="modal"><i class="material-icons"></i> <span> Xóa</span></a></td>
+										data-toggle="modal"><i class="material-icons"></i> <span>
+												Xóa</span></a></td>
 								</tr>
 								<tr>
-								<td>HS03</td>
-								<td>Tài khoản 03</td>
-								<td>03-05-2022</td>
-								<td><a href="admin_page/#" class="btn btn-info"
-									data-toggle="modal"><i class="material-icons"></i> <span> Xem </span></a></td>
+									<td>HS03</td>
+									<td>Tài khoản 03</td>
+
+									<td><a href="admin_page/#" class="btn btn-info"
+										data-toggle="modal"><i class="material-icons"></i> <span>
+												Xem </span></a></td>
 									<td><a href="admin_page/#" class="btn btn-danger"
-									data-toggle="modal"><i class="material-icons"></i> <span> Xóa</span></a></td>
+										data-toggle="modal"><i class="material-icons"></i> <span>
+												Xóa</span></a></td>
 								</tr>
-<tr>
-								<td>HS04</td>
-								<td>Tài khoản 04</td>
-								<td>03-05-2022</td>
-								<td><a href="admin_page/#" class="btn btn-info"
-									data-toggle="modal"><i class="material-icons"></i> <span> Xem </span></a></td>
+								<tr>
+									<td>HS04</td>
+									<td>Tài khoản 04</td>
+
+									<td><a href="admin_page/#" class="btn btn-info"
+										data-toggle="modal"><i class="material-icons"></i> <span>
+												Xem </span></a></td>
 									<td><a href="admin_page/#" class="btn btn-danger"
-									data-toggle="modal"><i class="material-icons"></i> <span> Xóa</span></a></td>
+										data-toggle="modal"><i class="material-icons"></i> <span>
+												Xóa</span></a></td>
 								</tr>
 
 								<tr>
-								<td>HS05</td>
-								<td>Tài khoản 05</td>
-								<td>03-05-2022</td>
-								<td><a href="admin_page/#" class="btn btn-info"
-									data-toggle="modal"><i class="material-icons"></i> <span> Xem </span></a></td>
+									<td>HS05</td>
+									<td>Tài khoản 05</td>
+									<td><a href="admin_page/#" class="btn btn-info"
+										data-toggle="modal"><i class="material-icons"></i> <span>
+												Xem </span></a></td>
 									<td><a href="admin_page/#" class="btn btn-danger"
-									data-toggle="modal"><i class="material-icons"></i> <span> Xóa</span></a></td>
+										data-toggle="modal"><i class="material-icons"></i> <span>
+												Xóa</span></a></td>
 								</tr>
 							</table>
 							<div class="custom-pagination">

@@ -213,8 +213,6 @@
 								<tr>
 									<th class="text-center">Mã môn học</th>
 									<th class="text-center">Tên môn học</th>
-									<th class="text-center">Ngày tạo</th>
-									<th class="text-center">Số bài</th>
 									<th class="text-center">Chi tiết</th>
 									<th class="text-center">Xóa môn học</th>
 
@@ -222,8 +220,7 @@
 								<tr>
 									<td>MH01</td>
 									<td>Môn học 01</td>
-									<td>03-05-2022</td>
-									<td>25</td>
+									
 									<td><a href="admin_page/#" class="btn btn-info"
 										data-toggle="modal"><i class="material-icons"></i> <span>
 												Xem </span></a></td>
@@ -234,8 +231,8 @@
 								<tr>
 									<td>MH02</td>
 									<td>Môn học 02</td>
-									<td>03-05-2022</td>
-									<td>25</td>
+									
+									
 									<td><a href="admin_page/#" class="btn btn-info"
 										data-toggle="modal"><i class="material-icons"></i> <span>
 												Xem </span></a></td>
@@ -246,8 +243,8 @@
 								<tr>
 									<td>MH03</td>
 									<td>Môn học 03</td>
-									<td>03-05-2022</td>
-									<td>25</td>
+									
+									
 									<td><a href="admin_page/#" class="btn btn-info"
 										data-toggle="modal"><i class="material-icons"></i> <span>
 												Xem </span></a></td>
@@ -258,8 +255,8 @@
 								<tr>
 									<td>MH04</td>
 									<td>Môn học 04</td>
-									<td>03-05-2022</td>
-									<td>25</td>
+									
+									
 									<td><a href="admin_page/#" class="btn btn-info"
 										data-toggle="modal"><i class="material-icons"></i> <span>
 												Xem </span></a></td>
@@ -271,8 +268,8 @@
 								<tr>
 									<td>MH05</td>
 									<td>Môn học 05</td>
-									<td>03-05-2022</td>
-									<td>25</td>
+									
+									
 									<td><a href="admin_page/#" class="btn btn-info"
 										data-toggle="modal"><i class="material-icons"></i> <span>
 												Xem </span></a></td>

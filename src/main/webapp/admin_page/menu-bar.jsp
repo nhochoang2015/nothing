@@ -26,18 +26,18 @@
 							<ul class="submenu-angle" aria-expanded="true">
 
 								<li class="list-group-item"><a title="Quản lý môn học" href="index-2"><i
-										class="fa fa-cube sub-icon-mg active" aria-hidden="true"></i> <span
+										class="fa fa-cube sub-icon-mg" aria-hidden="true"></i> <span
 										class="mini-sub-pro">Quản lý môn học</span></a></li>
 
 								<li class="list-group-item"><a title="Quản lý thông báo" href="Notification-list"><i
 										class="fa fa-female sub-icon-mg" aria-hidden="true"></i> <span
 										class="mini-sub-pro">Quản lý thông báo</span></a></li>
 
-								<li class="list-group-item active"><a title="Quản lý tài khoản" href="product-edit"><i
+								<li class="list-group-item "><a title="Quản lý tài khoản" href="AccountMng"><i
 										class="fa fa-bolt sub-icon-mg" aria-hidden="true"></i> <span
 										class="mini-sub-pro">Quản lý tài khoản</span></a></li>
 
-								<li class="list-group-item"><a title="Quản lý vật phẩm" href="product-list"><i
+								<li class="list-group-item"><a title="Quản lý vật phẩm" href="ADM-User"><i
 										class="fa fa-heart-o sub-icon-mg" aria-hidden="true"></i> <span
 										class="mini-sub-pro">Quản lý vật phẩm</span></a></li>
 
