@@ -10,5 +10,4 @@ import elementary_web.entity.Subject;
 public interface SubjectRepository extends JpaRepository<Subject, Integer> {
 	@Query(value = "SELECT * FROM MON_HOC WHERE (EMAIL = ?1) OR (MA_MON_HOC = ?1) OR (TEN_MON_HOC = ?1)", nativeQuery = true)
 	Subject findSubjectBySubjectNameOrSubjectCode(String SubjectNameOrSubjectCode);
-	
 }

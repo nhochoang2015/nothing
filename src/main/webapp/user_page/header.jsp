@@ -45,6 +45,10 @@
 <link href="user_page/css/header.css" rel="stylesheet">
 </head>
 <body>
+<%
+				AccountDTO accountDTO = (AccountDTO) session.getAttribute("account");
+				if (accountDTO != null) {
+				%>
 	<!-- Navbar Start -->
 	<div class="container-fluid bg-light position-relative shadow">
 		<nav
@@ -76,10 +80,7 @@
 					</div>
 					<a href="user_page/contact.jsp" class="nav-item nav-link">Contact</a>
 				</div>
-				<%
-				AccountDTO accountDTO = (AccountDTO) session.getAttribute("account");
-				if (accountDTO != null) {
-				%>
+				
 				<div id="login-container">
 					<i class="fa-solid fa-user fa-2xl" id="user-icon"></i> <br>
 					<p id="account-name"><%=accountDTO.getNickName()%></p>
@@ -92,6 +93,22 @@
 				<%
 				} else {
 				%>
+				<div class="navbar-nav font-weight-bold mx-auto py-0">
+					<a href="user_page/index.jsp" class="nav-item nav-link active">Home</a>
+					<a href="about.jsp" class="nav-item nav-link">About</a> <a
+						class="nav-item nav-link" data-toggle="modal" data-target="#store">Cửa
+						hàng</a> <a href="team.jsp" class="nav-item nav-link">Teachers</a> <a
+						href="Login-admin.jsp" class="nav-item nav-link">Admin</a>
+					<div class="nav-item dropdown">
+						<a href="user_page/#" class="nav-link dropdown-toggle"
+							data-toggle="dropdown">Pages</a>
+						<div class="dropdown-menu rounded-0 m-0">
+							<a href="user_page/blog.jsp" class="dropdown-item">Blog Grid</a>
+							<a href="single.jsp" class="dropdown-item">Blog Detail</a>
+						</div>
+					</div>
+					<a href="user_page/contact.jsp" class="nav-item nav-link">Contact</a>
+				</div>
 				<i class="fa-solid fa-user fa-2xl" id="user-icon"></i> <a
 					href="./login" class="btn btn-primary px-4" id="login-button">Đăng
 					nhập</a> <a href="user_page/" class="btn btn-primary px-4"
