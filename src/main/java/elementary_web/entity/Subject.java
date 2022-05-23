@@ -13,7 +13,7 @@ public class Subject {
 	@Column(name = "MA_MON_HOC")
 	private int subjectID;
 	@Column(name = "TEN_MON_HOC")
-	private int subjectName;
+	private String subjectName;
     @OneToMany(mappedBy = "subject")
 	private List<Chapter> chapterList;
 	public int getSubjectID() {
@@ -22,10 +22,10 @@ public class Subject {
 	public void setSubjectID(int subjectID) {
 		this.subjectID = subjectID;
 	}
-	public int getSubjectName() {
+	public String getSubjectName() {
 		return subjectName;
 	}
-	public void setSubjectName(int subjectName) {
+	public void setSubjectName(String subjectName) {
 		this.subjectName = subjectName;
 	}
 	public List<Chapter> getChapterList() {
