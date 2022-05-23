@@ -7,5 +7,6 @@ import elementary_web.entity.Role;
 
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Integer> {
+	public Role findByRoleID(int roleID);
 
 }
