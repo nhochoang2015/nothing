@@ -4,9 +4,9 @@ package elementary_web.dto;
 
 public class SubjectDTO {
 	private int subjectID;
-	private int subjectName;
+	private String subjectName;
 
-	public SubjectDTO(int subjectID, int subjectName) {
+	public SubjectDTO(int subjectID, String subjectName) {
 		super();
 		this.subjectID = subjectID;
 		this.subjectName = subjectName;
@@ -20,11 +20,11 @@ public class SubjectDTO {
 		this.subjectID = subjectID;
 	}
 
-	public int getSubjectName() {
+	public String getSubjectName() {
 		return subjectName;
 	}
 
-	public void setSubjectName(int subjectName) {
+	public void setSubjectName(String subjectName) {
 		this.subjectName = subjectName;
 	}
 

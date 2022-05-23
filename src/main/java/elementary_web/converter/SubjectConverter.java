@@ -10,7 +10,7 @@ public class SubjectConverter {
 	
 	public SubjectDTO toDTO(Subject entity) {
 	int subjectID = entity.getSubjectID();
-	int subjectName = entity.getSubjectName();
+	String subjectName = entity.getSubjectName();
 	SubjectDTO dto = new SubjectDTO(subjectID, subjectName);
 	return dto;
 	
