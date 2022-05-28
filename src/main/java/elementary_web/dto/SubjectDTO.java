@@ -1,15 +1,17 @@
 package elementary_web.dto;
 
-
+import java.util.List;
 
 public class SubjectDTO {
 	private int subjectID;
 	private String subjectName;
+	private List<ChapterDTO> chapterList;
 
-	public SubjectDTO(int subjectID, String subjectName) {
+	public SubjectDTO(int subjectID, String subjectName, List<ChapterDTO> chapterList) {
 		super();
 		this.subjectID = subjectID;
 		this.subjectName = subjectName;
+		this.chapterList = chapterList;
 	}
 
 	public int getSubjectID() {

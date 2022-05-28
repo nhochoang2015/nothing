@@ -50,7 +50,7 @@
 	<div class="container-fluid bg-light position-relative shadow">
 		<nav
 			class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
-			<a href="user_page/"
+			<a href="./"
 				class="navbar-brand font-weight-bold text-secondary"
 				style="font-size: 50px;"> <i class="fa-solid fa-book-open"></i>
 				<span class="text-primary">LEARN</span>

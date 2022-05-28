@@ -14,23 +14,29 @@ public class Subject {
 	private int subjectID;
 	@Column(name = "TEN_MON_HOC")
 	private String subjectName;
-    @OneToMany(mappedBy = "subject")
+	@OneToMany(mappedBy = "subject", fetch = FetchType.EAGER)
 	private List<Chapter> chapterList;
+
 	public int getSubjectID() {
 		return subjectID;
 	}
+
 	public void setSubjectID(int subjectID) {
 		this.subjectID = subjectID;
 	}
+
 	public String getSubjectName() {
 		return subjectName;
 	}
+
 	public void setSubjectName(String subjectName) {
 		this.subjectName = subjectName;
 	}
+
 	public List<Chapter> getChapterList() {
 		return chapterList;
 	}
+
 	public void setChapterList(List<Chapter> chapterList) {
 		this.chapterList = chapterList;
 	}

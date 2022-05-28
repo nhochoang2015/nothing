@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -25,7 +26,7 @@ public class Chapter {
 	@ManyToOne
 	@JoinColumn(name = "MA_BAI_HOC", nullable = false)
 	private Subject subject;
-	@OneToMany(mappedBy = "chapter")
+	@OneToMany(mappedBy = "chapter", fetch = FetchType.EAGER)
 	private List<Lesson> lessonList;
 	public int getChapterID() {
 		return chapterID;
