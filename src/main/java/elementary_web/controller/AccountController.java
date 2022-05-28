@@ -26,13 +26,13 @@ public class AccountController {
 			HttpSession session) throws NoSuchAlgorithmException {
 		AccountDTO accountDTO = accountService.findAccountByEmailOrUserOrPhoneNumber(username);
 		if (accountDTO == null) {
-			return "redirect: ./login?loginStatus=fail";
+			return "redirect:./login?loginStatus=fail";
 		} else {
 			if (!accountDTO.getPassword().equals(Utility.convertToMD5(password))) {
-				return "redirect: ./login?loginStatus=fail";
+				return "redirect:./login?loginStatus=fail";
 			} else {
 				session.setAttribute("account", accountDTO);
-				return "redirect: ./";
+				return "redirect:./";
 			}
 		}
 
