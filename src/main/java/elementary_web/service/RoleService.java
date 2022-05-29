@@ -9,11 +9,17 @@ import elementary_web.repository.RoleRepository;
 @Service
 public class RoleService {
 	@Autowired
-	RoleRepository roleRepository;
+	private RoleRepository roleRepository;
 
 	public Role findByRoleID(int roleID) {
 		Role role = roleRepository.findByRoleID(roleID);
 		return role;
-		
+
+	}
+
+	public Role findByRoleName(String roleName) {
+		Role role = roleRepository.findByRoleName(roleName);
+		return role;
+
 	}
 }

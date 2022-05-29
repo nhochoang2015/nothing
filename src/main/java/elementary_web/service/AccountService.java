@@ -16,13 +16,14 @@ public class AccountService {
 	@Autowired
 	private AccountConverter accountConverter;
 
-	// Dùng để thêm hoặc sửa thông tin tài khoản. Dùng cho quản lý tài khoản 
+	// Dùng để thêm hoặc sửa thông tin tài khoản. Dùng cho quản lý tài khoản
 	public void updateAccount(Account account) {
 		accountRepository.save(account);
 	}
 
 	// Dùng cho quản lý thông tin cá nhân
 	public void updateAccount(AccountDTO accountDTO) {
+		accountRepository.save(accountConverter.toEntity(accountDTO));
 	}
 
 	public AccountDTO findAccountByEmailOrUserOrPhoneNumber(String emailOrUserOrPhoneNumber) {
