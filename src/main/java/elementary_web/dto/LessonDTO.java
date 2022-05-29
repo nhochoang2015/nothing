@@ -49,4 +49,13 @@ public class LessonDTO {
 		this.lessonBeforeID = lessonBeforeID;
 	}
 
+	public boolean isComplete(List<LessonCompleteDTO> lessonCompleteList) {
+		for (LessonCompleteDTO lessonCompleteDTO : lessonCompleteList) {
+			if (lessonCompleteDTO.getLessonID() == this.lessonID)
+				return true;
+		}
+
+		return false;
+	}
+
 }

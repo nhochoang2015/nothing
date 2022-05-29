@@ -1,3 +1,12 @@
+<%@page import="elementary_web.dto.SubjectDTO"%>
+<%@page import="elementary_web.dto.ChapterDTO"%>
+<%@page import="elementary_web.dto.LessonDTO"%>
+
+<%@page import="java.util.ArrayList"%>
+<%@page import="elementary_web.dto.LessonCompleteDTO"%>
+<%@page import="java.util.List"%>
+
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -9,63 +18,75 @@
 <body>
 	<%@include file="header.jsp"%>
 	<!-- Môn học -->
+	<%
+	SubjectDTO subject = (SubjectDTO) request.getAttribute("subject");
+	List<LessonCompleteDTO> lessonCompleteList = (List<LessonCompleteDTO>) request.getAttribute("lessonCompleteList");
+	%>
 	<div class="container-fluid pt-5">
 		<div class="container">
 			<div class="text-center pb-2">
 				<p class="section-title px-5 subject-title">
-					<span class="px-2">MÔN HỌC</span>
+					<span class="px-2"><%=subject.getSubjectName()%></span>
 				</p>
 			</div>
+			<%
+			ArrayList<ChapterDTO> chaperDTOList = (ArrayList<ChapterDTO>) subject.getChapterList();
+			%>
 			<div class="row">
+				<%
+				for (ChapterDTO chapter : chaperDTOList) {
+				%>
 				<div class="col-lg-4 mb-5">
 					<div class="card border-0 bg-light shadow-sm pb-2 subject-image">
 						<img class="card-img-top mb-2" src="user_page/img/class-1.jpg"
 							alt="">
 						<div class="card-body text-center">
-							<h4 class="card-title">Chương 1</h4>
-
+							<h4 class="card-title">
+								<%=chapter.getChapterName()%></h4>
 						</div>
 						<div class="card-footer bg-transparent py-4 px-5 subject-lessons">
+							<%
+							ArrayList<LessonDTO> lessonList = (ArrayList<LessonDTO>) chapter.getLessonList();
+							for (LessonDTO lesson : lessonList) {
+							%>
 							<div class="row border-bottom">
 								<div class="col-10 py-1">
-									<a>Bài 1</a>
+									<a> <%
+ lesson.getLessonName();
+ %>
+									</a>
 								</div>
+
 								<div class="col-2 py-1">
+									<%
+									if (lesson.isComplete(lessonCompleteList)) {
+									%>
+									<i class="fa-solid fa-check"></i>
+									<%
+									} else {
+									%>
 									<i class="fa-solid fa-xmark"></i>
+									<%
+									}
+									%>
 								</div>
 							</div>
-							<div class="row border-bottom">
-								<div class="col-10 py-1">
-									<a>Bài 2</a>
-								</div>
-								<div class="col-2 py-1">
-									<i class="fa-solid fa-check"></i>
-								</div>
-							</div>
-							<div class="row border-bottom">
-								<div class="col-10 py-1">
-									<a>Bài 2</a>
-								</div>
-								<div class="col-2 py-1">
-									<i class="fa-solid fa-check"></i>
-								</div>
-							</div>
-							<div class="row border-bottom">
-								<div class="col-10 py-1">
-									<a>Bài 2</a>
-								</div>
-								<div class="col-2 py-1">
-									<i class="fa-solid fa-check"></i>
-								</div>
-							</div>
+							<%
+							}
+							%>
+
 						</div>
 						<a href="user_page/" class="btn btn-primary px-4 mx-auto mb-4">Kiểm
 							tra</a>
 					</div>
 				</div>
 
-
+				<%
+				}
+				%>
 			</div>
+
+
 		</div>
 	</div>
 

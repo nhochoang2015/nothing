@@ -2,21 +2,13 @@ package elementary_web.dto;
 
 public class LessonCompleteDTO {
 
-	private int LessonID;
+	private int lessonID;
 	private int accountID;
 
 	public LessonCompleteDTO(int lessonID, int accountID) {
 		super();
-		LessonID = lessonID;
+		this.lessonID = lessonID;
 		this.accountID = accountID;
-	}
-
-	public int getLessonID() {
-		return LessonID;
-	}
-
-	public void setLessonID(int lessonID) {
-		LessonID = lessonID;
 	}
 
 	public int getAccountID() {
@@ -25,6 +17,14 @@ public class LessonCompleteDTO {
 
 	public void setAccountID(int accountID) {
 		this.accountID = accountID;
+	}
+
+	public int getLessonID() {
+		return lessonID;
+	}
+
+	public void setLessonID(int lessonID) {
+		this.lessonID = lessonID;
 	}
 
 }

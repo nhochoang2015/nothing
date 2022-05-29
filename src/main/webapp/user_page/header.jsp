@@ -50,8 +50,7 @@
 	<div class="container-fluid bg-light position-relative shadow">
 		<nav
 			class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
-			<a href="./"
-				class="navbar-brand font-weight-bold text-secondary"
+			<a href="./" class="navbar-brand font-weight-bold text-secondary"
 				style="font-size: 50px;"> <i class="fa-solid fa-book-open"></i>
 				<span class="text-primary">LEARN</span>
 			</a>
@@ -59,38 +58,40 @@
 				data-target="#navbarCollapse">
 				<span class="navbar-toggler-icon"></span>
 			</button>
+			
 			<div class="collapse navbar-collapse justify-content-between"
 				id="navbarCollapse">
 				<%
-				AccountDTO accountDTO = (AccountDTO) session.getAttribute("account");
-				if (accountDTO != null) {
+					AccountDTO accountDTO = (AccountDTO) session.getAttribute("account");
+					if (accountDTO != null) {
 				%>
+				<!-- Trường họp người dùng đã đăng nhập -->
 				<div class="navbar-nav font-weight-bold mx-auto py-0">
-					<a href="user_page/index.jsp" class="nav-item nav-link active">Home</a>
-					<a href="about.jsp" class="nav-item nav-link">About</a> <a
+					<a href="./" class="nav-item nav-link active">Home</a>
+					<a href="/monthly-ranking" class="nav-item nav-link">Leaderboard</a> <a
 						class="nav-item nav-link" data-toggle="modal" data-target="#store">Cửa
-						hàng</a> <a href="team.jsp" class="nav-item nav-link">Teachers</a>
+						hàng</a> 
 
 					<%
-					if (accountDTO.getRoleName().equals("ADMIN")) {
+						if (accountDTO.getRoleName().equals("ADMIN")) {
 					%>
 
 					<a href=" ADM-User.jsp" class="nav-item nav-link">Amin Page</a>
-					
+
 					<%
-					}
+						}
 					%>
 
 
 					<div class="nav-item dropdown">
 						<a href="user_page/#" class="nav-link dropdown-toggle"
-							data-toggle="dropdown">Pages</a>
+							data-toggle="dropdown">Môn học</a>
 						<div class="dropdown-menu rounded-0 m-0">
-							<a href="user_page/blog.jsp" class="dropdown-item">Blog Grid</a>
-							<a href="single.jsp" class="dropdown-item">Blog Detail</a>
+							<a href="#" class="dropdown-item">Môn học</a>
+							<a href="#" class="dropdown-item">Mon học</a>
 						</div>
 					</div>
-					<a href="user_page/contact.jsp" class="nav-item nav-link">Contact</a>
+					<a href="/about" class="nav-item nav-link">About</a>
 				</div>
 
 				<div id="login-container">
@@ -103,92 +104,35 @@
 				<a id="logout-button" href="./logout"
 					class="fa-solid fa-arrow-right-from-bracket fa-2xl"></a>
 				<%
-				} else {
+					} else {
 				%>
+				<!-- Trường họp người dùng chưa đăng nhập -->
 				<div class="navbar-nav font-weight-bold mx-auto py-0">
-					<a href="user_page/index.jsp" class="nav-item nav-link active">Home</a>
-					<a href="about.jsp" class="nav-item nav-link">About</a> <a
-						class="nav-item nav-link" data-toggle="modal" data-target="#store">Cửa
-						hàng</a> <a href="team.jsp" class="nav-item nav-link">Teachers</a>
-						<a href="Gallery.jsp" class="nav-item nav-link">Gallery</a>
-				<div class="nav-item dropdown">
+					<a href="/" class="nav-item nav-link active">Home</a>
+					<a href="/monthly-ranking" class="nav-item nav-link">Leaderboard</a> 
+					<div class="nav-item dropdown">
 						<a href="user_page/#" class="nav-link dropdown-toggle"
-							data-toggle="dropdown">Pages</a>
+							data-toggle="dropdown">Môn học</a>
 						<div class="dropdown-menu rounded-0 m-0">
-							<a href="user_page/blog.jsp" class="dropdown-item">Blog Grid</a>
-							<a href="single.jsp" class="dropdown-item">Blog Detail</a>
+							<a href="#" class="dropdown-item">Môn học</a>
+							<a href="#" class="dropdown-item">Mon học</a>
 						</div>
 					</div>
-					<a href="user_page/contact.jsp" class="nav-item nav-link">Contact</a>
+					<a href="/about" class="nav-item nav-link">About</a>
 				</div>
 				<i class="fa-solid fa-user fa-2xl" id="user-icon"></i> <a
 					href="./login" class="btn btn-primary px-4" id="login-button">Đăng
 					nhập</a> <a href="user_page/" class="btn btn-primary px-4"
 					id="sign-in-button">Đăng ký</a>
 				<%
-				}
+					}
 				%>
 			</div>
 		</nav>
 	</div>
 	<!-- Navbar End -->
 
-
-	<!-- Header Start -->
-	<div class="container-fluid bg-primary px-0 px-md-5 mb-5 notification">
-		<div class="row align-items-center px-3">
-			<div class="col-lg-6 text-center text-lg-left notification-content">
-				<h4 class="text-white mb-4 mt-5 mt-lg-0">Kids Learning Center</h4>
-				<h1 class="display-3 font-weight-bold text-white">New Approach
-					to Kids Education</h1>
-				<p class="text-white mb-4">Sea ipsum kasd eirmod kasd magna, est
-					sea et diam ipsum est amet sed sit. Ipsum dolor no justo dolor et,
-					lorem ut dolor erat dolore sed ipsum at ipsum nonumy amet. Clita
-					lorem dolore sed stet et est justo dolore.</p>
-				<a href="user_page/" class="btn btn-secondary mt-1 py-3 px-5">Learn
-					More</a>
-			</div>
-			<div class="col-lg-6 text-center text-lg-right notification-image">
-				<img class="img-fluid mt-5" src="user_page/img/header.png" alt="">
-			</div>
-		</div>
-
-		<div class="row align-items-center px-3">
-			<div class="col-lg-6 text-center text-lg-left notification-content">
-				<h4 class="text-white mb-4 mt-5 mt-lg-0">Kids Learning Center</h4>
-				<h1 class="display-3 font-weight-bold text-white">New Approach
-					to Kids Education</h1>
-				<p class="text-white mb-4">Sea ipsum kasd eirmod kasd magna, est
-					sea et diam ipsum est amet sed sit. Ipsum dolor no justo dolor et,
-					lorem ut dolor erat dolore sed ipsum at ipsum nonumy amet. Clita
-					lorem dolore sed stet et est justo dolore.</p>
-				<a href="user_page/" class="btn btn-secondary mt-1 py-3 px-5">Learn
-					More</a>
-			</div>
-			<div class="col-lg-6 text-center text-lg-right notification-image">
-				<img class="img-fluid mt-5" src="user_page/img/header.png" alt="">
-			</div>
-		</div>
-		<div class="row align-items-center px-3">
-			<div class="col-lg-6 text-center text-lg-left notification-content">
-				<h4 class="text-white mb-4 mt-5 mt-lg-0">Kids Learning Center</h4>
-				<h1 class="display-3 font-weight-bold text-white">New Approach
-					to Kids Education</h1>
-				<p class="text-white mb-4">Sea ipsum kasd eirmod kasd magna, est
-					sea et diam ipsum est amet sed sit. Ipsum dolor no justo dolor et,
-					lorem ut dolor erat dolore sed ipsum at ipsum nonumy amet. Clita
-					lorem dolore sed stet et est justo dolore.</p>
-				<a href="user_page/" class="btn btn-secondary mt-1 py-3 px-5">Learn
-					More</a>
-			</div>
-			<div class="col-lg-6 text-center text-lg-right notification-image">
-				<img class="img-fluid mt-5" src="user_page/img/header.png" alt="">
-			</div>
-		</div>
-
-	</div>
-	<!-- Header End -->
-
+	<!-- Store Start -->
 	<div id="store" class="modal fade" role="dialog">
 		<div class="modal-dialog">
 
@@ -470,5 +414,6 @@
 
 		</div>
 	</div>
+	<!-- Store End -->
 </body>
 </html>

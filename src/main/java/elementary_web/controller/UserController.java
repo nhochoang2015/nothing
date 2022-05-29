@@ -1,6 +1,9 @@
 package elementary_web.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,12 +13,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import elementary_web.dto.AccountDTO;
+import elementary_web.dto.LessonCompleteDTO;
+import elementary_web.dto.SubjectDTO;
+import elementary_web.service.LessonCompleteService;
 import elementary_web.service.SubjectService;
 
 @Controller
 public class UserController {
 	@Autowired
 	private SubjectService subjectService;
+	@Autowired
+	private LessonCompleteService lessonCompleteService;
+
 	@GetMapping("/")
 	public String homePage(Model model) {
 		return "./user_page/index";
@@ -77,9 +87,15 @@ public class UserController {
 	}
 
 	@GetMapping("/subject-details")
-	public String subjectDetailsPage(@RequestParam int subjectID) {
-		
-		return "./user_page/subject-details";
+	public ModelAndView subjectDetailsPage(@RequestParam int subjectID, HttpSession session) {
+		SubjectDTO subjectDTO = subjectService.findBySubjectID(subjectID);
+		int accountID = ((AccountDTO) session.getAttribute("account")).getAccountID();
+		List<LessonCompleteDTO> lessonCompleteDTOList = lessonCompleteService.findByAccountID(accountID);
+		ModelAndView mav = new ModelAndView("user_page/subject-details");
+		mav.addObject("subject", subjectDTO);
+		mav.addObject("lessonCompleteList", lessonCompleteDTOList);
+
+		return mav;
 	}
 
 	@GetMapping("/mission")

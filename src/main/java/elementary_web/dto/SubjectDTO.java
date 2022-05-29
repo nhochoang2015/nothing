@@ -30,4 +30,12 @@ public class SubjectDTO {
 		this.subjectName = subjectName;
 	}
 
+	public List<ChapterDTO> getChapterList() {
+		return chapterList;
+	}
+
+	public void setChapterList(List<ChapterDTO> chapterList) {
+		this.chapterList = chapterList;
+	}
+
 }
