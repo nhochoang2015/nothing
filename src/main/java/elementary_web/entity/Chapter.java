@@ -21,7 +21,7 @@ public class Chapter {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "MA_CHUONG")
 	private int chapterID;
-	@Column(name = "TEN_CHUONG")
+	@Column(name = "TEN_CHUONG", columnDefinition = "nvarchar(max)")
 	private String chapterName;
 	@ManyToOne
 	@JoinColumn(name = "MA_MON_HOC", nullable = false)

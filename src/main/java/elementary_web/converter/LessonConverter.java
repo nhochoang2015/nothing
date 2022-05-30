@@ -13,7 +13,11 @@ public class LessonConverter {
 		int lessonID = entity.getLessonID();
 		String lessonName = entity.getLessonName();
 		int chapterID = entity.getChapter().getChapterID();
-		int lessonBeforeID = entity.getLessonBefore().getLessonID();
+		Lesson lessonBefore = entity.getLessonBefore();
+		Integer lessonBeforeID = null;
+		if (lessonBefore != null) {
+			lessonBeforeID = entity.getLessonBefore().getLessonID();
+		}
 		return new LessonDTO(lessonID, lessonName, chapterID, lessonBeforeID);
 	}
 }

@@ -51,4 +51,12 @@ public class SubjectService {
 		return subjectConverter.toDTO(subject);
 	}
 
+	public List<SubjectDTO> findAllSubject() {
+		List<Subject> subjectList = subjectRepository.findAll();
+		List<SubjectDTO> subjecDTOtList = new ArrayList<SubjectDTO>();
+		for (Subject subject : subjectList) {
+			subjecDTOtList.add(subjectConverter.toDTO(subject));
+		}
+		return subjecDTOtList;
+	}
 }

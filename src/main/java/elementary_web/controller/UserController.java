@@ -29,9 +29,12 @@ public class UserController {
 	@Autowired
 	private RankingService rankingService;
 
-	@GetMapping("/")
-	public String homePage(Model model) {
-		return "./user_page/index";
+	@RequestMapping("/")
+	public ModelAndView homePage() {
+		ModelAndView mav = new ModelAndView("user_page/index");
+		List<SubjectDTO> subjectList = subjectService.findAllSubject();
+		mav.addObject("subjectList", subjectList);
+		return mav;
 	}
 
 	@GetMapping("/about")
@@ -95,11 +98,14 @@ public class UserController {
 	@GetMapping("/subject-details")
 	public ModelAndView subjectDetailsPage(@RequestParam int subjectID, HttpSession session) {
 		SubjectDTO subjectDTO = subjectService.findBySubjectID(subjectID);
-		int accountID = ((AccountDTO) session.getAttribute("account")).getAccountID();
-		List<LessonCompleteDTO> lessonCompleteDTOList = lessonCompleteService.findByAccountID(accountID);
+		AccountDTO account = (AccountDTO) session.getAttribute("account");
 		ModelAndView mav = new ModelAndView("user_page/subject-details");
 		mav.addObject("subject", subjectDTO);
-		mav.addObject("lessonCompleteList", lessonCompleteDTOList);
+		if (account != null) {
+			int accountID = account.getAccountID();
+			List<LessonCompleteDTO> lessonCompleteDTOList = lessonCompleteService.findByAccountID(accountID);
+			mav.addObject("lessonCompleteList", lessonCompleteDTOList);
+		}
 		return mav;
 	}
 

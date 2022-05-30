@@ -12,7 +12,7 @@ public class Lesson {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "MA_BAI_HOC")
 	private int lessonID;
-	@Column(name = "TEN_BAI_HOC")
+	@Column(name = "TEN_BAI_HOC", columnDefinition = "nvarchar(max)")
 	private String lessonName;
 	@ManyToOne
 	@JoinColumn(name = "MA_CHUONG", nullable = false)

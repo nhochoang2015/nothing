@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="elementary_web.dto.SubjectDTO"%>
+<%@page import="elementary_web.dto.ChapterDTO"%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +13,7 @@
 
 <body>
 	<%@include file="header.jsp"%>
-	
+
 	<!-- Banner Start -->
 	<div class="container-fluid bg-primary px-0 px-md-5 mb-5 notification">
 		<div class="row align-items-center px-3">
@@ -63,7 +68,7 @@
 
 	</div>
 	<!-- Banner End -->
-	
+
 	<!--
 	<div class="container-fluid pt-5">
 		<div class="container pb-3">
@@ -336,125 +341,39 @@
 				</p>
 			</div>
 			<div class="row">
+				<%
+				ArrayList<SubjectDTO> subjectList = (ArrayList<SubjectDTO>) request.getAttribute("subjectList");
+				for (SubjectDTO subject : subjectList) {
+				%>
 				<div class="col-lg-4 mb-5">
 					<div class="card border-0 bg-light shadow-sm pb-2">
 						<img class="card-img-top mb-2" src="user_page/img/class-1.jpg"
 							alt="">
 						<div class="card-body text-center">
-							<h4 class="card-title">TOÁN</h4>
-
+							<h4 class="card-title"><%=subject.getSubjectName()%></h4>
 						</div>
 						<div class="card-footer bg-transparent py-4 px-5">
+							<%
+							ArrayList<ChapterDTO> chaperDTOList = (ArrayList<ChapterDTO>) subject.getChapterList();
+							for (ChapterDTO chapter : chaperDTOList) {
+							%>
 							<div class="row border-bottom">
-								<div class="col-5 py-1 border-right">
-									<strong>Chương 1</strong>
+								<div class="col-12 py-1">
+									<a><%=chapter.getChapterName()%></a>
 								</div>
-								<div class="col-7 py-1">3 - 6 Years</div>
 							</div>
-							<div class="row border-bottom">
-								<div class="col-5 py-1 border-right">
-									<strong>Chương 2</strong>
-								</div>
-								<div class="col-7 py-1">3 - 6 Years</div>
-							</div>
-							<div class="row border-bottom">
-								<div class="col-5 py-1 border-right">
-									<strong>Chương 3</strong>
-								</div>
-								<div class="col-7 py-1">3 - 6 Years</div>
-							</div>
-							<div class="row">
-								<div class="col-5 py-1 border-right">
-									<strong>Chương 4</strong>
-								</div>
-								<div class="col-7 py-1">3 - 6 Years</div>
-
-							</div>
+							<%
+							}
+							%>
 						</div>
-						<a href="user_page/" class="btn btn-primary px-4 mx-auto mb-4">Xem
-							thêm</a>
+						<a href="./subject-details?subjectID=<%=subject.getSubjectID()%>"
+							class="btn btn-primary px-4 mx-auto mb-4">Xem thêm</a>
 					</div>
 				</div>
 
-				<div class="col-lg-4 mb-5">
-					<div class="card border-0 bg-light shadow-sm pb-2">
-						<img class="card-img-top mb-2" src="user_page/img/class-1.jpg"
-							alt="">
-						<div class="card-body text-center">
-							<h4 class="card-title">TIẾNG VIỆT</h4>
-
-						</div>
-						<div class="card-footer bg-transparent py-4 px-5">
-							<div class="row border-bottom">
-								<div class="col-5 py-1 border-right">
-									<strong>Chương 1</strong>
-								</div>
-								<div class="col-7 py-1">3 - 6 Years</div>
-							</div>
-							<div class="row border-bottom">
-								<div class="col-5 py-1 border-right">
-									<strong>Chương 2</strong>
-								</div>
-								<div class="col-7 py-1">3 - 6 Years</div>
-							</div>
-							<div class="row border-bottom">
-								<div class="col-5 py-1 border-right">
-									<strong>Chương 3</strong>
-								</div>
-								<div class="col-7 py-1">3 - 6 Years</div>
-							</div>
-							<div class="row">
-								<div class="col-5 py-1 border-right">
-									<strong>Chương 4</strong>
-								</div>
-								<div class="col-7 py-1">3 - 6 Years</div>
-
-							</div>
-						</div>
-						<a href="user_page/" class="btn btn-primary px-4 mx-auto mb-4">Xem
-							thêm</a>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-5">
-					<div class="card border-0 bg-light shadow-sm pb-2">
-						<img class="card-img-top mb-2" src="user_page/img/class-1.jpg"
-							alt="">
-						<div class="card-body text-center">
-							<h4 class="card-title">TOÁN</h4>
-
-						</div>
-						<div class="card-footer bg-transparent py-4 px-5">
-							<div class="row border-bottom">
-								<div class="col-5 py-1 border-right">
-									<strong>Chương 1</strong>
-								</div>
-								<div class="col-7 py-1">3 - 6 Years</div>
-							</div>
-							<div class="row border-bottom">
-								<div class="col-5 py-1 border-right">
-									<strong>Chương 2</strong>
-								</div>
-								<div class="col-7 py-1">3 - 6 Years</div>
-							</div>
-							<div class="row border-bottom">
-								<div class="col-5 py-1 border-right">
-									<strong>Chương 3</strong>
-								</div>
-								<div class="col-7 py-1">3 - 6 Years</div>
-							</div>
-							<div class="row">
-								<div class="col-5 py-1 border-right">
-									<strong>Chương 4</strong>
-								</div>
-								<div class="col-7 py-1">3 - 6 Years</div>
-
-							</div>
-						</div>
-						<a href="user_page/" class="btn btn-primary px-4 mx-auto mb-4">Xem
-							thêm</a>
-					</div>
-				</div>
-
+				<%
+				}
+				%>
 			</div>
 		</div>
 	</div>

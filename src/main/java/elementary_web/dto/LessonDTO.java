@@ -7,9 +7,9 @@ public class LessonDTO {
 	private int lessonID;
 	private String lessonName;
 	private int chapterID;
-	private int lessonBeforeID;
+	private Integer lessonBeforeID;
 
-	public LessonDTO(int lessonID, String lessonName, int chapterID, int lessonBeforeID) {
+	public LessonDTO(int lessonID, String lessonName, int chapterID, Integer lessonBeforeID) {
 		super();
 		this.lessonID = lessonID;
 		this.lessonName = lessonName;

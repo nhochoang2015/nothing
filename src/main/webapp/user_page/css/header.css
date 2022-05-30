@@ -20,9 +20,10 @@
 	font-size: small;
 }
 
-#logout-button {
-	margin-top: 10px;
-	margin-left: 20px;
+#logout-container {
+	text-align: center;
+	align-items: center;
+	display: flex;
 }
 
 

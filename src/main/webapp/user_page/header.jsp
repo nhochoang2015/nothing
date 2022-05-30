@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@page import="elementary_web.dto.AccountDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="elementary_web.dto.SubjectDTO"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,83 +52,86 @@
 	<div class="container-fluid bg-light position-relative shadow">
 		<nav
 			class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
-			<a href="./" class="navbar-brand font-weight-bold text-secondary"
-				style="font-size: 50px;"> <i class="fa-solid fa-book-open"></i>
-				<span class="text-primary">LEARN</span>
-			</a>
+			<div>
+				<a href="./" class="navbar-brand font-weight-bold text-secondary"
+					style="font-size: 50px;"> <i class="fa-solid fa-book-open"></i>
+					<span class="text-primary">LEARN</span>
+				</a>
+			</div>
 			<button type="button" class="navbar-toggler" data-toggle="collapse"
 				data-target="#navbarCollapse">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			
+
 			<div class="collapse navbar-collapse justify-content-between"
 				id="navbarCollapse">
-				<%
+				<div class="navbar-nav font-weight-bold mx-auto py-0">
+					<a href="./" class="nav-item nav-link active">Home</a> <a
+						href="/monthly-ranking" class="nav-item nav-link">Leaderboard</a>
+					<%-- <div class="nav-item dropdown">
+						<a href="user_page/#" class="nav-link dropdown-toggle"
+							data-toggle="dropdown">Môn học</a>
+						<%
+						ArrayList<SubjectDTO> subjectList = (ArrayList<SubjectDTO>) request.getAttribute("subjectList");
+						%>
+						<div class="dropdown-menu rounded-0 m-0">
+							<%
+							for (SubjectDTO subject : subjectList) {
+							%>
+							<a href="./subject-details?subjectID=<%=subject.getSubjectID()%>"
+								class="dropdown-item"><%=subject.getSubjectName()%></a>
+							<%
+							}
+							%>
+						</div>
+					</div>
+ --%>
+					<a href="/about" class="nav-item nav-link">About</a>
+					<%
 					AccountDTO accountDTO = (AccountDTO) session.getAttribute("account");
 					if (accountDTO != null) {
-				%>
-				<!-- Trường họp người dùng đã đăng nhập -->
-				<div class="navbar-nav font-weight-bold mx-auto py-0">
-					<a href="./" class="nav-item nav-link active">Home</a>
-					<a href="/monthly-ranking" class="nav-item nav-link">Leaderboard</a> <a
-						class="nav-item nav-link" data-toggle="modal" data-target="#store">Cửa
-						hàng</a> 
+					%>
+					<!-- Trường họp người dùng đã đăng nhập -->
+					<a class="nav-item nav-link" data-toggle="modal"
+						data-target="#store">Cửa hàng</a> <a class="nav-item nav-link">Quản
+						lý thông tin cá nhân</a>
 
 					<%
-						if (accountDTO.getRoleName().equals("ADMIN")) {
+					if (accountDTO.getRoleName().equals("ADMIN")) {
 					%>
 
 					<a href=" ADM-User.jsp" class="nav-item nav-link">Amin Page</a>
 
 					<%
-						}
+					}
 					%>
 
-
-					<div class="nav-item dropdown">
-						<a href="user_page/#" class="nav-link dropdown-toggle"
-							data-toggle="dropdown">Môn học</a>
-						<div class="dropdown-menu rounded-0 m-0">
-							<a href="#" class="dropdown-item">Môn học</a>
-							<a href="#" class="dropdown-item">Mon học</a>
-						</div>
+					<div id="login-container">
+						<i class="fa-solid fa-user fa-2xl" id="user-icon"></i> <br>
+						<p id="account-name"><%=accountDTO.getNickName()%></p>
+						<p id="point">
+							ĐIỂM HIỆN CÓ:
+							<%=accountDTO.getCoin()%></p>
 					</div>
-					<a href="/about" class="nav-item nav-link">About</a>
-				</div>
-
-				<div id="login-container">
-					<i class="fa-solid fa-user fa-2xl" id="user-icon"></i> <br>
-					<p id="account-name"><%=accountDTO.getNickName()%></p>
-					<p id="point">
-						ĐIỂM HIỆN CÓ:
-						<%=accountDTO.getCoin()%></p>
-				</div>
-				<a id="logout-button" href="./logout"
-					class="fa-solid fa-arrow-right-from-bracket fa-2xl"></a>
-				<%
+					<div id="logout-container">
+						<a id="logout-button" href="./logout"
+							class="fa-solid fa-arrow-right-from-bracket fa-3x"></a>
+					</div>
+					<%
 					} else {
-				%>
-				<!-- Trường họp người dùng chưa đăng nhập -->
-				<div class="navbar-nav font-weight-bold mx-auto py-0">
-					<a href="/" class="nav-item nav-link active">Home</a>
-					<a href="/monthly-ranking" class="nav-item nav-link">Leaderboard</a> 
-					<div class="nav-item dropdown">
-						<a href="user_page/#" class="nav-link dropdown-toggle"
-							data-toggle="dropdown">Môn học</a>
-						<div class="dropdown-menu rounded-0 m-0">
-							<a href="#" class="dropdown-item">Môn học</a>
-							<a href="#" class="dropdown-item">Mon học</a>
-						</div>
+					%>
+					<div id="login-container">
+
+						<i class="fa-solid fa-user fa-2xl" id="user-icon"></i> <a
+							href="./login" class="btn btn-primary px-4" id="login-button">Đăng
+							nhập</a> <a href="user_page/" class="btn btn-primary px-4"
+							id="sign-in-button">Đăng ký</a>
 					</div>
-					<a href="/about" class="nav-item nav-link">About</a>
-				</div>
-				<i class="fa-solid fa-user fa-2xl" id="user-icon"></i> <a
-					href="./login" class="btn btn-primary px-4" id="login-button">Đăng
-					nhập</a> <a href="user_page/" class="btn btn-primary px-4"
-					id="sign-in-button">Đăng ký</a>
-				<%
+
+					<%
 					}
-				%>
+					%>
+				</div>
 			</div>
 		</nav>
 	</div>

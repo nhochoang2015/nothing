@@ -19,6 +19,7 @@
 	<%@include file="header.jsp"%>
 	<!-- Môn học -->
 	<%
+	AccountDTO account = (AccountDTO) session.getAttribute("account");
 	SubjectDTO subject = (SubjectDTO) request.getAttribute("subject");
 	List<LessonCompleteDTO> lessonCompleteList = (List<LessonCompleteDTO>) request.getAttribute("lessonCompleteList");
 	%>
@@ -50,13 +51,14 @@
 							for (LessonDTO lesson : lessonList) {
 							%>
 							<div class="row border-bottom">
+
 								<div class="col-10 py-1">
-									<a> <%
- lesson.getLessonName();
- %>
+									<a> <%=lesson.getLessonName()%>
 									</a>
 								</div>
-
+								<%
+								if (lessonCompleteList != null) {
+								%>
 								<div class="col-2 py-1">
 									<%
 									if (lesson.isComplete(lessonCompleteList)) {
@@ -70,10 +72,15 @@
 									}
 									%>
 								</div>
+								<%
+								}
+								%>
 							</div>
 							<%
 							}
 							%>
+
+
 
 						</div>
 						<a href="user_page/" class="btn btn-primary px-4 mx-auto mb-4">Kiểm
