@@ -61,6 +61,10 @@ public class Account {
 		this.role = role;
 	}
 
+	public Account() {
+		super();
+	}
+
 	public int getAccountID() {
 		return accountID;
 	}
