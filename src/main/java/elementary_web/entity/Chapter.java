@@ -24,7 +24,7 @@ public class Chapter {
 	@Column(name = "TEN_CHUONG")
 	private String chapterName;
 	@ManyToOne
-	@JoinColumn(name = "MA_BAI_HOC", nullable = false)
+	@JoinColumn(name = "MA_MON_HOC", nullable = false)
 	private Subject subject;
 	@OneToMany(mappedBy = "chapter", fetch = FetchType.EAGER)
 	private List<Lesson> lessonList;

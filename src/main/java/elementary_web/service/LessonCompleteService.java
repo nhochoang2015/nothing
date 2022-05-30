@@ -21,7 +21,7 @@ public class LessonCompleteService {
 
 	public List<LessonCompleteDTO> findByAccountID(int accountID) {
 		List<LessonCompleteDTO> lessonCompleteDTOList = new ArrayList<LessonCompleteDTO>();
-		List<LessonComplete> lessonCompleteList = lessonCompleteRepository.findByAccountID(accountID);
+		List<LessonComplete> lessonCompleteList = lessonCompleteRepository.findByAccount_AccountID(accountID);
 		for (LessonComplete lessonComplete : lessonCompleteList) {
 			lessonCompleteDTOList.add(lessonCompleteConverter.toDTO(lessonComplete));
 		}

@@ -17,7 +17,8 @@ public class Lesson {
 	@ManyToOne
 	@JoinColumn(name = "MA_CHUONG", nullable = false)
 	private Chapter chapter;
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "MA_BAI_HOC_TIEN_QUYET")
 	private Lesson lessonBefore;
 	@ManyToMany(mappedBy = "lessonBefore")
 	private List<Lesson> lessonAfter;

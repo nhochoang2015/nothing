@@ -10,5 +10,5 @@ import elementary_web.entity.compositeKey.LessonCompleteKey;
 
 @Repository
 public interface LessonCompleteRepository extends JpaRepository<LessonComplete, LessonCompleteKey> {
-	List<LessonComplete> findByAccountID(int accountID);
+	List<LessonComplete> findByAccount_AccountID(int accountID);
 }

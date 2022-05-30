@@ -100,7 +100,6 @@ public class UserController {
 		ModelAndView mav = new ModelAndView("user_page/subject-details");
 		mav.addObject("subject", subjectDTO);
 		mav.addObject("lessonCompleteList", lessonCompleteDTOList);
-
 		return mav;
 	}
 
