@@ -12,5 +12,7 @@ import elementary_web.entity.Account;
 public interface AccountRepository extends JpaRepository<Account, Integer> {
 	@Query(value = "SELECT * FROM TAI_KHOAN WHERE (EMAIL = ?1) OR (TEN_TAI_KHOAN = ?1) OR (SDT = ?1)", nativeQuery = true)
 	Account findByEmailOrUsernameOrPhoneNumber(String emailOrUserOrPhoneNumber);
+	
+	List<Account> findByOrderByMonthlyPointDesc();
 
 }
