@@ -17,6 +17,7 @@ import elementary_web.dto.AccountDTO;
 import elementary_web.dto.LessonCompleteDTO;
 import elementary_web.dto.SubjectDTO;
 import elementary_web.service.LessonCompleteService;
+import elementary_web.service.RankingService;
 import elementary_web.service.SubjectService;
 
 @Controller
@@ -25,6 +26,8 @@ public class UserController {
 	private SubjectService subjectService;
 	@Autowired
 	private LessonCompleteService lessonCompleteService;
+	@Autowired
+	private RankingService rankingService;
 
 	@GetMapping("/")
 	public String homePage(Model model) {
