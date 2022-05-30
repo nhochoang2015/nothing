@@ -77,8 +77,11 @@ public class UserController {
 	}
 
 	@GetMapping("/monthly-ranking")
-	public String monthlyRankingPage(Model model) {
-		return "./user_page/monthly-ranking";
+	public ModelAndView monthlyRankingPage() {
+		List<AccountDTO> rankingList = rankingService.getMonthlyRankingList();
+		ModelAndView mav = new ModelAndView("user_page/monthly-ranking");
+		mav.addObject("rankingList", rankingList);
+		return mav;
 	}
 
 	@GetMapping("/weekly-ranking")
