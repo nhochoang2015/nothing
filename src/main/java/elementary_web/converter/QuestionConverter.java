@@ -15,7 +15,8 @@ public class QuestionConverter {
 		int lessonID = entity.getLesson().getLessonID();
 
 		String answers = entity.getAnswers();
-		return new QuestionDTO(questionID, content, lessonID, answers);
+		String explain = entity.getExplain();
+		return new QuestionDTO(questionID, content, lessonID, answers, explain);
 	}
 
 }

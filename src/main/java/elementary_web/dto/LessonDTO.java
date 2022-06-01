@@ -8,13 +8,16 @@ public class LessonDTO {
 	private String lessonName;
 	private int chapterID;
 	private Integer lessonBeforeID;
+	private List<QuestionDTO> questionList;
 
-	public LessonDTO(int lessonID, String lessonName, int chapterID, Integer lessonBeforeID) {
+	public LessonDTO(int lessonID, String lessonName, int chapterID, Integer lessonBeforeID,
+			List<QuestionDTO> questionList) {
 		super();
 		this.lessonID = lessonID;
 		this.lessonName = lessonName;
 		this.chapterID = chapterID;
 		this.lessonBeforeID = lessonBeforeID;
+		this.questionList = questionList;
 	}
 
 	public int getLessonID() {
@@ -56,6 +59,14 @@ public class LessonDTO {
 		}
 
 		return false;
+	}
+
+	public List<QuestionDTO> getQuestionList() {
+		return questionList;
+	}
+
+	public void setQuestionList(List<QuestionDTO> questionList) {
+		this.questionList = questionList;
 	}
 
 }

@@ -15,8 +15,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import elementary_web.dto.AccountDTO;
 import elementary_web.dto.LessonCompleteDTO;
+import elementary_web.dto.LessonDTO;
 import elementary_web.dto.SubjectDTO;
 import elementary_web.service.LessonCompleteService;
+import elementary_web.service.LessonService;
+import elementary_web.service.LessonService;
 import elementary_web.service.RankingService;
 import elementary_web.service.SubjectService;
 
@@ -28,7 +31,8 @@ public class UserController {
 	private LessonCompleteService lessonCompleteService;
 	@Autowired
 	private RankingService rankingService;
-
+	@Autowired
+	private LessonService lessonService;
 	@RequestMapping("/")
 	public ModelAndView homePage() {
 		ModelAndView mav = new ModelAndView("user_page/index");
@@ -72,9 +76,12 @@ public class UserController {
 		return "./user_page/team";
 	}
 
-	@GetMapping("/quiz")
-	public String quizPage(Model model) {
-		return "./user_page/quiz";
+	@RequestMapping("/quiz")
+	public ModelAndView quizPage(@RequestParam int lessonID) {
+		ModelAndView mav = new ModelAndView( "user_page/quiz");
+		LessonDTO lesson = lessonService.findByLessonID(lessonID);
+		mav.addObject("lesson", lesson);
+		return mav;
 	}
 
 	@GetMapping("/test")

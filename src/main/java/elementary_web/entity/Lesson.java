@@ -22,7 +22,7 @@ public class Lesson {
 	private Lesson lessonBefore;
 	@ManyToMany(mappedBy = "lessonBefore")
 	private List<Lesson> lessonAfter;
-	@OneToMany(mappedBy = "lesson")
+	@OneToMany(mappedBy = "lesson", fetch = FetchType.EAGER)
 	private List<Question> questionList;
 	@OneToMany(mappedBy = "lesson")
 	private List<LessonComplete> lessonCompleteList;

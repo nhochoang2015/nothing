@@ -9,13 +9,15 @@ public class QuestionDTO {
 	private int lessonID;
 
 	private String answers;
+	private String explain;
 
-	public QuestionDTO(int questionID, String content, int lessonID, String answers) {
+	public QuestionDTO(int questionID, String content, int lessonID, String answers, String explain) {
 		super();
 		this.questionID = questionID;
 		this.content = content;
 		this.lessonID = lessonID;
 		this.answers = answers;
+		this.explain = explain;
 	}
 
 	public int getQuestionID() {
@@ -48,6 +50,14 @@ public class QuestionDTO {
 
 	public void setAnswers(String answers) {
 		this.answers = answers;
+	}
+
+	public String getExplain() {
+		return explain;
+	}
+
+	public void setExplain(String explain) {
+		this.explain = explain;
 	}
 
 }

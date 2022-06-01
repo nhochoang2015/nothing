@@ -7,5 +7,6 @@ import elementary_web.entity.Lesson;
 
 @Repository
 public interface LessonRepository extends JpaRepository<Lesson, Integer> {
+	Lesson findByLessonID(int lessonID);
 
 }

@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@page import="elementary_web.dto.LessonDTO"%>
+<%@page import="elementary_web.dto.QuestionDTO"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,38 +16,40 @@
 		<div class="row pt-5">
 			<div class="col-lg-12" id="flipbook">
 				<div class="hard"></div>
+				<%
+				LessonDTO lesson = (LessonDTO) request.getAttribute("lesson");
+				ArrayList<QuestionDTO> questionList = (ArrayList<QuestionDTO>) lesson.getQuestionList();
+				int index = 1;
+				for (QuestionDTO question : questionList) {
+				%>
 				<div class="page question">
 					<div class="col-lg-12 question-container">
 						<div class="row">
 							<div class="col-lg-12 question-number">
-								<span>Câu hỏi số 1</span>
+								<span>Câu hỏi số <%=index%></span>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-lg-12 question-content">
-								<p>Nội dung câu hỏi.Nội dung câu hỏiNội dung câu hỏiNội dung
-									câu hỏiNội dung câu hỏiNội dung câu hỏiNội dung câu hỏiNội dung
-									câu hỏiNội dung câu hỏi</p>
+								<p><%=question.getContent()%></p>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-lg-12 question-answer">
-								<div class = "answer">
-									<input type="radio" id="answer1" name="answer" value="40" class ="radioButton">
-									<label for="answer1">Đáp án 1</label>
+								<%
+								String answer = question.getAnswers();
+								String[] arrayAnswer = answer.split(";");
+								String correctAnswer = arrayAnswer[0];
+								for (int i = 1; i < arrayAnswer.length; i++) {
+								%>
+								<div class="answer">
+									<input type="radio" name="answer<%=i%>" value="<%=i%>"
+										class="radioButton"> <label for="answer1"><%=arrayAnswer[i]%></label>
 								</div>
-								<div class = "answer">
-									<input type="radio" id="answer2" name="answer" value="40" class ="radioButton">
-									<label for="answer1">Đáp án 1</label>
-								</div>
-								<div class = "answer">
-									<input type="radio" id="answer3" name="answer" value="40" class ="radioButton"> 
-									<label for="answer1">Đáp án 1</label>
-								</div>
-								<div class = "answer">
-									<input type="radio" id="answer4" name="answer" value="40" class ="radioButton">
-									<label for="answer1">Đáp án 1</label>
-								</div>
+								<%
+								}
+								%>
+
 
 							</div>
 						</div>
@@ -62,19 +66,16 @@
 						</div>
 						<div class="row">
 							<div class="col-lg-12 explain-content">
-								<p>Giai thich Giai thich Giai thich Giai thich Giai
-									thichGiai thich</p>
+								<p><%=question.getExplain()%></p>
 							</div>
 						</div>
 
 					</div>
 				</div>
-				<div class="page">Question 2</div>
-				<div class="page">Explain 2</div>
-				<div class="page">Question 3</div>
-				<div class="page">Explain 3</div>
-				<div class="page">Question 4</div>
-				<div class="page">Explain 4</div>
+
+				<%
+				}
+				%>
 				<div class="hard"></div>
 			</div>
 
