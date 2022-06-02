@@ -39,12 +39,11 @@
 								<%
 								String answer = question.getAnswers();
 								String[] arrayAnswer = answer.split(";");
-								String correctAnswer = arrayAnswer[0];
 								for (int i = 1; i < arrayAnswer.length; i++) {
 								%>
-								<div class="answer">
-									<input type="radio" name="answer<%=i%>" value="<%=i%>"
-										class="radioButton"> <label for="answer1"><%=arrayAnswer[i]%></label>
+								<div class="answer" onclick="answerQuestion(this)">
+									<input type="radio" name="<%=index%>" value="<%=i%>"
+										class="radioButton" disabled="disabled"> <label><%=arrayAnswer[i]%></label>
 								</div>
 								<%
 								}
@@ -65,7 +64,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-lg-12 explain-content">
+							<div id="ex_<%=index%>" class="col-lg-12 explain-content" hidden="true">
 								<p><%=question.getExplain()%></p>
 							</div>
 						</div>
@@ -74,6 +73,7 @@
 				</div>
 
 				<%
+				index++;
 				}
 				%>
 				<div class="hard"></div>
@@ -103,7 +103,23 @@
 		</div>
 
 	</div>
+	<%
+	ArrayList<String> correctArrayAnswer = lesson.getCorrectAnswerArray();
+	%>
+	<script type="text/javascript">
+		var correctAnswers = [];
+		var userAnswers = [];
+	<%for (int i = 0; i < correctArrayAnswer.size(); i++) {%>
+		correctAnswers[
+	<%=i%>
+		] =
+	<%=correctArrayAnswer.get(i)%>
+		
+	<%}%>
+		
+	</script>
 	<%@include file="footer.jsp"%>
+
 	<script type="text/javascript" src="user_page/lib/turnjs4/turn.js"></script>
 	<script type="text/javascript" src="user_page/js/quiz.js"></script>
 </body>

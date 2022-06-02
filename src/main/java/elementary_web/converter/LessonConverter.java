@@ -20,6 +20,7 @@ public class LessonConverter {
 		int lessonID = entity.getLessonID();
 		String lessonName = entity.getLessonName();
 		int chapterID = entity.getChapter().getChapterID();
+		int score = entity.getScore();
 		Lesson lessonBefore = entity.getLessonBefore();
 		Integer lessonBeforeID = null;
 		if (lessonBefore != null) {
@@ -31,6 +32,6 @@ public class LessonConverter {
 			questionDTOList.add(questionConverter.toDTO(question));
 
 		}
-		return new LessonDTO(lessonID, lessonName, chapterID, lessonBeforeID, questionDTOList);
+		return new LessonDTO(lessonID, lessonName, chapterID, lessonBeforeID, questionDTOList, score);
 	}
 }

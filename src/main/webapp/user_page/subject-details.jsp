@@ -53,7 +53,7 @@
 							<div class="row border-bottom">
 
 								<div class="col-10 py-1">
-									<a> <%=lesson.getLessonName()%>
+									<a href="./quiz?lessonID=<%=lesson.getLessonID()%>"> <%=lesson.getLessonName()%>
 									</a>
 								</div>
 								<%

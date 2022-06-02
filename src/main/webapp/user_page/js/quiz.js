@@ -51,7 +51,6 @@ $(document).ready(function() {
 	$(".page-number").click(function() {
 		var index = $(this).index() * 2;
 
-		console.log(index);
 		oTurn.turn("page", index);
 		$(".page-number").each(function() {
 			$(this).css({ 'background-color': ' white', 'color': ' black' });
@@ -59,7 +58,31 @@ $(document).ready(function() {
 		$(this).css({ 'background-color': ' yellow', 'color': ' black' });
 
 	});
-	$(".answer").click(function() {
-		$(this).closest(".answer").find(".radioButton").prop("checked", true);
-	})
 })
+function answerQuestion(div) {
+	var answerDivArray = $(div).closest(".question-answer").find(".answer");
+	for (let i = 0; i < answerDivArray.length; i++) {
+		$(answerDivArray[i]).removeAttr('onclick');
+
+	}
+	var radidoButton = $(div).find(".radioButton");
+	radidoButton.prop("checked", true);
+	var questionNumber = radidoButton.attr('name');
+	var awswerUserPicked = radidoButton.val();
+	var correctAnswer = correctAnswers[questionNumber - 1];
+	console.log('Right:' + correctAnswer);
+
+	userAnswers[questionNumber - 1] = awswerUserPicked;
+	if (awswerUserPicked == correctAnswer) {
+		$(div).css({ 'background-color': 'green', 'color': 'black' });
+		console.log("Đúng")
+	} else {
+		$(div).css({ 'background-color': 'red', 'color': 'white' });
+		$(answerDivArray[correctAnswer - 1]).css({ 'background-color': 'green', 'color': 'black' })
+		console.log("Sai")
+	}
+	var explainID = '#ex_' + questionNumber;
+	var explainDiv = $(explainID);
+	explainDiv.attr('hidden', false);
+
+}

@@ -1,12 +1,14 @@
 package elementary_web.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import elementary_web.converter.LessonConverter;
 import elementary_web.dto.LessonDTO;
 import elementary_web.entity.Lesson;
 import elementary_web.repository.LessonRepository;
 
+@Service
 public class LessonService {
 
 	@Autowired

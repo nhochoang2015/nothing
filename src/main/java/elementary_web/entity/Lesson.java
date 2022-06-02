@@ -14,6 +14,8 @@ public class Lesson {
 	private int lessonID;
 	@Column(name = "TEN_BAI_HOC", columnDefinition = "nvarchar(max)")
 	private String lessonName;
+	@Column(name = "DIEM")
+	private int score;
 	@ManyToOne
 	@JoinColumn(name = "MA_CHUONG", nullable = false)
 	private Chapter chapter;
@@ -81,6 +83,14 @@ public class Lesson {
 
 	public void setLessonCompleteList(List<LessonComplete> lessonCompleteList) {
 		this.lessonCompleteList = lessonCompleteList;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
 	}
 
 }

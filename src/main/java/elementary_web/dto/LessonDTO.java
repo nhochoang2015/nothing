@@ -1,5 +1,6 @@
 package elementary_web.dto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class LessonDTO {
@@ -9,15 +10,17 @@ public class LessonDTO {
 	private int chapterID;
 	private Integer lessonBeforeID;
 	private List<QuestionDTO> questionList;
+	private int score;
 
 	public LessonDTO(int lessonID, String lessonName, int chapterID, Integer lessonBeforeID,
-			List<QuestionDTO> questionList) {
+			List<QuestionDTO> questionList, int score) {
 		super();
 		this.lessonID = lessonID;
 		this.lessonName = lessonName;
 		this.chapterID = chapterID;
 		this.lessonBeforeID = lessonBeforeID;
 		this.questionList = questionList;
+		this.score = score;
 	}
 
 	public int getLessonID() {
@@ -67,6 +70,15 @@ public class LessonDTO {
 
 	public void setQuestionList(List<QuestionDTO> questionList) {
 		this.questionList = questionList;
+	}
+
+	public ArrayList<String> getCorrectAnswerArray() {
+		ArrayList<String> result = new ArrayList<String>();
+		for (QuestionDTO questionDTO : questionList) {
+			result.add(questionDTO.getAnswers().split(";")[0]);
+		}
+		return result;
+
 	}
 
 }
