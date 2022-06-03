@@ -64,7 +64,8 @@
 							</div>
 						</div>
 						<div class="row">
-							<div id="ex_<%=index%>" class="col-lg-12 explain-content" hidden="true">
+							<div id="ex_<%=index%>" class="col-lg-12 explain-content"
+								hidden="true">
 								<p><%=question.getExplain()%></p>
 							</div>
 						</div>
@@ -100,6 +101,11 @@
 
 				</ul>
 			</div>
+
+			<div class="col-lg-12" hidden="true">
+				<button>Trang chủ</button>
+				<button>Chi tiết môn học</button>
+			</div>
 		</div>
 
 	</div>
@@ -108,7 +114,6 @@
 	%>
 	<script type="text/javascript">
 		var correctAnswers = [];
-		var userAnswers = [];
 	<%for (int i = 0; i < correctArrayAnswer.size(); i++) {%>
 		correctAnswers[
 	<%=i%>
@@ -116,7 +121,13 @@
 	<%=correctArrayAnswer.get(i)%>
 		
 	<%}%>
-		
+		var userAnswers = Array(correctAnswers.length).fill(0);
+		var lessonID =
+	<%=lesson.getLessonID()%>
+		;
+		var lessonScore =
+	<%=lesson.getScore()%>
+		;
 	</script>
 	<%@include file="footer.jsp"%>
 

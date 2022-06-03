@@ -13,4 +13,14 @@ public class LessonCompleteKey implements Serializable {
 	@Column(name = "MA_TAI_KHOAN")
 	int accountID;
 
+	public LessonCompleteKey(int lessonID, int accountID) {
+		super();
+		this.lessonID = lessonID;
+		this.accountID = accountID;
+	}
+
+	public LessonCompleteKey() {
+		super();
+	}
+
 }

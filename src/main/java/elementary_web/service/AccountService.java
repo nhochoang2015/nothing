@@ -37,4 +37,9 @@ public class AccountService {
 		}
 	}
 
+	public Account findByAccountID(int accountID) {
+		Account account = accountRepository.findByAccountID(accountID);
+		return account;
+	}
+
 }

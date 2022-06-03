@@ -21,4 +21,10 @@ public class LessonService {
 		return lessonConverter.toDTO(lesson);
 
 	}
+
+	public Lesson findEntityByLessonID(int lessonID) {
+		Lesson lesson = lessonRepository.findByLessonID(lessonID);
+		return lesson;
+
+	}
 }

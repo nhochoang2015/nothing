@@ -28,4 +28,9 @@ public class LessonCompleteService {
 		return lessonCompleteDTOList;
 	}
 
+	public void updateProcess(LessonCompleteDTO lessonCompleteDTO, int result) {
+		LessonComplete lessonComplete = lessonCompleteConverter.toEntity(lessonCompleteDTO);
+		lessonCompleteRepository.save(lessonComplete);
+	}
+
 }
