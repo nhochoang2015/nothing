@@ -28,7 +28,8 @@ public class LessonCompleteService {
 		return lessonCompleteDTOList;
 	}
 
-	public void updateProcess(LessonCompleteDTO lessonCompleteDTO, int result) {
+	public void updateProcess(int accountID, int lessonID) {
+		LessonCompleteDTO lessonCompleteDTO = new LessonCompleteDTO(accountID, lessonID);
 		LessonComplete lessonComplete = lessonCompleteConverter.toEntity(lessonCompleteDTO);
 		lessonCompleteRepository.save(lessonComplete);
 	}

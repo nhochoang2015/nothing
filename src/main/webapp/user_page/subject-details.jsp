@@ -53,7 +53,9 @@
 							<div class="row border-bottom">
 
 								<div class="col-10 py-1">
-									<a href="./quiz?lessonID=<%=lesson.getLessonID()%>"> <%=lesson.getLessonName()%>
+									<a <%if (account != null) {%>
+										href="./quiz?lessonID=<%=lesson.getLessonID()%>&subjectID=<%=subject.getSubjectID()%>"
+										<%} else {%> href="./login" <%}%>> <%=lesson.getLessonName()%>
 									</a>
 								</div>
 								<%

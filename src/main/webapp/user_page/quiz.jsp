@@ -17,6 +17,7 @@
 			<div class="col-lg-12" id="flipbook">
 				<div class="hard"></div>
 				<%
+				int subjectID = (int)request.getAttribute("subjectID");
 				LessonDTO lesson = (LessonDTO) request.getAttribute("lesson");
 				ArrayList<QuestionDTO> questionList = (ArrayList<QuestionDTO>) lesson.getQuestionList();
 				int index = 1;
@@ -102,9 +103,11 @@
 				</ul>
 			</div>
 
-			<div class="col-lg-12" hidden="true">
-				<button>Trang chủ</button>
-				<button>Chi tiết môn học</button>
+			<div id="back-button-container" class="col-lg-12" hidden="true">
+				<button onclick="location.href = './'">Trang chủ</button>
+				<button
+					onclick="location.href = './subject-details?subjectID=<%=subjectID%>';">Chi
+					tiết môn học</button>
 			</div>
 		</div>
 
@@ -112,6 +115,7 @@
 	<%
 	ArrayList<String> correctArrayAnswer = lesson.getCorrectAnswerArray();
 	%>
+
 	<script type="text/javascript">
 		var correctAnswers = [];
 	<%for (int i = 0; i < correctArrayAnswer.size(); i++) {%>

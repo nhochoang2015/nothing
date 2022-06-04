@@ -33,6 +33,7 @@ public class UserController {
 	private RankingService rankingService;
 	@Autowired
 	private LessonService lessonService;
+
 	@RequestMapping("/")
 	public ModelAndView homePage() {
 		ModelAndView mav = new ModelAndView("user_page/index");
@@ -77,10 +78,11 @@ public class UserController {
 	}
 
 	@RequestMapping("/quiz")
-	public ModelAndView quizPage(@RequestParam int lessonID) {
-		ModelAndView mav = new ModelAndView( "user_page/quiz");
+	public ModelAndView quizPage(@RequestParam int lessonID, @RequestParam int subjectID) {
+		ModelAndView mav = new ModelAndView("user_page/quiz");
 		LessonDTO lesson = lessonService.findByLessonID(lessonID);
 		mav.addObject("lesson", lesson);
+		mav.addObject("subjectID", subjectID);
 		return mav;
 	}
 

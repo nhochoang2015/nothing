@@ -62,6 +62,7 @@ $(document).ready(function() {
 })
 function answerQuestion(div) {
 	var answerDivArray = $(div).closest(".question-answer").find(".answer");
+
 	//Bỏ onclick trên các đáp án
 	for (let i = 0; i < answerDivArray.length; i++) {
 		$(answerDivArray[i]).removeAttr('onclick');
@@ -88,8 +89,11 @@ function answerQuestion(div) {
 	var explainID = '#ex_' + questionNumber;
 	var explainDiv = $(explainID);
 	explainDiv.attr('hidden', false);
+	// Kiểm tra xem học sinh hoàn thành bài học chưa
 	if (isLessonComplete()) {
-		var reward = lessonScore / numberOfRightAnswer;
+		$("#back-button-container").attr('hidden', false);
+		var reward = Math.round((lessonScore / 10) * numberOfRightAnswer);
+		console.log(reward)
 		$.ajax({
 			url: './updateLessonProcress',
 			type: 'POST',
@@ -106,6 +110,7 @@ function answerQuestion(div) {
 	}
 
 }
+// Kiểm tra xem học sinh hoàn thành bài học chưa
 function isLessonComplete() {
 	for (let i = 0; i < userAnswers.length; i++) {
 		if (userAnswers[i] === 0) return false;
