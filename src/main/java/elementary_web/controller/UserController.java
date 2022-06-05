@@ -1,5 +1,6 @@
 package elementary_web.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -78,11 +79,19 @@ public class UserController {
 	}
 
 	@RequestMapping("/quiz")
-	public ModelAndView quizPage(@RequestParam int lessonID, @RequestParam int subjectID) {
+	public ModelAndView quizPage(@RequestParam int lessonID, @RequestParam int subjectID, HttpSession session) {
 		ModelAndView mav = new ModelAndView("user_page/quiz");
+		AccountDTO account = (AccountDTO) session.getAttribute("account");
+		int accountID = account.getAccountID();
 		LessonDTO lesson = lessonService.findByLessonID(lessonID);
-		mav.addObject("lesson", lesson);
-		mav.addObject("subjectID", subjectID);
+		if (lessonCompleteService.checkIfLessonBeforeComplete(accountID, lessonID)) {
+			mav.addObject("lesson", lesson);
+			mav.addObject("subjectID", subjectID);
+		} else {
+			mav = new ModelAndView("redirect:./subject-details?subjectID=" + subjectID);
+			mav.addObject("lessonID", lesson.getLessonBeforeID());
+		}
+
 		return mav;
 	}
 
@@ -105,7 +114,10 @@ public class UserController {
 	}
 
 	@GetMapping("/subject-details")
-	public ModelAndView subjectDetailsPage(@RequestParam int subjectID, HttpSession session) {
+	public ModelAndView subjectDetailsPage(@RequestParam int subjectID, HttpSession session, HttpServletRequest request)
+			throws UnsupportedEncodingException {
+		String lessonIDString = (String) request.getParameter("lessonID");
+		System.out.println("LessonString: " + lessonIDString);
 		SubjectDTO subjectDTO = subjectService.findBySubjectID(subjectID);
 		AccountDTO account = (AccountDTO) session.getAttribute("account");
 		ModelAndView mav = new ModelAndView("user_page/subject-details");
@@ -114,6 +126,13 @@ public class UserController {
 			int accountID = account.getAccountID();
 			List<LessonCompleteDTO> lessonCompleteDTOList = lessonCompleteService.findByAccountID(accountID);
 			mav.addObject("lessonCompleteList", lessonCompleteDTOList);
+			if (lessonIDString != null) {
+				System.out.println("CODE IS HERE");
+				int lessonID = Integer.parseInt(lessonIDString);
+				LessonDTO lessonBefore = lessonService.findByLessonID(lessonID);
+				mav.addObject("notify", "Bạn chưa thể tham gia bài học này vì"
+						+ lessonBefore.getLessonName() + "chưa hoàn thành.");
+			}
 		}
 		return mav;
 	}

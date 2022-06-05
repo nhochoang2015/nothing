@@ -97,7 +97,6 @@ function answerQuestion(div) {
 		$.ajax({
 			url: './updateLessonProcress',
 			type: 'POST',
-			dataType: 'text',
 			data: {
 				lessonID: lessonID,
 				reward: reward
@@ -117,4 +116,5 @@ function isLessonComplete() {
 	}
 	return true;
 }
+
 

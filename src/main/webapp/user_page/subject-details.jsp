@@ -55,7 +55,7 @@
 								<div class="col-10 py-1">
 									<a <%if (account != null) {%>
 										href="./quiz?lessonID=<%=lesson.getLessonID()%>&subjectID=<%=subject.getSubjectID()%>"
-										<%} else {%> href="./login" <%}%>> <%=lesson.getLessonName()%>
+										<%%> <%} else {%> href="./login" <%}%>> <%=lesson.getLessonName()%>
 									</a>
 								</div>
 								<%
@@ -100,7 +100,17 @@
 	</div>
 
 
+	<%
+	String notify = (String) request.getAttribute("notify");
+	if (notify != null) {
+	%>
 
+	<script type="text/javascript">
+	alert('<%=notify%>');
+	</script>
+	<%
+	}
+	%>
 	<%@include file="footer.jsp"%>
 	<script type="text/javascript" src="user_page/js/subject-details.js"></script>
 </body>

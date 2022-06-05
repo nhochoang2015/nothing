@@ -42,4 +42,8 @@ public class AccountService {
 		return account;
 	}
 
+	public AccountDTO findDTOByAccountID(int accountID) {
+		Account account = accountRepository.findByAccountID(accountID);
+		return accountConverter.toDTO(account);
+	}
 }
