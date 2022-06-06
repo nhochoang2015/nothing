@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<%@include file="header.jsp"%>
+	<%@include file="header.jsp"%> 
 	<div class="container py-5">
 		<div class="row pt-5">
 			<div class="col-lg-12" id="flipbook">
