@@ -81,12 +81,17 @@
 							<%
 							}
 							%>
-
-
-
 						</div>
+						<%
+						if (lessonCompleteList != null) {
+							if (chapter.isChapterComplete(lessonCompleteList)) {
+						%>
 						<a href="user_page/" class="btn btn-primary px-4 mx-auto mb-4">Kiểm
 							tra</a>
+						<%
+						}
+						}
+						%>
 					</div>
 				</div>
 
@@ -106,7 +111,8 @@
 	%>
 
 	<script type="text/javascript">
-	alert('<%=notify%>');
+	alert('<%=notify%>
+		');
 	</script>
 	<%
 	}

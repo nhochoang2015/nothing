@@ -32,6 +32,21 @@ public class AccountDTO {
 		this.roleName = roleName;
 		this.active = active;
 	}
+	public AccountDTO(String accountName, String nickName, String password, String email,
+			String phoneNumber, int coin, int totalPoint, int weeklyPoint, int monthlyPoint, String roleName,
+			boolean active) {
+		this.accountName = accountName;
+		this.nickName = nickName;
+		this.password = password;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
+		this.coin = coin;
+		this.totalPoint = totalPoint;
+		this.weeklyPoint = weeklyPoint;
+		this.monthlyPoint = monthlyPoint;
+		this.roleName = roleName;
+		this.active = active;
+	}
 
 	public int getAccountID() {
 		return accountID;

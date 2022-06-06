@@ -17,12 +17,14 @@ import org.springframework.web.servlet.ModelAndView;
 import elementary_web.dto.AccountDTO;
 import elementary_web.dto.LessonCompleteDTO;
 import elementary_web.dto.LessonDTO;
+import elementary_web.dto.QuestionDTO;
 import elementary_web.dto.SubjectDTO;
 import elementary_web.service.LessonCompleteService;
 import elementary_web.service.LessonService;
 import elementary_web.service.LessonService;
 import elementary_web.service.RankingService;
 import elementary_web.service.SubjectService;
+import elementary_web.service.TestService;
 
 @Controller
 public class UserController {
@@ -34,6 +36,8 @@ public class UserController {
 	private RankingService rankingService;
 	@Autowired
 	private LessonService lessonService;
+	@Autowired
+	private TestService testService;
 
 	@RequestMapping("/")
 	public ModelAndView homePage() {
@@ -95,9 +99,12 @@ public class UserController {
 		return mav;
 	}
 
-	@GetMapping("/test")
-	public String testPage(Model model) {
-		return "./user_page/test";
+	@RequestMapping("/test")
+	public ModelAndView testPage(@RequestParam int chapterID) {
+		ModelAndView mav = new ModelAndView("user_page/test");
+		List<QuestionDTO> questionList = testService.getRandomQuestion(chapterID);
+		mav.addObject("questionList", questionList);
+		return mav;
 	}
 
 	@GetMapping("/monthly-ranking")
@@ -130,8 +137,8 @@ public class UserController {
 				System.out.println("CODE IS HERE");
 				int lessonID = Integer.parseInt(lessonIDString);
 				LessonDTO lessonBefore = lessonService.findByLessonID(lessonID);
-				mav.addObject("notify", "Bạn chưa thể tham gia bài học này vì"
-						+ lessonBefore.getLessonName() + "chưa hoàn thành.");
+				mav.addObject("notify",
+						"Bạn chưa thể tham gia bài học này vì" + lessonBefore.getLessonName() + "chưa hoàn thành.");
 			}
 		}
 		return mav;
