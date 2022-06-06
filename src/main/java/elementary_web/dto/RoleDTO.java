@@ -3,9 +3,9 @@ package elementary_web.dto;
 public class RoleDTO {
 
 	private int roleID;
-	private int roleName;
+	private String roleName;
 
-	public RoleDTO(int roleID, int roleName) {
+	public RoleDTO(int roleID, String roleName) {
 		super();
 		this.roleID = roleID;
 		this.roleName = roleName;
@@ -19,11 +19,11 @@ public class RoleDTO {
 		this.roleID = roleID;
 	}
 
-	public int getRoleName() {
+	public String getRoleName() {
 		return roleName;
 	}
 
-	public void setRoleName(int roleName) {
+	public void setRoleName(String roleName) {
 		this.roleName = roleName;
 	}
 

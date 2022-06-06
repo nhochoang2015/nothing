@@ -25,25 +25,42 @@ public class LessonComplete {
 	private Account account;
 	@ManyToOne
 	@MapsId("lessonID")
-	@JoinColumn(name = "MA_BAI_HOC")	
+	@JoinColumn(name = "MA_BAI_HOC")
 	private Lesson lesson;
+
+	public LessonComplete() {
+		super();
+	}
+
+	public LessonComplete(LessonCompleteKey id, Account account, Lesson lesson) {
+		super();
+		this.id = id;
+		this.account = account;
+		this.lesson = lesson;
+	}
+
 	public LessonCompleteKey getId() {
 		return id;
 	}
+
 	public void setId(LessonCompleteKey id) {
 		this.id = id;
 	}
+
 	public Account getAccount() {
 		return account;
 	}
+
 	public void setAccount(Account account) {
 		this.account = account;
 	}
+
 	public Lesson getLesson() {
 		return lesson;
 	}
+
 	public void setLesson(Lesson lesson) {
 		this.lesson = lesson;
 	}
-	
+
 }

@@ -1,5 +1,8 @@
 package elementary_web.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +29,10 @@ public class AccountService {
 		accountRepository.save(accountConverter.toEntity(accountDTO));
 	}
 
+	public void addNewAccount(Account account) {
+		accountRepository.save(account);
+	}
+
 	public AccountDTO findAccountByEmailOrUserOrPhoneNumber(String emailOrUserOrPhoneNumber) {
 		Account account = accountRepository.findByEmailOrUsernameOrPhoneNumber(emailOrUserOrPhoneNumber);
 		// Tim thay hay khong
@@ -37,4 +44,26 @@ public class AccountService {
 		}
 	}
 
+	public Account findByAccountID(int accountID) {
+		Account account = accountRepository.findByAccountID(accountID);
+		return account;
+	}
+
+	
+
+	public AccountDTO findDTOByAccountID(int accountID) {
+		Account account = accountRepository.findByAccountID(accountID);
+		return accountConverter.toDTO(account);
+	}
+
+	public List<AccountDTO> findAllAccount() {
+
+		List<Account> listAccount = accountRepository.findAll();
+		List<AccountDTO> listAccountDTO = new ArrayList<AccountDTO>();
+		for (Account a : listAccount) {
+			AccountDTO accountDTO = accountConverter.toDTO(a);
+			listAccountDTO.add(accountDTO);
+		}
+		return listAccountDTO;
+	}
 }

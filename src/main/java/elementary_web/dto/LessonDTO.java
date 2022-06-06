@@ -81,4 +81,16 @@ public class LessonDTO {
 
 	}
 
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+
+	public void setLessonBeforeID(Integer lessonBeforeID) {
+		this.lessonBeforeID = lessonBeforeID;
+	}
+
 }

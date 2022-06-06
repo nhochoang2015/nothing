@@ -3,7 +3,7 @@ insert into VAI_TRO(TEN_VAI_TRO) values ('ADMIN');
 insert into TAI_KHOAN(TEN_TAI_KHOAN, TIEN_XU, EMAIL, NICK_NAME, MAT_KHAU, SDT, DIEM_TICH_LUY, DIEM_TICH_LUY_TUAN, DIEM_TICH_LUY_THANG, MA_VAI_TRO, HOAT_DONG) 
 values('user1',0,'17130238@st.hcmuaf.edu.vn','thuan','E10ADC3949BA59ABBE56E057F20F883E', '123456789', 0, 0, 0, 1, 1);
 insert into MON_HOC(TEN_MON_HOC) values (N'TOÁN')
-insert into MON_HOC(TEN_MON_HOC) values (N'TIẾNG VIỆT')
+insert into MON_HOC(TEN_MON_HOC) values (N'TIẾNG VIỆT') Test
 -- CHƯƠNG
 insert into CHUONG(TEN_CHUONG, MA_MON_HOC) values (N'CHƯƠNG 1: SỐ HỌC', 1)
 --insert into CHUONG(TEN_CHUONG, MA_MON_HOC) values ('CHƯƠNG 2: ĐẠI LƯỢNG ĐO LƯỜNG VÀ ỨNG DỤNG', 1)

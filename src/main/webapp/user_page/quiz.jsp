@@ -11,12 +11,13 @@
 </head>
 
 <body>
-	<%@include file="header.jsp"%>
+	<%@include file="header.jsp"%> 
 	<div class="container py-5">
 		<div class="row pt-5">
 			<div class="col-lg-12" id="flipbook">
 				<div class="hard"></div>
 				<%
+				int subjectID = (int)request.getAttribute("subjectID");
 				LessonDTO lesson = (LessonDTO) request.getAttribute("lesson");
 				ArrayList<QuestionDTO> questionList = (ArrayList<QuestionDTO>) lesson.getQuestionList();
 				int index = 1;
@@ -64,7 +65,8 @@
 							</div>
 						</div>
 						<div class="row">
-							<div id="ex_<%=index%>" class="col-lg-12 explain-content" hidden="true">
+							<div id="ex_<%=index%>" class="col-lg-12 explain-content"
+								hidden="true">
 								<p><%=question.getExplain()%></p>
 							</div>
 						</div>
@@ -100,15 +102,22 @@
 
 				</ul>
 			</div>
+
+			<div id="back-button-container" class="col-lg-12" hidden="true">
+				<button onclick="location.href = './'">Trang chủ</button>
+				<button
+					onclick="location.href = './subject-details?subjectID=<%=subjectID%>';">Chi
+					tiết môn học</button>
+			</div>
 		</div>
 
 	</div>
 	<%
 	ArrayList<String> correctArrayAnswer = lesson.getCorrectAnswerArray();
 	%>
+
 	<script type="text/javascript">
 		var correctAnswers = [];
-		var userAnswers = [];
 	<%for (int i = 0; i < correctArrayAnswer.size(); i++) {%>
 		correctAnswers[
 	<%=i%>
@@ -116,7 +125,13 @@
 	<%=correctArrayAnswer.get(i)%>
 		
 	<%}%>
-		
+		var userAnswers = Array(correctAnswers.length).fill(0);
+		var lessonID =
+	<%=lesson.getLessonID()%>
+		;
+		var lessonScore =
+	<%=lesson.getScore()%>
+		;
 	</script>
 	<%@include file="footer.jsp"%>
 

@@ -50,4 +50,16 @@ public class ChapterDTO {
 		this.lessonList = lessonList;
 	}
 
+	public boolean isChapterComplete(List<LessonCompleteDTO> lessonCompleteList) {
+		for (LessonDTO lesson : lessonList) {
+			for (LessonCompleteDTO lessonCompleteDTO : lessonCompleteList) {
+				if (lesson.getLessonID() != lessonCompleteDTO.getLessonID())
+					return false;
+			}
+
+		}
+		return true;
+
+	}
+
 }

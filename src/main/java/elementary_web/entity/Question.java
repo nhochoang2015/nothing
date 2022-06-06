@@ -12,7 +12,7 @@ public class Question {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "MA_CAU_HOI")
 	private int questionID;
-	@Column(name = "NOI_DUNG")
+	@Column(name = "NOI_DUNG", columnDefinition = "nvarchar(max)")
 	private String content;
 	@Column(name = "GIAI_THICH", columnDefinition = "nvarchar(max)")
 	private String explain;
