@@ -14,6 +14,8 @@ public class Subject {
 	private int subjectID;
 	@Column(name = "TEN_MON_HOC", columnDefinition = "nvarchar(max)")
 	private String subjectName;
+	@Column(name = "ACTIVE")
+	private boolean active;
 	@OneToMany(mappedBy = "subject", fetch = FetchType.EAGER)
 	private List<Chapter> chapterList;
 
@@ -31,6 +33,14 @@ public class Subject {
 
 	public void setSubjectName(String subjectName) {
 		this.subjectName = subjectName;
+	}
+	
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 
 	public List<Chapter> getChapterList() {

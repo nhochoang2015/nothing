@@ -48,11 +48,6 @@ public class AdminController {
 		return "./admin_page/images-cropper";
 	}
 
-	@GetMapping("/index-2")
-	public String index2Page(Model model) {
-		return "./admin_page/index-2";
-	}
-
 	@GetMapping("/line-charts")
 	public String lineChartsPage(Model model) {
 		return "./admin_page/line-charts";

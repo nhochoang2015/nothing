@@ -19,13 +19,14 @@ public class SubjectConverter {
 	public SubjectDTO toDTO(Subject entity) {
 		int subjectID = entity.getSubjectID();
 		String subjectName = entity.getSubjectName();
+		boolean active = entity.isActive();
 		List<Chapter> chapterList = entity.getChapterList();
 		List<ChapterDTO> chapterDTOList = new ArrayList<ChapterDTO>();
 		for (Chapter chapter : chapterList) {
 			chapterDTOList.add(chapterConverter.toDTO(chapter));
 
 		}
-		return new SubjectDTO(subjectID, subjectName, chapterDTOList);
+		return new SubjectDTO(subjectID, subjectName, active,chapterDTOList);
 
 	}
 

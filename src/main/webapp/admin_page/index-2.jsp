@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="elementary_web.dto.SubjectDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 
 <!doctype html>
@@ -235,9 +238,13 @@
 									<th class="text-center">Xóa môn học</th>
 
 								</tr>
+								<%
+								List<SubjectDTO> subjectList = (ArrayList<SubjectDTO>) request.getAttribute("subjectList");
+								for (SubjectDTO subject : subjectList) {
+								%>
 								<tr>
-									<td>${item.SubjectID}</td>
-									<td>${item.SubjectName}</td>
+									<td><%=subject.getSubjectID()%></td>
+									<td><%=subject.getSubjectName()%></td>
 
 									<td><a href="Chapter" class="btn btn-info"
 										data-toggle="modal"><i class="material-icons"></i> <span>
@@ -246,55 +253,9 @@
 										data-toggle="modal"><i class="material-icons"></i> <span>
 												Xóa</span></a></td>
 								</tr>
-								<tr>
-									<td>MH02</td>
-									<td>Môn học 02</td>
-
-
-									<td><a href="Chapter" class="btn btn-info"
-										data-toggle="modal"><i class="material-icons"></i> <span>
-												Xem </span></a></td>
-									<td><a href="admin_page/#" class="btn btn-danger"
-										data-toggle="modal"><i class="material-icons"></i> <span>
-												Xóa</span></a></td>
-								</tr>
-								<tr>
-									<td>MH03</td>
-									<td>Môn học 03</td>
-
-
-									<td><a href="Chapter" class="btn btn-info"
-										data-toggle="modal"><i class="material-icons"></i> <span>
-												Xem </span></a></td>
-									<td><a href="admin_page/#" class="btn btn-danger"
-										data-toggle="modal"><i class="material-icons"></i> <span>
-												Xóa</span></a></td>
-								</tr>
-								<tr>
-									<td>MH04</td>
-									<td>Môn học 04</td>
-
-
-									<td><a href="Chapter" class="btn btn-info"
-										data-toggle="modal"><i class="material-icons"></i> <span>
-												Xem </span></a></td>
-									<td><a href="admin_page/#" class="btn btn-danger"
-										data-toggle="modal"><i class="material-icons"></i> <span>
-												Xóa</span></a></td>
-								</tr>
-
-								<tr>
-									<td>MH05</td>
-									<td>Môn học 05</td>
-
-
-									<td><a href="Chapter" class="btn btn-info"
-										data-toggle="modal"><i class="material-icons"></i> <span>
-												Xem </span></a></td>
-									<td><a href="admin_page/#" class="btn btn-danger"
-										data-toggle="modal"><i class="material-icons"></i> <span>
-												Xóa</span></a></td>
-								</tr>
+								<%
+								}
+								%>
 							</table>
 							<div class="custom-pagination">
 								<nav aria-label="Page navigation example">
