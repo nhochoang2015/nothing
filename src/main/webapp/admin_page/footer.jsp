@@ -64,7 +64,28 @@
 	<script src="admin_page/js/data-table/colResizable-1.5.source.js"></script>
 	<script src="admin_page/js/data-table/bootstrap-table-export.js"></script>
 	<!--  editable JS
-    ============================================ -->
+	 ================================================================ -->
+	<!--add bootstrap -->
+	<script src="admin_page/bootstrap-4.1.1/css/bootstrap.css"></script>
+	<script src="admin_page/bootstrap-4.1.1/css/bootstrap.css.map"></script>
+	<script src="admin_page/bootstrap-4.1.1/css/bootstrap.min.css"></script>
+	<script src="admin_page/bootstrap-4.1.1/css/bootstrap.min.css.map"></script>
+	<script src="admin_page/bootstrap-4.1.1/css/bootstrap-grid.css"></script>
+	<script src="admin_page/bootstrap-4.1.1/css/bootstrap-grid.css.map"></script>
+	<script src="admin_page/bootstrap-4.1.1/css/bootstrap-grid.min.css"></script>
+	<script src="admin_page/bootstrap-4.1.1/css/bootstrap-reboot.css"></script>
+	<script src="admin_page/bootstrap-4.1.1/css/bootstrap-reboot.css.map"></script>
+	<script src="admin_page/bootstrap-4.1.1/css/bootstrap-reboot.min.css"></script>
+	<script src="admin_page/bootstrap-4.1.1/css/bootstrap-reboot.min.css.map"></script>
+	<script src="admin_page/bootstrap-4.1.1/js/bootstrap.bundle.js"></script>
+	<script src="admin_page/bootstrap-4.1.1/js/bootstrap.bundle.js.map"></script>
+	<script src="admin_page/bootstrap-4.1.1/js/bootstrap.bundle.min.js"></script>
+	<script src="admin_page/bootstrap-4.1.1/js/bootstrap.bundle.min.js.map"></script>
+	<script src="admin_page/bootstrap-4.1.1/js/bootstrap.js"></script>
+	<script src="admin_page/bootstrap-4.1.1/js/bootstrap.js.map"></script>
+	<script src="admin_page/bootstrap-4.1.1/js/bootstrap.min.js"></script>
+	<script src="admin_page/bootstrap-4.1.1/js/bootstrap.min.js.map"></script>
+    <!-- ============================================ -->
 	<script src="admin_page/js/editable/jquery.mockjax.js"></script>
 	<script src="admin_page/js/editable/mock-active.js"></script>
 	<script src="admin_page/js/editable/select2.js"></script>

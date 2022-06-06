@@ -2,17 +2,47 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 <!-- favicon
 		============================================ -->
 <link rel="shortcut icon" type="image/x-icon"
 	href="admin_page/img/IMG_BOOK/favicon.ico">
 <!-- Google Fonts
-		============================================ -->
-<link href="admin_page/https://fonts.googleapis.com/css?family=Play:400,700"
+============================================ -->
+<!--add bootstrap -->
+<script src="admin_page/bootstrap-4.1.1/css/bootstrap.css"></script>
+<script src="admin_page/bootstrap-4.1.1/css/bootstrap.css.map"></script>
+<script src="admin_page/bootstrap-4.1.1/css/bootstrap.min.css"></script>
+<script src="admin_page/bootstrap-4.1.1/css/bootstrap.min.css.map"></script>
+<script src="admin_page/bootstrap-4.1.1/css/bootstrap-grid.css"></script>
+<script src="admin_page/bootstrap-4.1.1/css/bootstrap-grid.css.map"></script>
+<script src="admin_page/bootstrap-4.1.1/css/bootstrap-grid.min.css"></script>
+<script src="admin_page/bootstrap-4.1.1/css/bootstrap-reboot.css"></script>
+<script src="admin_page/bootstrap-4.1.1/css/bootstrap-reboot.css.map"></script>
+<script src="admin_page/bootstrap-4.1.1/css/bootstrap-reboot.min.css"></script>
+<script
+	src="admin_page/bootstrap-4.1.1/css/bootstrap-reboot.min.css.map"></script>
+<script src="admin_page/bootstrap-4.1.1/js/bootstrap.bundle.js"></script>
+<script src="admin_page/bootstrap-4.1.1/js/bootstrap.bundle.js.map"></script>
+<script src="admin_page/bootstrap-4.1.1/js/bootstrap.bundle.min.js"></script>
+<script src="admin_page/bootstrap-4.1.1/js/bootstrap.bundle.min.js.map"></script>
+<script src="admin_page/bootstrap-4.1.1/js/bootstrap.js"></script>
+<script src="admin_page/bootstrap-4.1.1/js/bootstrap.js.map"></script>
+<script src="admin_page/bootstrap-4.1.1/js/bootstrap.min.js"></script>
+<script src="admin_page/bootstrap-4.1.1/js/bootstrap.min.js.map"></script>
+<!-- ============================================ -->
+
+<link
+	href="admin_page/https://fonts.googleapis.com/css?family=Play:400,700"
 	rel="stylesheet">
 <!-- Bootstrap CSS
 		============================================ -->
@@ -47,11 +77,14 @@
 <!-- metisMenu CSS
 		============================================ -->
 <link rel="stylesheet" href="admin_page/css/metisMenu/metisMenu.min.css">
-<link rel="stylesheet" href="admin_page/css/metisMenu/metisMenu-vertical.css">
+<link rel="stylesheet"
+	href="admin_page/css/metisMenu/metisMenu-vertical.css">
 <!-- calendar CSS
 		============================================ -->
-<link rel="stylesheet" href="admin_page/css/calendar/fullcalendar.min.css">
-<link rel="stylesheet" href="admin_page/css/calendar/fullcalendar.print.min.css">
+<link rel="stylesheet"
+	href="admin_page/css/calendar/fullcalendar.min.css">
+<link rel="stylesheet"
+	href="admin_page/css/calendar/fullcalendar.print.min.css">
 <!-- style CSS
 		============================================ -->
 <link rel="stylesheet" href="admin_page/css/style.css">
@@ -61,6 +94,7 @@
 <!-- modernizr JS
 		============================================ -->
 <script src="admin_page/js/vendor/modernizr-2.8.3.min.js"></script>
+
 </head>
 <body>
 	<div class="container-fluid">
@@ -91,14 +125,14 @@
 								<div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
 									<div class="header-top-menu tabl-d-n">
 										<ul class="nav navbar-nav mai-top-nav">
-											<li class="nav-item"><a href="admin_page/#" class="nav-link">Trang
-													chủ</a></li>
-											<li class="nav-item"><a href="admin_page/#" class="nav-link">Thông
-													tin</a></li>
-											<li class="nav-item"><a href="admin_page/#" class="nav-link">Dịch
-													vụ</a></li>
-											<li class="nav-item"><a href="admin_page/#" class="nav-link">Hỗ
-													trợ</a></li>
+											<li class="nav-item"><a href="admin_page/#"
+												class="nav-link">Trang chủ</a></li>
+											<li class="nav-item"><a href="admin_page/#"
+												class="nav-link">Thông tin</a></li>
+											<li class="nav-item"><a href="admin_page/#"
+												class="nav-link">Dịch vụ</a></li>
+											<li class="nav-item"><a href="admin_page/#"
+												class="nav-link">Hỗ trợ</a></li>
 										</ul>
 									</div>
 								</div>
@@ -139,8 +173,8 @@
 														<a href="admin_page/#">Nhiều hơn</a>
 													</div>
 												</div></li>
-											<li class="nav-item"><a href="admin_page/#" data-toggle="dropdown"
-												role="button" aria-expanded="false"
+											<li class="nav-item"><a href="admin_page/#"
+												data-toggle="dropdown" role="button" aria-expanded="false"
 												class="nav-link dropdown-toggle"><i class="fa fa-bell-o"
 													aria-hidden="true"></i><span class="indicator-nt"></span></a>
 												<div role="menu"
@@ -168,8 +202,8 @@
 
 													</div>
 												</div></li>
-											<li class="nav-item"><a href="admin_page/#" data-toggle="dropdown"
-												role="button" aria-expanded="false"
+											<li class="nav-item"><a href="admin_page/#"
+												data-toggle="dropdown" role="button" aria-expanded="false"
 												class="nav-link dropdown-toggle"> <i
 													class="fa fa-user adminpro-user-rounded header-riht-inf"
 													aria-hidden="true"></i> <span class="admin-name">TTY</span>
@@ -212,11 +246,14 @@
 									<li><a href="admin_page/index-3.html">Dashboard</a></li>
 
 
-									<li><a href="admin_page/product-list.html">Danh sách sản phẩm</a></li>
-									<li><a href="admin_page/product-edit.html">Thay đổi sản phẩm</a></li>
+									<li><a href="admin_page/product-list.html">Danh sách
+											sản phẩm</a></li>
+									<li><a href="admin_page/product-edit.html">Thay đổi
+											sản phẩm</a></li>
 									<li><a href="admin_page/ADM-User.html">Quản lý User</a></li>
 									<li><a href="admin_page/product-cart.html">Giỏ hàng</a></li>
-									<li><a href="admin_page/product-payment.html">Thanh toán</a></li>
+									<li><a href="admin_page/product-payment.html">Thanh
+											toán</a></li>
 									<li><a href="admin_page/analytics.html">Phân tích</a></li>
 
 
@@ -224,10 +261,13 @@
 								</ul>
 								</li>
 								<li><a data-toggle="collapse"
-									data-target="#Miscellaneousmob" href="admin_page/#">Giao diện <span
-										class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+									data-target="#Miscellaneousmob" href="admin_page/#">Giao
+										diện <span
+										class="admin-project-icon adminpro-icon adminpro-down-arrow"></span>
+								</a>
 									<ul id="Miscellaneousmob" class="collapse dropdown-header-top">
-										<li><a href="admin_page/google-map.html">Bản đồ google</a></li>
+										<li><a href="admin_page/google-map.html">Bản đồ
+												google</a></li>
 
 										<li><a href="admin_page/images-cropper.html">Hình ảnh</a></li>
 									</ul></li>
@@ -236,10 +276,13 @@
 									href="admin_page/#">Biểu đồ <span
 										class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
 									<ul id="Chartsmob" class="collapse dropdown-header-top">
-										<li><a href="admin_page/bar-charts.html">Biểu đồ thanh</a></li>
-										<li><a href="admin_page/line-charts.html">Biểu đồ đường</a></li>
+										<li><a href="admin_page/bar-charts.html">Biểu đồ
+												thanh</a></li>
+										<li><a href="admin_page/line-charts.html">Biểu đồ
+												đường</a></li>
 
-										<li><a href="admin_page/rounded-chart.html">Biểu đồ tròn</a></li>
+										<li><a href="admin_page/rounded-chart.html">Biểu đồ
+												tròn</a></li>
 
 									</ul></li>
 								<li><a data-toggle="collapse" data-target="#Tablesmob"
@@ -258,8 +301,8 @@
 										<li><a href="admin_page/login.html">Đăng nhập</a></li>
 										<li><a href="admin_page/register.html">Đăng ký</a></li>
 
-										<li><a href="admin_page/password-recovery.html">Khôi phục mật
-												khẩu</a></li>
+										<li><a href="admin_page/password-recovery.html">Khôi
+												phục mật khẩu</a></li>
 									</ul></li>
 								</ul>
 							</nav>
@@ -299,7 +342,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
 	</div>
 

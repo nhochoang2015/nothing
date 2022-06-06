@@ -22,27 +22,39 @@ public class SubjectService {
 	@Autowired
 	private SubjectConverter subjectConverter;
 
+	List<SubjectDTO> subjects = new ArrayList<SubjectDTO>();
+
 	// Xóa môn học
 	public void deleteSubjectBySubjectID(int subjectID) {
-		subjectRepository.deleteById(subjectID);
-		;
-	}
-
-	// Tim mon hoc
-	public SubjectDTO findSubjectBySubjectNameOrSubjectID(int SubjectNameOrSubjectID) {
-		Subject subject = subjectRepository.findSubjectBySubjectNameOrSubjectID(SubjectNameOrSubjectID);
-		// Tim thay hay khong
-		if (subject == null) {
-			return null;
-		} else {
-			SubjectDTO SubjectDTO = subjectConverter.toDTO(subject);
-			return SubjectDTO;
+		for (SubjectDTO s : subjects) {
+			if (s.getSubjectID() == subjectID) {
+				subjects.remove(subjectID);
+			}
 		}
 	}
 
+	// Tim mon hoc
+//	public SubjectDTO findSubjectBySubjectNameOrSubjectID(int SubjectNameOrSubjectID) {
+//		Subject subject = subjectRepository.findSubjectBySubjectNameOrSubjectID(SubjectNameOrSubjectID);
+//		// Tim thay hay khong
+//		if (subject == null) {
+//			return null;
+//		} else {
+//			SubjectDTO SubjectDTO = subjectConverter.toDTO(subject);
+//			return SubjectDTO;
+//		}
+//	}
+
+	
 	// Tao mon hoc
-	public void createSubjectBySubjectIDAndSubjectName(Subject subject) {
-		subjectRepository.save(subject);
+	public void createSubject(int SubjectID,String SubjectName) {
+		for (SubjectDTO s : subjects) {
+			if (s.getSubjectID() == SubjectID) {
+				return;
+			}else {
+				subjects.add(s);
+			}
+		}
 	}
 
 	// Tim mon hoc theo ID
