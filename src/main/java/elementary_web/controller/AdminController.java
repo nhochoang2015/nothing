@@ -9,9 +9,13 @@ public class AdminController {
 	
 
 	
-	@GetMapping("/ADM-User")
+	@GetMapping("/management")
 	public String homePage(Model model) {
-		return "./admin_page/ADM-User";
+		return "./admin_page/account-management";
+	}
+	@GetMapping("/edit")
+	public String editPage(Model model) {
+		return "./admin_page/editAccount";
 	}
 
 	@GetMapping("/analytics")
