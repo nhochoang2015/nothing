@@ -17,8 +17,8 @@ public interface SubjectRepository extends JpaRepository<Subject, Integer> {
 	Subject findBySubjectID(int subjectID);
 	
 	@Query(value = "UPDATE MON_HOC SET HOAT_DONG = 0 WHERE (MA_MON_HOC = ?1)",nativeQuery = true)
-	Subject deleteSubjectByID(int SubjectID);
-	
+	void deleteSubjectByID(int SubjectID);
+	// Dùng save đi dừng dùng câu lệnh update kiểu này
 	@Query(value = "UPDATE MON_HOC SET HOAT_DONG = 1 WHERE (MA_MON_HOC = ?1)",nativeQuery = true)
 	Subject restoreSubjectByID(int SubjectID);
 }

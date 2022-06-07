@@ -24,6 +24,7 @@ public class SubjectService {
 
 	List<SubjectDTO> subjects = new ArrayList<SubjectDTO>();
 
+	
 	// Xóa môn học
 //	public void deleteSubjectBySubjectID(int subjectID) {
 //		for (SubjectDTO s : subjects) {
@@ -45,7 +46,6 @@ public class SubjectService {
 //		}
 //	}
 
-	
 	// Tao mon hoc
 //	public void createSubject(int SubjectID,String SubjectName) {
 //		for (SubjectDTO s : subjects) {
@@ -57,21 +57,40 @@ public class SubjectService {
 //		}
 //	}
 	// xóa môn
-	public SubjectDTO deleteSubjectByID(int subjectID) {
-		Subject subject = subjectRepository.deleteSubjectByID(subjectID);
-		return subjectConverter.toDTO(subject);
+	public void deleteSubjectByID(int subjectID) {
+		Subject subject = subjectRepository.findBySubjectID(subjectID);
+		subject.setActive(false);
+		subjectRepository.save(subject);
+	}
+	//tạo môn
+	public void createSubject(String subjectName) {
+		Subject subject = new Subject();
+		subject.setSubjectName(subjectName);
+		subject.setActive(true);
+		subjectRepository.save(subject);
+	}
+	//sửa tên môn học
+	public void renameSubject(int subjectID,String newSubjectName) {
+		Subject subject = subjectRepository.findBySubjectID(subjectID);
+		subject.setSubjectName(newSubjectName);
+		subjectRepository.save(subject);
 	}
 	// phục hồi môn
 	public SubjectDTO restoreSubjectByID(int subjectID) {
 		Subject subject = subjectRepository.restoreSubjectByID(subjectID);
 		return subjectConverter.toDTO(subject);
 	}
+
 	// Tim mon hoc theo ID
 	public SubjectDTO findBySubjectID(int subjectID) {
 		Subject subject = subjectRepository.findBySubjectID(subjectID);
 		return subjectConverter.toDTO(subject);
 	}
+	// tạo môn
 
+//	public void addNewSubject(Subject subject) {
+//		subjectRepository.save(subjectConverter.toDTO(subject));
+//	}
 	public List<SubjectDTO> findAllSubject() {
 		List<Subject> subjectList = subjectRepository.findAll();
 		List<SubjectDTO> subjecDTOtList = new ArrayList<SubjectDTO>();

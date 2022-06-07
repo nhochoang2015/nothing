@@ -1,3 +1,4 @@
+<%@page import="elementary_web.dto.SubjectDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 
 <!doctype html>
@@ -45,7 +46,7 @@
 								</div>
 							</div>
 							<ul class="list-inline cus-product-sl-rp">
-
+					
 
 								<li>
 									<h5>Môn học: TOÁN</h5>
@@ -166,8 +167,7 @@
 										</div>
 										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 											<div class="actions graph-rp">
-												<button type="button"
-													class="btn btn-success"
+												<button type="button" class="btn btn-success"
 													data-toggle="modal" data-target="#createChapter"
 													title="Tạo chương">
 													<i class="glyphicon glyphicon-plus-sign" aria-hidden="true"></i>
@@ -199,14 +199,13 @@
 															<i class="glyphicon glyphicon-info-sign"
 															aria-hidden="true"></i>s
 														</a>
-														<button type="button"
-															class="btn btn-primary"
+														<button type="button" class="btn btn-primary"
 															data-toggle="modal" data-target="#updateChapterName"
 															title="Sủa tên chương">
-															<i class="glyphicon glyphicon-pencil" aria-pressed="false"></i>
+															<i class="glyphicon glyphicon-pencil"
+																aria-pressed="false"></i>
 														</button>
-														<button type="button"
-															class="btn btn-danger"
+														<button type="button" class="btn btn-danger"
 															data-toggle="modal" data-target="#deleteChapter"
 															title="Xóa chương">
 															<i class="fa fa-trash-o" aria-pressed="false"></i>
