@@ -25,7 +25,7 @@
 						</a>
 							<ul class="submenu-angle" aria-expanded="true">
 
-								<li class="list-group-item"><a title="Quản lý môn học" href="index-2"><i
+								<li class="list-group-item"><a title="Quản lý môn học" href="subjectmanagement"><i
 										class="fa fa-cube sub-icon-mg" aria-hidden="true"></i> <span
 										class="mini-sub-pro">Quản lý môn học</span></a></li>
 

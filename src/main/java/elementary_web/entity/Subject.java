@@ -14,7 +14,7 @@ public class Subject {
 	private int subjectID;
 	@Column(name = "TEN_MON_HOC", columnDefinition = "nvarchar(max)")
 	private String subjectName;
-	@Column(name = "ACTIVE")
+	@Column(name = "HOAT_DONG")
 	private boolean active;
 	@OneToMany(mappedBy = "subject", fetch = FetchType.EAGER)
 	private List<Chapter> chapterList;

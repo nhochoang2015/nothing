@@ -131,25 +131,9 @@
 
 										</div>
 									</div>
-									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-										<div class="actions graph-rp">
-											<div class="btn-group" data-toggle="buttons">
-												<label class="btn btn-grey active"> <input
-													type="radio" name="options" class="toggle" id="option1"
-													checked="">Hôm nay
-												</label> <label class="btn btn-grey"> <input type="radio"
-													name="options" class="toggle" id="option2">Tuần
-												</label>
-
-											</div>
-										</div>
-									</div>
-
 								</div>
 							</div>
 							<ul class="list-inline cus-product-sl-rp">
-
-
 								<li>
 									<h5>
 										<i class="fa fa-circle" style="color: #24caa1;"></i>Sách kinh
@@ -174,13 +158,13 @@
 						<div class="product-status-wrap">
 							<h4>QUẢN LÝ MÔN HỌC</h4>
 							<!--                            <h4>Products List</h4>-->
-							<!-- <div class="add-product">
-								 //////////////////////////////thêm vật phẩm
-								<a href="admin_page/product-edit.html">Thêm vật phẩm</a>								
-								<a href="admin_page/product-edit.html">Add Product</a>
-								<a href="admin_page/#">Xóa</a>
-							</div> 
-							-->
+							<div class="add-product">
+								//////////////////////////////thêm vật phẩm <a
+									href="admin_page/product-edit.html">Thêm vật phẩm</a> <a
+									href="admin_page/product-edit.html">Add Product</a> <a
+									href="admin_page/#">Xóa</a>
+							</div>
+
 							<div class="col-lg-8">
 								<div class="form-group has-feedback has-search">
 									<span class="glyphicon glyphicon-search form-control-feedback"></span>
@@ -234,6 +218,7 @@
 								<tr>
 									<th class="text-center">Mã môn học</th>
 									<th class="text-center">Tên môn học</th>
+									<th class="text-center">Active</th>
 									<th class="text-center">Chi tiết</th>
 									<th class="text-center">Xóa môn học</th>
 
@@ -243,15 +228,19 @@
 								for (SubjectDTO subject : subjectList) {
 								%>
 								<tr>
-									<td><%=subject.getSubjectID()%></td>
+									<td><%=subject.getSubjectID()%>
+										<button type="button" class="btn btn-primary"
+											data-toggle="modal" data-target="#updateChapterName"
+											title="Sủa tên chương">
+											<i class="glyphicon glyphicon-pencil" aria-pressed="false"></i>
+										</button></td>
 									<td><%=subject.getSubjectName()%></td>
-
-									<td><a href="Chapter" class="btn btn-info"
+									<td><%=subject.isActive()%></td>
+									<td><a href="chapter" class="btn btn-info"
 										data-toggle="modal"><i class="material-icons"></i> <span>
 												Xem </span></a></td>
-									<td><a href="admin_page/#" class="btn btn-danger"
-										data-toggle="modal"><i class="material-icons"></i> <span>
-												Xóa</span></a></td>
+									<td><a href="" class="btn btn-danger" data-toggle="modal"><i
+											class="material-icons"></i> <span> Xóa</span></a></td>
 								</tr>
 								<%
 								}
