@@ -159,7 +159,7 @@
 							<h4>QUẢN LÝ MÔN HỌC</h4>
 							<!--                            <h4>Products List</h4>-->
 							<div class="add-product">
-								//////////////////////////////thêm vật phẩm <a
+									<a
 									href="admin_page/product-edit.html">Thêm vật phẩm</a> <a
 									href="admin_page/product-edit.html">Add Product</a> <a
 									href="admin_page/#">Xóa</a>
@@ -228,17 +228,15 @@
 								for (SubjectDTO subject : subjectList) {
 								%>
 								<tr>
-									<td><%=subject.getSubjectID()%>
+									<td><%=subject.getSubjectID()%></td>
+									<td><%=subject.getSubjectName()%>
 										<button type="button" class="btn btn-primary"
 											data-toggle="modal" data-target="#updateChapterName"
 											title="Sủa tên chương">
 											<i class="glyphicon glyphicon-pencil" aria-pressed="false"></i>
 										</button></td>
-									<td><%=subject.getSubjectName()%></td>
 									<td><%=subject.isActive()%></td>
-									<td><a href="chapter" class="btn btn-info"
-										data-toggle="modal"><i class="material-icons"></i> <span>
-												Xem </span></a></td>
+									<td><a title="Đến trang quản lý chương" href="chapter"><button type="button" class="btn btn-primary">Xem</button></td>
 									<td><a href="" class="btn btn-danger" data-toggle="modal"><i
 											class="material-icons"></i> <span> Xóa</span></a></td>
 								</tr>
