@@ -3,6 +3,7 @@
 }
 
 #flipbook:first-child .hard {
+	/*/user_page/img/book-cover.jpg  */
 	background: url("/elementary_web/user_page/img/book-cover.jpg");
 	-moz-background-size: 100% 100%;
 	-webkit-background-size: 100% 100%;
@@ -84,6 +85,8 @@
 	font-size: large;
 	border: 5px solid;
 	border-radius: 30px;
+	height: 210px;
+	overflow: auto;
 }
 
 .answer {

@@ -11,14 +11,15 @@
 </head>
 
 <body>
-	<%@include file="header.jsp"%> 
+	<%@include file="header.jsp"%>
 	<div class="container py-5">
 		<div class="row pt-5">
 			<div class="col-lg-12" id="flipbook">
 				<div class="hard"></div>
 				<%
-				int subjectID = (int)request.getAttribute("subjectID");
-				LessonDTO lesson = (LessonDTO) request.getAttribute("lesson");
+				String lessonString = "lesson" + request.getAttribute("lessonID");
+				int subjectID = (int) request.getAttribute("subjectID");
+				LessonDTO lesson = (LessonDTO) session.getAttribute(lessonString);
 				ArrayList<QuestionDTO> questionList = (ArrayList<QuestionDTO>) lesson.getQuestionList();
 				int index = 1;
 				for (QuestionDTO question : questionList) {
@@ -117,15 +118,7 @@
 	%>
 
 	<script type="text/javascript">
-		var correctAnswers = [];
-	<%for (int i = 0; i < correctArrayAnswer.size(); i++) {%>
-		correctAnswers[
-	<%=i%>
-		] =
-	<%=correctArrayAnswer.get(i)%>
-		
-	<%}%>
-		var userAnswers = Array(correctAnswers.length).fill(0);
+	var userAnswers = Array(10).fill(0);
 		var lessonID =
 	<%=lesson.getLessonID()%>
 		;

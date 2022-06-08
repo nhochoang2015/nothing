@@ -89,7 +89,8 @@ public class UserController {
 		int accountID = account.getAccountID();
 		LessonDTO lesson = lessonService.findByLessonID(lessonID);
 		if (lessonCompleteService.checkIfLessonBeforeComplete(accountID, lessonID)) {
-			mav.addObject("lesson", lesson);
+			session.setAttribute("lesson" + lesson.getLessonID(), lesson);
+			mav.addObject("lessonID", lesson.getLessonID());
 			mav.addObject("subjectID", subjectID);
 		} else {
 			mav = new ModelAndView("redirect:./subject-details?subjectID=" + subjectID);

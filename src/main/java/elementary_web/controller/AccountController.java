@@ -40,7 +40,7 @@ public class AccountController {
 
 	@RequestMapping("/logout")
 	public String logout(HttpSession session) {
-		session.removeAttribute("account");
+		session.invalidate();
 		return "redirect: ./";
 
 	}

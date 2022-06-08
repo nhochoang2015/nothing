@@ -72,41 +72,63 @@ function answerQuestion(div) {
 	radidoButton.prop("checked", true);
 	var questionNumber = radidoButton.attr('name');
 	var awswerUserPicked = radidoButton.val();
-	var correctAnswer = correctAnswers[questionNumber - 1];
-	console.log('Right:' + correctAnswer);
 	userAnswers[questionNumber - 1] = awswerUserPicked;
-	// So sánh kết quả
-	if (awswerUserPicked == correctAnswer) {
-		$(div).css({ 'background-color': 'green', 'color': 'black' });
-		numberOfRightAnswer += 1;
-		console.log("Đúng")
-	} else {
-		$(div).css({ 'background-color': 'red', 'color': 'white' });
-		$(answerDivArray[correctAnswer - 1]).css({ 'background-color': 'green', 'color': 'black' })
-		console.log("Sai")
-	}
-	// Hiện giải thích
-	var explainID = '#ex_' + questionNumber;
-	var explainDiv = $(explainID);
-	explainDiv.attr('hidden', false);
-	// Kiểm tra xem học sinh hoàn thành bài học chưa
-	if (isLessonComplete()) {
-		$("#back-button-container").attr('hidden', false);
-		var reward = Math.round((lessonScore / 10) * numberOfRightAnswer);
-		console.log(reward)
-		$.ajax({
-			url: './updateLessonProcress',
-			type: 'POST',
-			data: {
-				lessonID: lessonID,
-				reward: reward
-			},
 
-			success: (function() {
-				alert('Chúc mừng bạn đã hoàn thành bài học. Kết quả: ' + numberOfRightAnswer + "/" + 10);
-			})
+	//if (awswerUserPicked == correctAnswer) {
+	//$(div).css({ 'background-color': 'green', 'color': 'black' });
+	//	numberOfRightAnswer += 1;
+	//	console.log("Đúng")
+	//} else {
+	//	$(div).css({ 'background-color': 'red', 'color': 'white' });
+	//	$(answerDivArray[correctAnswer - 1]).css({ 'background-color': 'green', 'color': 'black' })
+	//	console.log("Sai")
+	//}
+
+	//Gửi request lên server để so sánh kết quả
+	$.ajax({
+		url: './checkAnswer',
+		type: 'POST',
+		data: {
+			lessonID: lessonID,
+			questionNumber: questionNumber,
+			userAnswer: awswerUserPicked
+		},
+		success: (function(data) {
+			var correctAnswer = data.split(':')[1];
+			var result = data.split(':')[0];
+			if (result === 'true') {
+				$(div).css({ 'background-color': 'green', 'color': 'black' });
+				numberOfRightAnswer += 1;
+				console.log("Đúng")
+			} else {
+				$(div).css({ 'background-color': 'red', 'color': 'white' });
+				$(answerDivArray[correctAnswer - 1]).css({ 'background-color': 'green', 'color': 'black' })
+				console.log("Sai")
+			}
+			// Hiện giải thích
+			var explainID = '#ex_' + questionNumber;
+			var explainDiv = $(explainID);
+			explainDiv.attr('hidden', false);
+			// Kiểm tra xem học sinh hoàn thành bài học chưa
+			if (isLessonComplete()) {
+				$("#back-button-container").attr('hidden', false);
+				var reward = Math.round((lessonScore / 10) * numberOfRightAnswer);
+				console.log(reward)
+				$.ajax({
+					url: './updateLessonProcress',
+					type: 'POST',
+					data: {
+						lessonID: lessonID,
+						numberOfRightAnswer: numberOfRightAnswer
+					},
+
+					success: (function() {
+						alert('Chúc mừng bạn đã hoàn thành bài học. Kết quả: ' + numberOfRightAnswer + "/" + 10);
+					})
+				})
+			}
 		})
-	}
+	})
 
 }
 // Kiểm tra xem học sinh hoàn thành bài học chưa

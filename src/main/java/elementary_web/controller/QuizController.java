@@ -1,5 +1,7 @@
 package elementary_web.controller;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import elementary_web.dto.AccountDTO;
+import elementary_web.dto.LessonDTO;
 import elementary_web.entity.LessonComplete;
 import elementary_web.service.AccountService;
 import elementary_web.service.LessonCompleteService;
@@ -22,12 +25,28 @@ public class QuizController {
 	LessonCompleteService lessonCompleteService;
 
 	@PostMapping("/updateLessonProcress")
-	public @ResponseBody void updateProgress(HttpSession session, @RequestParam int reward,
-			@RequestParam int lessonID) {
+	public @ResponseBody void updateProgress(HttpSession session, @RequestParam int lessonID,
+			@RequestParam int numberOfRightAnswer) {
+		String lessonString = "lesson" + lessonID;
+		LessonDTO lesson = (LessonDTO) session.getAttribute(lessonString);
+		int reward = Math.round((lesson.getScore() / 10) * numberOfRightAnswer);
 		AccountDTO account = (AccountDTO) session.getAttribute("account");
 		lessonCompleteService.updateProcess(account.getAccountID(), lessonID);
 		account.setCoin(account.getCoin() + reward);
 		accountService.updateAccount(account);
+		session.removeAttribute(lessonString);
+	}
+
+	@PostMapping("/checkAnswer")
+	public @ResponseBody String checkAnswer(HttpSession session, @RequestParam int lessonID,
+			@RequestParam int questionNumber, @RequestParam int userAnswer) {
+		LessonDTO lesson = (LessonDTO) session.getAttribute("lesson" + lessonID);
+		ArrayList<String> correctAnswerArray = lesson.getCorrectAnswerArray();
+		int correctAnswer = Integer.parseInt(correctAnswerArray.get(questionNumber - 1));
+		if (correctAnswer == userAnswer)
+			return "true:" + correctAnswer;
+		return "false:" + correctAnswer;
+
 	}
 
 }
