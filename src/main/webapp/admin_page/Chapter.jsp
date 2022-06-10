@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="elementary_web.dto.ChapterDTO"%>
 <%@page import="elementary_web.dto.SubjectDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 
@@ -31,6 +34,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<%SubjectDTO subject = (SubjectDTO) request.getAttribute("subject"); %>
 						<div class="product-sales-chart">
 							<div class="portlet-title">
 								<div class="row">
@@ -46,14 +50,12 @@
 								</div>
 							</div>
 							<ul class="list-inline cus-product-sl-rp">
-					
-
 								<li>
-									<h5>Môn học: TOÁN</h5>
+									<h5>Môn học: </h5>
 								</li>
 
 							</ul>
-						</div>
+
 						<div class="product-status-wrap">
 							<h4>QUẢN LÝ CHƯƠNG</h4>
 							<div class="col-lg-8">
@@ -65,94 +67,7 @@
 								<button type="button" class="btn btn-primary">Tìm kiếm</button>
 
 							</div>
-							<!-- Modal -->
-							<form>
-								<div class="modal fade" id="deleteChapter" tabindex="-1"
-									role="dialog" aria-labelledby="exampleModalLabel"
-									aria-hidden="true">
-									<div class="modal-dialog" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h5 class="modal-title" id="exampleModalLabel">Xóa
-													chương</h5>
-											</div>
-											<div class="modal-body">
 
-												<div class="mb-3">Unactive Chapter!!!</div>
-											</div>
-											<div class="modal-footer">
-												<button type="submit" class="btn btn-danger">Xác
-													nhận</button>
-												<button type="button" class="btn btn-default"
-													data-dismiss="modal">Close</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</form>
-							<!-- Modal -->
-							<form>
-								<div class="modal fade" id="createChapter" tabindex="-1"
-									role="dialog" aria-labelledby="exampleModalLabel"
-									aria-hidden="true">
-									<div class="modal-dialog" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h5 class="modal-title" id="exampleModalLabel">Tạo
-													chương</h5>
-											</div>
-											<div class="modal-body">
-
-												<div class="mb-3">
-													<label for="validationCustom01" class="form-label">Tên
-														chương</label> <input type="text" class="form-control"
-														id="validationCustom01" placeholder="Tên chương" required>
-												</div>
-
-
-
-											</div>
-											<div class="modal-footer">
-												<button type="submit" class="btn btn-primary">Tạo</button>
-												<button type="button" class="btn btn-default"
-													data-dismiss="modal">Close</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</form>
-							<!-- Modal -->
-							<form>
-								<div class="modal fade" id="updateChapterName" tabindex="-1"
-									role="dialog" aria-labelledby="exampleModalLabel"
-									aria-hidden="true">
-									<div class="modal-dialog" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h5 class="modal-title" id="exampleModalLabel">Sửa tên
-													chương</h5>
-											</div>
-											<div class="modal-body">
-
-												<div class="mb-3">
-													<label for="validationCustom01" class="form-label">Tên
-														chương</label> <input type="text" class="form-control"
-														id="validationCustom01" placeholder="Tên chương" required>
-												</div>
-
-
-
-											</div>
-											<div class="modal-footer">
-												<button type="submit" class="btn btn-primary">Xác
-													nhận</button>
-												<button type="button" class="btn btn-default"
-													data-dismiss="modal">Close</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</form>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							<div class="product-sales-chart">
@@ -177,18 +92,22 @@
 										</div>
 									</div>
 								</div>
-
+								<%
+								List<ChapterDTO> chapterList = (ArrayList<ChapterDTO>) request.getAttribute("chapterList");
+								for (ChapterDTO chapter : chapterList) {
+									
+									%>
 								<ul class="list-group">
 									<li class="list-group-item">
 										<div class="portlet-title">
 											<div class="row">
 												<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 													<div class="caption pro-sl-hd">
-
-														<!--                                            ************************************************-->
-														<span class="caption-subject text-uppercase"><b>Chương
-																1</b></span>
-														<!--                                            <span class="caption-subject text-uppercase"><b>Order Statistic</b></span>-->
+														<span class="caption-subject text-uppercase"><b>
+																<%
+																chapter.getChapterName();
+																%>
+														</b></span>
 													</div>
 												</div>
 												<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -218,8 +137,101 @@
 										</div>
 									</li>
 								</ul>
+								<%
+								}
+								%>
+								<!-- Modal -->
+								<form>
+									<div class="modal fade" id="deleteChapter" tabindex="-1"
+										role="dialog" aria-labelledby="exampleModalLabel"
+										aria-hidden="true">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLabel">Xóa
+														chương</h5>
+												</div>
+												<div class="modal-body">
+
+													<div class="mb-3">Unactive Chapter!!!</div>
+												</div>
+												<div class="modal-footer">
+													<button type="submit" class="btn btn-danger">Xác
+														nhận</button>
+													<button type="button" class="btn btn-default"
+														data-dismiss="modal">Close</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+								<!-- Modal -->
+								<form>
+									<div class="modal fade" id="createChapter" tabindex="-1"
+										role="dialog" aria-labelledby="exampleModalLabel"
+										aria-hidden="true">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLabel">Tạo
+														chương</h5>
+												</div>
+												<div class="modal-body">
+
+													<div class="mb-3">
+														<label for="validationCustom01" class="form-label">Tên
+															chương</label> <input type="text" class="form-control"
+															id="validationCustom01" placeholder="Tên chương" required>
+													</div>
+
+
+
+												</div>
+												<div class="modal-footer">
+													<button type="submit" class="btn btn-primary">Tạo</button>
+													<button type="button" class="btn btn-default"
+														data-dismiss="modal">Close</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+								<!-- Modal -->
+								<form>
+									<div class="modal fade" id="updateChapterName" tabindex="-1"
+										role="dialog" aria-labelledby="exampleModalLabel"
+										aria-hidden="true">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLabel">Sửa tên
+														chương</h5>
+												</div>
+												<div class="modal-body">
+
+													<div class="mb-3">
+														<label for="validationCustom01" class="form-label">Tên
+															chương</label> <input type="text" class="form-control"
+															id="validationCustom01" placeholder="Tên chương" required>
+													</div>
+
+
+
+												</div>
+												<div class="modal-footer">
+													<button type="submit" class="btn btn-primary">Xác
+														nhận</button>
+													<button type="button" class="btn btn-default"
+														data-dismiss="modal">Close</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+								
 							</div>
 						</div>
+
 					</div>
 				</div>
 				<div class="traffic-analysis-area">

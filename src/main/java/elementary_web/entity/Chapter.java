@@ -26,6 +26,8 @@ public class Chapter {
 	@ManyToOne
 	@JoinColumn(name = "MA_MON_HOC", nullable = false)
 	private Subject subject;
+	@Column(name = "HOAT_DONG")
+	private boolean active;
 	@OneToMany(mappedBy = "chapter", fetch = FetchType.EAGER)
 	private List<Lesson> lessonList;
 	public int getChapterID() {
@@ -52,5 +54,11 @@ public class Chapter {
 	public void setLessonList(List<Lesson> lessonList) {
 		this.lessonList = lessonList;
 	}
-
+	public boolean isActive() {
+		return active;
+	}
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+	
 }

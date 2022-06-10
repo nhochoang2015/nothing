@@ -43,11 +43,9 @@ public class SubjectController {
 	}
 	
 	@RequestMapping("/activeSubject")
-	public ModelAndView activeSubject(@RequestParam int SubjectID) {
-		SubjectDTO subjectdto = subjectService.restoreSubjectByID(SubjectID);
-		ModelAndView mav = new ModelAndView("admin_page/SubjectManagement");
-		mav.addObject("subjectdto", subjectdto);
-		return mav;
+	public String activeSubject(@RequestParam int subjectID) {
+		subjectService.restoreSubjectByID(subjectID);
+		return "redirect:./subjectmanagement";
 	}
 //@PostMapping("/addSubject")
 //public String addNewSubject(@RequestParam int SubjectID, @RequestParam String SubjectName,

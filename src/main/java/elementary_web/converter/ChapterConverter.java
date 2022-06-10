@@ -20,12 +20,13 @@ public class ChapterConverter {
 		int chaperID = entity.getChapterID();
 		String chapterName = entity.getChapterName();
 		int subjectID = entity.getSubject().getSubjectID();
+		boolean active = entity.isActive();
 		List<Lesson> lessonList = entity.getLessonList();
 		List<LessonDTO> lessonDTOList = new ArrayList<LessonDTO>();
 		for (Lesson lesson : lessonList) {
 			lessonDTOList.add(lessonConverter.toDTO(lesson));
 		}
-		return new ChapterDTO(chaperID, chapterName, subjectID, lessonDTOList);
+		return new ChapterDTO(chaperID, chapterName, subjectID, active, lessonDTOList);
 
 	}
 

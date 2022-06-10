@@ -13,6 +13,7 @@
         <![endif]-->
 <%@ include file="menu-bar.jsp"%>
 <%@ include file="header.jsp"%>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -34,7 +35,7 @@
 
 						<div class="product-status-wrap">
 							<h4>QUẢN LÝ MÔN HỌC</h4>
-							
+
 							<!--                            <h4>Products List</h4>-->
 							<div class="add-product">
 								<a href="admin_page/product-edit.html">Thêm vật phẩm</a> <a
@@ -53,7 +54,7 @@
 									môn học</button>
 
 							</div>
-							
+
 							<table>
 
 								<tr>
@@ -76,14 +77,23 @@
 											title="Sủa tên môn">
 											<i class="glyphicon glyphicon-pencil" aria-pressed="false"></i>
 										</button></td>
-									<td><%=subject.isActive()%></td>
-									<td><a title="Đến trang quản lý chương" href="chapter"><button
+
+									<td id="hiddenResult"><%=subject.isActive()%></td>
+									<td><a  title="Đến trang quản lý chương" href="chapter"><button
 												type="button" class="btn btn-primary">Xem</button></a></td>
-									<td><button type="button" class="btn btn-danger" onclick="location.href='./unactiveSubject?subjectID=<%=subject.getSubjectID()%>'">Xóa</button></td>
+									<td><button type="button" class="btn btn-danger"
+											id="btnDelete"
+											onclick="location.href='./unactiveSubject?subjectID=<%=subject.getSubjectID()%>'"
+											onclick="function();">Xóa</button>
+										<button type="button" class="btn btn-danger" id="btnRestore"
+											onclick="location.href='./activeSubject?subjectID=<%=subject.getSubjectID()%>'"
+											onclick="function();">Phục hồi</button></td>
+
+									</td>
 								</tr>
-								
+
 								<!-- Modal -->
-							<form action="./createSubject" method="post">
+								<form action="./createSubject" method="post">
 									<div class="modal fade" id="createSubject" tabindex="-1"
 										role="dialog" aria-labelledby="exampleModalLabel"
 										aria-hidden="true">
@@ -112,44 +122,47 @@
 										</div>
 									</div>
 								</form>
-								<form action="./renameSubject?subjectID=<%=subject.getSubjectID()%>&newSubjectName=''" method="post">
-								<div class="modal fade" id="updateSubjectName" tabindex="-1"
-									role="dialog" aria-labelledby="exampleModalLabel"
-									aria-hidden="true">
-									<div class="modal-dialog" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h5 class="modal-title" id="exampleModalLabel">Sửa tên
-													môn</h5>
-											</div>
-											<div class="modal-body">
-
-												<div class="mb-3">
-													<label for="validationCustom01" class="form-label">Tên
-														môn</label> <input name ="newSubjectName" type="text" class="form-control"
-														id="validationCustom02" placeholder="Nhập tên môn cần sửa"
-														required>
+								<form
+									action="./renameSubject?subjectID=<%=subject.getSubjectID()%>&newSubjectName=''"
+									method="post">
+									<div class="modal fade" id="updateSubjectName" tabindex="-1"
+										role="dialog" aria-labelledby="exampleModalLabel"
+										aria-hidden="true">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLabel">Sửa tên
+														môn</h5>
 												</div>
+												<div class="modal-body">
+
+													<div class="mb-3">
+														<label for="validationCustom01" class="form-label">Tên
+															môn</label> <input name="newSubjectName" type="text"
+															class="form-control" id="validationCustom02"
+															placeholder="Nhập tên môn cần sửa" required>
+													</div>
 
 
 
-											</div>
-											<div class="modal-footer">
-												<button type="submit" class="btn btn-primary" onclick="location.href='./renameSubject?subjectID=<%=subject.getSubjectID()%>&newSubjectName='">Xác
-													nhận </button>
-												<button type="button" class="btn btn-default"
-													data-dismiss="modal">Close</button>
+												</div>
+												<div class="modal-footer">
+													<button type="submit" class="btn btn-primary"
+														onclick="location.href='./renameSubject?subjectID=<%=subject.getSubjectID()%>&newSubjectName='">Xác
+														nhận</button>
+													<button type="button" class="btn btn-default"
+														data-dismiss="modal">Close</button>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-							</form>
+								</form>
 								<%
 								}
 								%>
 							</table>
 							<!-- Modal -->
-							
+
 							<!-- Modal -->
 							<form action="./unactiveSubject" method="post">
 								<div class="modal fade" id="deleteSubject" tabindex="-1"
@@ -184,14 +197,10 @@
 					</div>
 				</div>
 				<div class="product-new-list-area">
-					<div class="container-fluid">
-						
-					</div>
+					<div class="container-fluid"></div>
 				</div>
 				<div class="product-sales-area mg-tb-30">
-					<div class="container-fluid">
-						
-					</div>
+					<div class="container-fluid"></div>
 				</div>
 				<div class="calender-area mg-tb-30">
 					<div class="container-fluid">
@@ -206,26 +215,18 @@
 				</div>
 				<%@ include file="footer.jsp"%>
 				<script type="text/javascript">
-				
-				(() => {
-					  'use strict'
-
-					  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-					  const forms = document.querySelectorAll('.needs-validation')
-
-					  // Loop over them and prevent submission
-					  Array.from(forms).forEach(form => {
-					    form.addEventListener('submit', event => {
-					      if (!form.checkValidity()) {
-					        event.preventDefault()
-					        event.stopPropagation()
-					      }
-
-					      form.classList.add('was-validated')
-					    }, false)
-					  })
-					})()
+					$(button).ready(function() {
+						$("btnDelete").show();
+						$("btnRestore").show();
+						$("#btnDelete").click(function() {
+							$("btnRestore").show();
+						});
+						$("#btnRestore").click(function() {
+							$("btnDelete").show();
+						});
+					});
 				</script>
+
 			</div>
 </body>
 

@@ -6,15 +6,16 @@ public class ChapterDTO {
 
 	private int chapterID;
 	private String chapterName;
-
+	private boolean active;
 	private int subjectID;
 	private List<LessonDTO> lessonList;
 
-	public ChapterDTO(int chapterID, String chapterName, int subjectID, List<LessonDTO> lessonList) {
+	public ChapterDTO(int chapterID, String chapterName, int subjectID,boolean active, List<LessonDTO> lessonList) {
 		super();
 		this.chapterID = chapterID;
 		this.chapterName = chapterName;
 		this.subjectID = subjectID;
+		this.active = active;
 		this.lessonList = lessonList;
 	}
 
@@ -48,6 +49,14 @@ public class ChapterDTO {
 
 	public void setLessonList(List<LessonDTO> lessonList) {
 		this.lessonList = lessonList;
+	}
+	
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 
 	public boolean isChapterComplete(List<LessonCompleteDTO> lessonCompleteList) {

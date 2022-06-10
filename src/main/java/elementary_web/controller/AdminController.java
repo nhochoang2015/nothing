@@ -18,11 +18,6 @@ public class AdminController {
 		return "./admin_page/editAccount";
 	}
 
-	@GetMapping("/chapter")
-	public String chapterPage(Model model) {
-		return "./admin_page/Chapter";
-	}
-	
 	@GetMapping("/analytics")
 	public String analyticsPage(Model model) {
 		return "./admin_page/analytics";

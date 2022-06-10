@@ -76,9 +76,10 @@ public class SubjectService {
 		subjectRepository.save(subject);
 	}
 	// phục hồi môn
-	public SubjectDTO restoreSubjectByID(int subjectID) {
-		Subject subject = subjectRepository.restoreSubjectByID(subjectID);
-		return subjectConverter.toDTO(subject);
+	public void restoreSubjectByID(int subjectID) {
+		Subject subject = subjectRepository.findBySubjectID(subjectID);
+		subject.setActive(true);
+		subjectRepository.save(subject);
 	}
 
 	// Tim mon hoc theo ID
