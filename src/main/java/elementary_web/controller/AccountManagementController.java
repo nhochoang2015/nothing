@@ -19,6 +19,7 @@ import elementary_web.service.AccountService;
 import elementary_web.service.RoleService;
 
 @Controller
+@RequestMapping("/admin")
 public class AccountManagementController {
 	@Autowired
 	private AccountService accountService;
@@ -30,7 +31,7 @@ public class AccountManagementController {
 	public ModelAndView accountManagePage() {
 		List<AccountDTO> accountlistdto = accountService.findAllAccount();
 		List<RoleDTO> listRoledto = roleService.findAllRole();
-		ModelAndView mav = new ModelAndView("admin_page/account-management");
+		ModelAndView mav = new ModelAndView("../admin_page/account-management");
 		mav.addObject("accountlistdto", accountlistdto);
 		mav.addObject("listRoledto", listRoledto);
 		return mav;
@@ -48,7 +49,7 @@ public class AccountManagementController {
 
 		accountService.updateAccount(accountDTO);
 		System.out.println(roleName);
-		return "redirect: ./accountManagement";
+		return "redirect: ../admin/accountManagement";
 	}
 
 	// sua tài khoản
@@ -57,7 +58,7 @@ public class AccountManagementController {
 	public ModelAndView editAccountPage(@RequestParam int accountID) {
 		AccountDTO accountDTO = accountService.findDTOByAccountID(accountID);
 		List<RoleDTO> listRoledto = roleService.findAllRole();
-		ModelAndView mav = new ModelAndView("admin_page/editAccount");
+		ModelAndView mav = new ModelAndView("../admin_page/editAccount");
 		mav.addObject("listRoledto", listRoledto);
 		mav.addObject("accountDTO", accountDTO);
 		return mav;
@@ -73,7 +74,7 @@ public class AccountManagementController {
 		AccountDTO accountDTO = new AccountDTO(accountID, accountName, nickName, password, email, phoneNumber,
 				monthlyPoint, coin, totalPoint, weeklyPoint, roleName, active);
 		accountService.updateAccount(accountDTO);
-		return "redirect: ./accountManagement";
+		return "redirect: ../admin/accountManagement";
 	}
 
 }

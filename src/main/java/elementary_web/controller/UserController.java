@@ -176,4 +176,8 @@ public class UserController {
 		return "./user_page/signup";
 	}
 
+	@RequestMapping("/accessDenied")
+	public String accessDeniedPage(Model model) {
+		return "./user_page/accessDenied";
+	}
 }

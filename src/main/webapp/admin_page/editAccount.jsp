@@ -72,7 +72,7 @@ img {
 											<div class="modal-dialog">
 												<div class="modal-content">
 													<form
-														action="./edit?accountID=<%=accountDTO.getAccountID()%>"
+														action="../admin/edit?accountID=<%=accountDTO.getAccountID()%>"
 														method="post">
 														<div class="modal-header">
 															<h4 class="modal-title">Edit Account</h4>

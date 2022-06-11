@@ -1,6 +1,14 @@
 package elementary_web.dto;
 
-public class AccountDTO {
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+public class AccountDTO implements UserDetails {
 
 	private int accountID;
 	private String accountName;
@@ -32,9 +40,9 @@ public class AccountDTO {
 		this.roleName = roleName;
 		this.active = active;
 	}
-	public AccountDTO(String accountName, String nickName, String password, String email,
-			String phoneNumber, int coin, int totalPoint, int weeklyPoint, int monthlyPoint, String roleName,
-			boolean active) {
+
+	public AccountDTO(String accountName, String nickName, String password, String email, String phoneNumber, int coin,
+			int totalPoint, int weeklyPoint, int monthlyPoint, String roleName, boolean active) {
 		this.accountName = accountName;
 		this.nickName = nickName;
 		this.password = password;
@@ -140,5 +148,41 @@ public class AccountDTO {
 		return active;
 	}
 
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		// TODO Auto-generated method stub
+		List<GrantedAuthority> result = new ArrayList<GrantedAuthority>();
+		result.add(new SimpleGrantedAuthority(this.roleName));
+		return result;
+	}
+
+	@Override
+	public String getUsername() {
+		// TODO Auto-generated method stub
+		return this.accountName;
+	}
+
+	@Override
+	public boolean isAccountNonExpired() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean isAccountNonLocked() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean isCredentialsNonExpired() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean isEnabled() {
+		return this.active;
+	}
 
 }

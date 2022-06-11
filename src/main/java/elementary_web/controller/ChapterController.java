@@ -12,16 +12,16 @@ import elementary_web.dto.ChapterDTO;
 import elementary_web.service.ChapterService;
 
 @Controller
+@RequestMapping("/admin")
 public class ChapterController {
 	@Autowired
 	private ChapterService chapterService;
 
 	@RequestMapping("/chapter")
-
 	public ModelAndView chapterPage(@RequestParam int subjectID) {
 
 		List<ChapterDTO> chapterList = chapterService.findAllChapter(subjectID);
-		ModelAndView mav = new ModelAndView("admin_page/Chapter");
+		ModelAndView mav = new ModelAndView("../admin_page/Chapter");
 		mav.addObject("chapterList", chapterList);
 		return mav;
 	}
@@ -29,24 +29,24 @@ public class ChapterController {
 	@RequestMapping("/unactiveChapter")
 	public String unactiveSubject(@RequestParam int chapterID) {
 		chapterService.deleteChapterbyID(chapterID);
-		return "redirect:./chapter";
+		return "redirect:../admin/chapter";
 	}
 
 	@RequestMapping("/createChapter")
 	public String createSubject(@RequestParam String chapterName) {
 		chapterService.createChapter(chapterName);
-		return "redirect:./chapter";
+		return "redirect: ../admin/chapter";
 	}
 
 	@RequestMapping("/renameChapter")
 	public String renameSubject(@RequestParam int ChapterID, @RequestParam String chaptertName) {
 		chapterService.renameChapter(ChapterID, chaptertName);
-		return "redirect:./chapter";
+		return "redirect:../admin/chapter";
 	}
 
 	@RequestMapping("/activeChapter")
 	public String activeSubject(@RequestParam int chapterID) {
 		chapterService.restoreChapterbyID(chapterID);
-		return "redirect:./chapter";
+		return "redirect:../admin/chapter";
 	}
 }

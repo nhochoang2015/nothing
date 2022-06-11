@@ -58,7 +58,7 @@
 										<!--                                    ====-->
 										<div class="add-product">
 											
-											<a href="#addAccountModal" data-toggle="modal">Thêm</a>
+											<a data-target="#addAccountModal" data-toggle="modal">Thêm</a>
 											
 										</div>
 										
@@ -120,7 +120,7 @@
 												</td>																							
 												<td><input type="checkbox"<%if(accountdto.isActive()) {%>checked<%}%> onclick="return false;"></td>
 												<td>
-													<a href="./editAccount?accountID=<%=accountdto.getAccountID()%>"  class="btn btn-success" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+													<a href="../admin/editAccount?accountID=<%=accountdto.getAccountID()%>"  class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
 												</td>
 											</tr>
 											  <% } %>
@@ -137,10 +137,10 @@
 		<%@ include file="footer.jsp"%>
 	</div>
 	<!-- ....................................................... -->
-	<div id="addAccountModal" class="modal fade" onload="disableSubmitBtn()">
+	<div id="addAccountModal" class="modal" onload="disableSubmitBtn()">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form action="./addAccount" method="post">
+                    <form action="../admin/addAccount" method="post">
                         <div class="modal-header">						
                             <h4 class="modal-title">ADD Account</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
