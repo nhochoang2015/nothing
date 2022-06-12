@@ -17,6 +17,7 @@ public class AdminController {
 	public String editPage(Model model) {
 		return "../admin_page/editAccount";
 	}
+	
 
 	@GetMapping("/analytics")
 	public String analyticsPage(Model model) {

@@ -17,5 +17,6 @@ public interface AccountRepository extends JpaRepository<Account, Integer> {
 	List<Account> findByOrderByMonthlyPointDesc();
 
 	Account findByAccountID(int AccountID);
-
+	@Query(value = "SELECT * FROM TAI_KHOAN WHERE ((EMAIL = ?1) OR (TEN_TAI_KHOAN = ?1) OR (SDT = ?1)) OR(NICK_NAME = ?1)",nativeQuery = true)
+	Account findAccountByEmailOrUserOrPhoneNumberOrNickname(String emailOrUserOrPhoneNumberOrNickname);
 }

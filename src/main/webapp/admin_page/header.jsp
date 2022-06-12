@@ -71,7 +71,7 @@
 <!-- bootstrap JS
     ============================================ -->
 <script src="../admin_page/bootstrap-4.4.1/js/bootstrap.bundle.min.js"></script>
-
+<script src="../admin_page/js/jquery-3.6.0.min.js" type="text/javascript"></script>
 </head>
 <body>
 	<div class="container-fluid">

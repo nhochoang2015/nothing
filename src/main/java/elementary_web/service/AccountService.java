@@ -49,7 +49,16 @@ public class AccountService {
 		return account;
 	}
 
-	
+	public AccountDTO findAccountByEmailOrUserOrPhoneNumberOrNickname(String emailOrUserOrPhoneNumberOrNickname) {
+		Account account = accountRepository.findByEmailOrUsernameOrPhoneNumber(emailOrUserOrPhoneNumberOrNickname);
+		// Tim thay hay khong
+		if (account == null) {
+			return null;
+		} else {
+			AccountDTO accountDTO = accountConverter.toDTO(account);
+			return accountDTO;
+		}
+	}
 
 	public AccountDTO findDTOByAccountID(int accountID) {
 		Account account = accountRepository.findByAccountID(accountID);

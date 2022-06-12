@@ -11,7 +11,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet"
+<!-- <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -23,7 +23,7 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link href="css/manager.css" rel="stylesheet" type="text/css" />
+<link href="css/manager.css" rel="stylesheet" type="text/css" /> -->
 </head>
 <style>
 img {
@@ -72,7 +72,7 @@ img {
 											<div class="modal-dialog">
 												<div class="modal-content">
 													<form
-														action="../admin/edit?accountID=<%=accountDTO.getAccountID()%>"
+														action="./edit?accountID=<%=accountDTO.getAccountID()%>"
 														method="post">
 														<div class="modal-header">
 															<h4 class="modal-title">Edit Account</h4>
@@ -90,6 +90,7 @@ img {
 																<label>Tên tài khoản</label> <input name="accountName"
 																	type="text" class="form-control"
 																	value="<%=accountDTO.getAccountName()%>" required>
+																<div id="accountNameMessage" style="color: red"></div>
 															</div>
 															<div class="form-group">
 																<label>Tiền xu</label> <input name="coin" type="number"
@@ -100,38 +101,42 @@ img {
 																<label>Email</label> <input name="email" type="email"
 																	class="form-control" value="<%=accountDTO.getEmail()%>"
 																	required>
+																<div id="emailMessage" style="color: red"></div>
 															</div>
 															<div class="form-group">
 																<label>Nick name</label> <input name="nickName"
 																	type="text" class="form-control"
 																	value="<%=accountDTO.getNickName()%>" required>
+																<div id="nickNameMessage" style="color: red"></div>
 															</div>
 															<div class="form-group">
-																<label>Mật khẩu</label> <input name="password"
-																	type="text" class="form-control"
-																	value="<%=accountDTO.getPassword()%>" required>
+																<label>Mật khẩu</label> <input name="password" id="password"
+																	type="text" class="form-control" pattern="[A-Za-z0-9]{10,18}">
+																	<p style="color: red">*Mật Khẩu từ 10-15 ký tự và không chứa ký tự đặc biệt</p>
+																	
 															</div>
 															<div class="form-group">
-																<label>SDT</label> <input name="phoneNumber" type="text"
+																<label>SDT</label> <input name="phoneNumber" type="tel"
 																	class="form-control"
 																	value="<%=accountDTO.getPhoneNumber()%>" required>
+																<div id="phoneNumberMessage" style="color: red"></div>
 															</div>
 															<div class="form-group">
 																<label>Điểm tích lũy</label> <input name="totalPoint"
-																	type="number" class="form-control"
-																	value="<%=accountDTO.getTotalPoint()%>" required
+																	class="form-control"
+																	value="<%=accountDTO.getTotalPoint()%>"
 																	readonly>
 															</div>
 															<div class="form-group">
 																<label>Điểm tích lũy Tuần</label> <input
-																	name="weeklyPoint" type="number" class="form-control"
-																	value="<%=accountDTO.getWeeklyPoint()%>" required
+																	type="number" class="form-control"
+																	value="<%=accountDTO.getWeeklyPoint()%>" 
 																	readonly>
 															</div>
 															<div class="form-group">
 																<label>Điểm tích lũy Tháng</label> <input
-																	name="monthlyPoint" type="number" class="form-control"
-																	value="<%=accountDTO.getMonthlyPoint()%>" required
+																	type="number" class="form-control"
+																	value="<%=accountDTO.getMonthlyPoint()%>"
 																	readonly>
 															</div>
 															<div class="form-group">

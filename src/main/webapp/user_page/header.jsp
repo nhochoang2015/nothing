@@ -45,6 +45,7 @@
 <link href="user_page/css/style.css" rel="stylesheet">
 <link href="user_page/fonts/chalk/stylesheet.css" rel="stylesheet">
 <link href="user_page/css/header.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -100,7 +101,7 @@
 					if (accountDTO.getRoleName().equals("ADMIN")) {
 					%>
 
-					<a href=" ADM-User.jsp" class="nav-item nav-link">Amin Page</a>
+					<a href="./admin/accountManagement" class="nav-item nav-link">Amin Page</a>
 
 					<%
 					}

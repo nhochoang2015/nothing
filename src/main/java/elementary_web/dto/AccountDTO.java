@@ -147,6 +147,14 @@ public class AccountDTO implements UserDetails {
 	public boolean isActive() {
 		return active;
 	}
+	
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
+	}
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
