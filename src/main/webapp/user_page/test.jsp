@@ -25,7 +25,6 @@
 		<div class="row pt-5">
 			<div class="col-lg-12" id="questions-slick">
 				<%
-				int index = 1;
 				for (QuestionDTO question : questionList) {
 				%>
 				<div class="page question">
@@ -37,9 +36,7 @@
 						</div>
 						<div class="row">
 							<div class="col-lg-12 question-content">
-								<p>Nội dung câu hỏi.Nội dung câu hỏiNội dung câu hỏiNội dung
-									câu hỏiNội dung câu hỏiNội dung câu hỏiNội dung câu hỏiNội dung
-									câu hỏiNội dung câu hỏi</p>
+								<p><%=question.getContent()%></p>
 							</div>
 						</div>
 						<div class="row">
@@ -50,7 +47,7 @@
 								for (int i = 1; i < arrayAnswer.length; i++) {
 								%>
 								<div class="answer" onclick="answerQuestion(this)">
-									<input type="radio" name="<%=index%>" value="<%=i%>"
+									<input type="radio" name="<%=question.getQuestionID()%>" value="<%=i%>"
 										class="radioButton" disabled="disabled"> <label><%=arrayAnswer[i]%></label>
 								</div>
 								<%
@@ -65,134 +62,8 @@
 				</div>
 
 				<%
-				index++;
 				}
 				%>
-				<div class="page question">
-					<div class="col-lg-12 question-container">
-						<div class="row">
-							<div class="col-lg-12 question-number">
-								<span>Câu hỏi số 1</span>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-12 question-content">
-								<p>Nội dung câu hỏi.Nội dung câu hỏiNội dung câu hỏiNội dung
-									câu hỏiNội dung câu hỏiNội dung câu hỏiNội dung câu hỏiNội dung
-									câu hỏiNội dung câu hỏi</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-12 question-answer">
-								<input type="radio" id="answer1" name="answer" value="40">
-								<label for="answer1">Đáp án 1</label><br> <input
-									type="radio" id="answer2" name="answer" value="40"> <label
-									for="answer2">Đáp án 2</label><br> <input type="radio"
-									id="answer3" name="answer" value="40"> <label
-									for="answer3">Đáp án 3</label><br> <input type="radio"
-									id="answer4" name="answer" value="40"> <label
-									for="answer4">Đáp án 4</label><br>
-
-							</div>
-						</div>
-
-
-					</div>
-				</div>
-				<div class="page question">
-					<div class="col-lg-12 question-container">
-						<div class="row">
-							<div class="col-lg-12 question-number">
-								<span>Câu hỏi số 1</span>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-12 question-content">
-								<p>Nội dung câu hỏi.Nội dung câu hỏiNội dung câu hỏiNội dung
-									câu hỏiNội dung câu hỏiNội dung câu hỏiNội dung câu hỏiNội dung
-									câu hỏiNội dung câu hỏi</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-12 question-answer">
-								<input type="radio" id="answer1" name="answer" value="40">
-								<label for="answer1">Đáp án 1</label><br> <input
-									type="radio" id="answer2" name="answer" value="40"> <label
-									for="answer2">Đáp án 2</label><br> <input type="radio"
-									id="answer3" name="answer" value="40"> <label
-									for="answer3">Đáp án 3</label><br> <input type="radio"
-									id="answer4" name="answer" value="40"> <label
-									for="answer4">Đáp án 4</label><br>
-
-							</div>
-						</div>
-
-
-					</div>
-				</div>
-				<div class="page question">
-					<div class="col-lg-12 question-container">
-						<div class="row">
-							<div class="col-lg-12 question-number">
-								<span>Câu hỏi số 1</span>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-12 question-content">
-								<p>Nội dung câu hỏi.Nội dung câu hỏiNội dung câu hỏiNội dung
-									câu hỏiNội dung câu hỏiNội dung câu hỏiNội dung câu hỏiNội dung
-									câu hỏiNội dung câu hỏi</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-12 question-answer">
-								<input type="radio" id="answer1" name="answer" value="40">
-								<label for="answer1">Đáp án 1</label><br> <input
-									type="radio" id="answer2" name="answer" value="40"> <label
-									for="answer2">Đáp án 2</label><br> <input type="radio"
-									id="answer3" name="answer" value="40"> <label
-									for="answer3">Đáp án 3</label><br> <input type="radio"
-									id="answer4" name="answer" value="40"> <label
-									for="answer4">Đáp án 4</label><br>
-
-							</div>
-						</div>
-
-
-					</div>
-				</div>
-				<div class="page question">
-					<div class="col-lg-12 question-container">
-						<div class="row">
-							<div class="col-lg-12 question-number">
-								<span>Câu hỏi số 1</span>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-12 question-content">
-								<p>Nội dung câu hỏi.Nội dung câu hỏiNội dung câu hỏiNội dung
-									câu hỏiNội dung câu hỏiNội dung câu hỏiNội dung câu hỏiNội dung
-									câu hỏiNội dung câu hỏi</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-12 question-answer">
-								<input type="radio" id="answer1" name="answer" value="40">
-								<label for="answer1">Đáp án 1</label><br> <input
-									type="radio" id="answer2" name="answer" value="40"> <label
-									for="answer2">Đáp án 2</label><br> <input type="radio"
-									id="answer3" name="answer" value="40"> <label
-									for="answer3">Đáp án 3</label><br> <input type="radio"
-									id="answer4" name="answer" value="40"> <label
-									for="answer4">Đáp án 4</label><br>
-
-							</div>
-						</div>
-
-
-					</div>
-				</div>
-
 			</div>
 
 			<div class="col-lg-12" id="page-list">

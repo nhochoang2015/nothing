@@ -2,6 +2,7 @@
  * 
  */
 var numberOfRightAnswer = 0;
+var userAnswers = Array(10).fill(0);
 $(document).ready(function() {
 	var oTurn = $("#flipbook").turn({
 		height: 600,
@@ -74,19 +75,9 @@ function answerQuestion(div) {
 	var awswerUserPicked = radidoButton.val();
 	userAnswers[questionNumber - 1] = awswerUserPicked;
 
-	//if (awswerUserPicked == correctAnswer) {
-	//$(div).css({ 'background-color': 'green', 'color': 'black' });
-	//	numberOfRightAnswer += 1;
-	//	console.log("Đúng")
-	//} else {
-	//	$(div).css({ 'background-color': 'red', 'color': 'white' });
-	//	$(answerDivArray[correctAnswer - 1]).css({ 'background-color': 'green', 'color': 'black' })
-	//	console.log("Sai")
-	//}
-
 	//Gửi request lên server để so sánh kết quả
 	$.ajax({
-		url: './checkAnswer',
+		url: './checkQuizAnswer',
 		type: 'POST',
 		data: {
 			lessonID: lessonID,

@@ -15,10 +15,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import elementary_web.dto.AccountDTO;
+import elementary_web.dto.ChapterDTO;
 import elementary_web.dto.LessonCompleteDTO;
 import elementary_web.dto.LessonDTO;
 import elementary_web.dto.QuestionDTO;
 import elementary_web.dto.SubjectDTO;
+import elementary_web.service.ChapterService;
 import elementary_web.service.LessonCompleteService;
 import elementary_web.service.LessonService;
 import elementary_web.service.LessonService;
@@ -38,6 +40,8 @@ public class UserController {
 	private LessonService lessonService;
 	@Autowired
 	private TestService testService;
+	@Autowired
+	private ChapterService chapterService;
 
 	@RequestMapping("/")
 	public ModelAndView homePage() {
@@ -101,10 +105,18 @@ public class UserController {
 	}
 
 	@RequestMapping("/test")
-	public ModelAndView testPage(@RequestParam int chapterID) {
+	public ModelAndView testPage(@RequestParam int chapterID, HttpSession session) {
 		ModelAndView mav = new ModelAndView("user_page/test");
-		List<QuestionDTO> questionList = testService.getRandomQuestion(chapterID);
-		mav.addObject("questionList", questionList);
+		AccountDTO account = (AccountDTO) session.getAttribute("account");
+		ChapterDTO chapter = chapterService.findByChapterID(chapterID);
+		boolean isChapterComplete = chapter
+				.isChapterComplete(lessonCompleteService.findByAccountID(account.getAccountID()));
+		if (isChapterComplete) {
+			List<QuestionDTO> questionList = testService.getRandomQuestion(chapterID);
+			mav.addObject("questionList", questionList);
+		} else {
+			mav = new ModelAndView("redirect:./subject-details?subjectID=" + chapter.getSubjectID());
+		}
 		return mav;
 	}
 
@@ -139,7 +151,7 @@ public class UserController {
 				int lessonID = Integer.parseInt(lessonIDString);
 				LessonDTO lessonBefore = lessonService.findByLessonID(lessonID);
 				mav.addObject("notify",
-						"Bạn chưa thể tham gia bài học này vì" + lessonBefore.getLessonName() + "chưa hoàn thành.");
+						"Bạn chưa thể tham gia bài học này vì " + lessonBefore.getLessonName() + " chưa hoàn thành.");
 			}
 		}
 		return mav;

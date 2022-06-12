@@ -37,7 +37,7 @@ public class QuizController {
 		session.removeAttribute(lessonString);
 	}
 
-	@PostMapping("/checkAnswer")
+	@PostMapping("/checkQuizAnswer")
 	public @ResponseBody String checkAnswer(HttpSession session, @RequestParam int lessonID,
 			@RequestParam int questionNumber, @RequestParam int userAnswer) {
 		LessonDTO lesson = (LessonDTO) session.getAttribute("lesson" + lessonID);

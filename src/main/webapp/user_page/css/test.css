@@ -90,7 +90,23 @@
 	font-size: large;
 	border: 5px solid;
 	border-radius: 30px;
+	height: 210px;
+	overflow: auto;
 }
+
+.answer {
+	border: 1px solid;
+	border-radius: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.answer:hover {
+	background-color: green;
+	color: black;
+}
+
 
 .explain-container .row {
 	margin-top: 15px;

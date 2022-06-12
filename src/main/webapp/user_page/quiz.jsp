@@ -118,7 +118,6 @@
 	%>
 
 	<script type="text/javascript">
-	var userAnswers = Array(10).fill(0);
 		var lessonID =
 	<%=lesson.getLessonID()%>
 		;

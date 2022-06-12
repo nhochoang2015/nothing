@@ -12,5 +12,6 @@ import elementary_web.entity.Question;
 public interface QuestionRepository extends JpaRepository<Question, Integer> {
 	@Query(value = "SELECT TOP 10 ca.* FROM CAU_HOI ca join BAI_HOC bh on ca.MA_BAI_HOC = bh.MA_BAI_HOC join CHUONG ch on bh.MA_CHUONG = ch.MA_CHUONG WHERE (bh.MA_CHUONG = ?1) ORDER BY NEWID()", nativeQuery = true)
 	List<Question> findRandomQuestionByChapterID(int chapterID);
+	Question findByQuestionID(int questionID);
 
 }
