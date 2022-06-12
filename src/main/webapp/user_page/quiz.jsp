@@ -68,7 +68,7 @@
 						<div class="row">
 							<div id="ex_<%=index%>" class="col-lg-12 explain-content"
 								hidden="true">
-								<p><%=question.getExplain()%></p>
+								<p></p>
 							</div>
 						</div>
 

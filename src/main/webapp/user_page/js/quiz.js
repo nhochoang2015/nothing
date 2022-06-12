@@ -94,8 +94,10 @@ function answerQuestion(div) {
 			userAnswer: awswerUserPicked
 		},
 		success: (function(data) {
-			var correctAnswer = data.split(':')[1];
-			var result = data.split(':')[0];
+			var dataArray = data.split(':');
+			var correctAnswer = dataArray[1];
+			var result = dataArray[0];
+			var explain = dataArray[2];
 			if (result === 'true') {
 				$(div).css({ 'background-color': 'green', 'color': 'black' });
 				numberOfRightAnswer += 1;
@@ -106,9 +108,18 @@ function answerQuestion(div) {
 				console.log("Sai")
 			}
 			// Hiện giải thích
+
+
 			var explainID = '#ex_' + questionNumber;
 			var explainDiv = $(explainID);
+			var explainP = $(explainID + ' p');
+			explainP.text(explain);
 			explainDiv.attr('hidden', false);
+
+
+
+
+
 			// Kiểm tra xem học sinh hoàn thành bài học chưa
 			if (isLessonComplete()) {
 				$("#back-button-container").attr('hidden', false);

@@ -44,8 +44,8 @@ public class QuizController {
 		ArrayList<String> correctAnswerArray = lesson.getCorrectAnswerArray();
 		int correctAnswer = Integer.parseInt(correctAnswerArray.get(questionNumber - 1));
 		if (correctAnswer == userAnswer)
-			return "true:" + correctAnswer;
-		return "false:" + correctAnswer;
+			return "true:" + correctAnswer + ":" + lesson.getExplain(questionNumber);
+		return "false:" + correctAnswer + ":" + lesson.getExplain(questionNumber);
 
 	}
 

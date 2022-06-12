@@ -93,4 +93,8 @@ public class LessonDTO {
 		this.lessonBeforeID = lessonBeforeID;
 	}
 
+	public String getExplain(int questionIndex) {
+		return questionList.get(questionIndex- 1).getExplain();
+	}
+
 }
