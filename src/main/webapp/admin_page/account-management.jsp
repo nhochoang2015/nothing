@@ -46,7 +46,7 @@
 										<div class="add-product">
 
 											<a data-target="#addAccountModal" data-toggle="modal">Thêm</a>
-
+											
 										</div>
 
 										<thead>
@@ -121,11 +121,8 @@
 				</div>
 			</div>
 		</div>
-		<!-- Static Table End -->
-		<%@ include file="footer.jsp"%>
-	</div>
-	<!-- ....................................................... -->
-	<div id="addAccountModal" class="modal">
+		<!-- ....................................................... -->
+		<div id="addAccountModal" class="modal">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<form action="./addAccount" method="post"
@@ -164,7 +161,7 @@
 							<label>Mật khẩu</label> <input name="password" id="password"
 								type="text" class="form-control" required
 								pattern="[A-Za-z0-9]{10,18}">
-							<p style="color: red">*Mật Khẩu từ 10-15 ký tự và không chứa
+							<p style="color: black">*Mật Khẩu từ 10-15 ký tự và không chứa
 								ký tự đặc biệt</p>
 						</div>
 						<div class="form-group">
@@ -211,6 +208,11 @@
 			</div>
 		</div>
 	</div>
+		<!-- Static Table End -->
+		<%@ include file="footer.jsp"%>
+	</div>
+
+	
 	<script src="../admin_page/js/ajax.js" type="text/javascript"></script>
 
 </body>

@@ -33,7 +33,7 @@
 										class="fa fa-female sub-icon-mg" aria-hidden="true"></i> <span
 										class="mini-sub-pro">Quản lý thông báo</span></a></li>
 
-								<li class="list-group-item "><a title="Quản lý tài khoản" href="AccountMng"><i
+								<li class="list-group-item "><a title="Quản lý tài khoản" href="../admin/accountManagement"><i
 										class="fa fa-bolt sub-icon-mg" aria-hidden="true"></i> <span
 										class="mini-sub-pro">Quản lý tài khoản</span></a></li>
 

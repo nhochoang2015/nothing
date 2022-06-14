@@ -44,11 +44,6 @@ public class AccountService {
 		}
 	}
 
-	public Account findByAccountID(int accountID) {
-		Account account = accountRepository.findByAccountID(accountID);
-		return account;
-	}
-
 	public AccountDTO findAccountByEmailOrUserOrPhoneNumberOrNickname(String emailOrUserOrPhoneNumberOrNickname) {
 		Account account = accountRepository.findByEmailOrUsernameOrPhoneNumber(emailOrUserOrPhoneNumberOrNickname);
 		// Tim thay hay khong
@@ -75,4 +70,43 @@ public class AccountService {
 		}
 		return listAccountDTO;
 	}
+
+	public AccountDTO findDTOByAccountName(int accountID, String accountName) {
+		Account account = accountRepository.findByAccountName(accountID, accountName);
+		if (account == null) {
+			return null;
+		}
+		return accountConverter.toDTO(account);
+	}
+
+	public AccountDTO findDTOByEmail(int accountID, String email) {
+		Account account = accountRepository.findByEmail(accountID, email);
+		if (account == null) {
+			return null;
+		}
+		return accountConverter.toDTO(account);
+	}
+
+	public AccountDTO findDTOByPhoneNumber(int accountID, String phoneNumber) {
+		Account account = accountRepository.findByPhoneNumber(accountID, phoneNumber);
+		if (account == null) {
+			return null;
+		}
+		return accountConverter.toDTO(account);
+	}
+
+	public AccountDTO findDTOByNickName(int accountID, String nickName) {
+
+		Account account = accountRepository.findByNickName(accountID, nickName);
+		if (account == null) {
+			return null;
+		}
+		return accountConverter.toDTO(account);
+	}
+
+	public Account findByAccountID(int accountID) {
+		Account account = accountRepository.findByAccountID(accountID);
+		return account;
+	}
+
 }

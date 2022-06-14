@@ -11,19 +11,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- <link rel="stylesheet"
-	href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
-<link rel="stylesheet"
-	href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link href="css/manager.css" rel="stylesheet" type="text/css" /> -->
+
+
 </head>
 <style>
 img {
@@ -52,18 +41,6 @@ img {
 							</div>
 							<div class="sparkline13-graph">
 								<div class="datatable-dashv1-list custom-datatable-overright">
-									<div id="toolbar">
-										<select class="form-control">
-											<option value="">Xuất danh sách</option>
-											<option value="all">Xuất toàn bộ danh sách</option>
-											<option value="selected">Xuất danh sách đã chọn</option>
-
-											<!--												<option value="">Export Basic</option>-->
-											<!--												<option value="all">Export All</option>-->
-											<!--												<option value="selected">Export Selected</option>-->
-										</select>
-									</div>
-
 									<div class="container">
 										<%
 										AccountDTO accountDTO = (AccountDTO) request.getAttribute("accountDTO");
@@ -73,7 +50,7 @@ img {
 												<div class="modal-content">
 													<form
 														action="./edit?accountID=<%=accountDTO.getAccountID()%>"
-														method="post">
+														method="post" onsubmit="return validation()"><!--  -->
 														<div class="modal-header">
 															<h4 class="modal-title">Edit Account</h4>
 															<button type="button" class="close" data-dismiss="modal"
@@ -112,7 +89,7 @@ img {
 															<div class="form-group">
 																<label>Mật khẩu</label> <input name="password" id="password"
 																	type="text" class="form-control" pattern="[A-Za-z0-9]{10,18}">
-																	<p style="color: red">*Mật Khẩu từ 10-15 ký tự và không chứa ký tự đặc biệt</p>
+																	<p style="color: black">*Mật Khẩu từ 10-15 ký tự và không chứa ký tự đặc biệt</p>
 																	
 															</div>
 															<div class="form-group">
@@ -146,7 +123,7 @@ img {
 																	List<RoleDTO> listRoledto = (List<RoleDTO>) request.getAttribute("listRoledto");
 																	for (RoleDTO roledto : listRoledto) {
 																	%>
-																	<option value="<%=roledto.getRoleName()%>"><%=roledto.getRoleName()%></option>
+																	<option value="<%=roledto.getRoleName()%>" <%if (accountDTO.getRoleName().equals(roledto.getRoleName())) {%>selected="selected"<%}%>><%=roledto.getRoleName()%></option>
 																	<%
 																	}
 																	%>
@@ -159,8 +136,9 @@ img {
 															</div>
 														</div>
 														<div class="modal-footer">
-															<input type="button" class="btn btn-default"
-																data-dismiss="modal" value="Cancel"> <input
+															
+															<input type="button" class="btn btn-success" onclick="location.href = '../admin/accountManagement';" value="CANCEL"> 
+															<input
 																type="submit" class="btn btn-success" value="save">
 														</div>
 													</form>
@@ -173,5 +151,6 @@ img {
 										<!-- Static Table End -->
 										<%@ include file="footer.jsp"%>
 									</div>
+			<script src="../admin_page/js/ajaxEdit.js" type="text/javascript"></script>						
 </body>
 </html>

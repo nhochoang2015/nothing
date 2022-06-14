@@ -39,7 +39,7 @@ public class AccountManagementController {
 		mav.addObject("listRoledto", listRoledto);
 		return mav;
 	}
-		
+
 	// Thêm tài khoản
 	@PostMapping("/addAccount")
 	public String addNewAccount(@RequestParam String accountName, @RequestParam String nickName,
@@ -49,7 +49,8 @@ public class AccountManagementController {
 			@RequestParam(required = false) boolean active) throws NoSuchAlgorithmException {
 		AccountDTO accountDTO = new AccountDTO(accountName, nickName, password, email, phoneNumber, monthlyPoint, coin,
 				totalPoint, weeklyPoint, roleName, active);
-		accountDTO.setPassword(Utility.convertToMD5(password));;
+		accountDTO.setPassword(Utility.convertToMD5(password));
+		;
 		accountService.updateAccount(accountDTO);
 		System.out.println(roleName);
 		return "redirect: ../admin/accountManagement";
@@ -80,15 +81,15 @@ public class AccountManagementController {
 		accountDTO.setPhoneNumber(phoneNumber);
 		accountDTO.setRoleName(roleName);
 		accountDTO.setCoin(coin);
-		accountDTO.setActive(active);		
-		//kiem tra mk rong
-		if(!password.isEmpty()) {
+		accountDTO.setActive(active);
+		// kiem tra mk rong
+		if (!password.isEmpty()) {
 			accountDTO.setPassword(Utility.convertToMD5(password));
-		}		
+		}
 		accountService.updateAccount(accountDTO);
 		return "redirect: ../admin/accountManagement";
 	}
-	
+
 	@RequestMapping("/accountNameCheck")
 	public @ResponseBody String checkAccountNameExit(@RequestParam String accountName) {
 		AccountDTO accountDTO = accountService.findAccountByEmailOrUserOrPhoneNumberOrNickname(accountName);
@@ -97,7 +98,7 @@ public class AccountManagementController {
 		}
 		return "false";
 	}
-	
+
 	@RequestMapping("/emailCheck")
 	public @ResponseBody String checkEmailExit(@RequestParam String email) {
 		AccountDTO accountDTO = accountService.findAccountByEmailOrUserOrPhoneNumberOrNickname(email);
@@ -106,6 +107,7 @@ public class AccountManagementController {
 		}
 		return "false";
 	}
+
 	@RequestMapping("/phoneNumberCheck")
 	public @ResponseBody String checkPhoneNumberExit(@RequestParam String phoneNumber) {
 		AccountDTO accountDTO = accountService.findAccountByEmailOrUserOrPhoneNumberOrNickname(phoneNumber);
@@ -114,6 +116,7 @@ public class AccountManagementController {
 		}
 		return "false";
 	}
+
 	@RequestMapping("/nickNameCheck")
 	public @ResponseBody String checkNickNameExit(@RequestParam String nickName) {
 		AccountDTO accountDTO = accountService.findAccountByEmailOrUserOrPhoneNumberOrNickname(nickName);
@@ -123,4 +126,46 @@ public class AccountManagementController {
 		return "false";
 	}
 
+	// kiểm tra tên tk có trùng không
+	@RequestMapping("/accountNameCheckMatch")
+	public @ResponseBody String checkAccountName(@RequestParam int accountID, @RequestParam String accountName) {
+		AccountDTO accountDTO = accountService.findDTOByAccountName(accountID, accountName);
+		// kiểm tra dưới csdl tk có null hay không
+		// nếu khác null là tài khoản đó đã tồn tại tồi--> true
+		if (accountDTO != null) {
+			return "true";
+		}
+		return "false";
+	}
+
+	@RequestMapping("/emailCheckMatch")
+	public @ResponseBody String checkEmail(@RequestParam int accountID, @RequestParam String email) {
+		AccountDTO accountDTO = accountService.findDTOByEmail(accountID, email);
+		
+		if (accountDTO != null) {
+			return "true";
+		}
+
+		return "false";
+	}
+
+	@RequestMapping("/phoneNumberCheckMatch")
+	public @ResponseBody String checkPhoneNumber(@RequestParam int accountID, @RequestParam String phoneNumber) {
+		AccountDTO accountDTO = accountService.findDTOByPhoneNumber(accountID, phoneNumber);
+		if (accountDTO != null) {
+			return "true";
+		}
+		
+		return "false";
+	}
+
+	@RequestMapping("/nickNameCheckMatch")
+	public @ResponseBody String checkNickName(@RequestParam int accountID, @RequestParam String nickName) {
+		AccountDTO accountDTO = accountService.findDTOByNickName(accountID, nickName);
+		if (accountDTO != null) {		
+			return "true";
+		}
+		
+		return "false";
+	}
 }

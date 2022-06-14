@@ -15,8 +15,16 @@ public interface AccountRepository extends JpaRepository<Account, Integer> {
 	Account findByEmailOrUsernameOrPhoneNumber(String emailOrUserOrPhoneNumber);
 
 	List<Account> findByOrderByMonthlyPointDesc();
-
-	Account findByAccountID(int AccountID);
+	@Query(value = "SELECT * FROM TAI_KHOAN WHERE (MA_TAI_KHOAN = ?1) ",nativeQuery = true)
+	Account findByAccountID(int accountID);
 	@Query(value = "SELECT * FROM TAI_KHOAN WHERE ((EMAIL = ?1) OR (TEN_TAI_KHOAN = ?1) OR (SDT = ?1)) OR(NICK_NAME = ?1)",nativeQuery = true)
 	Account findAccountByEmailOrUserOrPhoneNumberOrNickname(String emailOrUserOrPhoneNumberOrNickname);
+	@Query(value = "SELECT * FROM TAI_KHOAN WHERE (MA_TAI_KHOAN != ?1) AND (TEN_TAI_KHOAN = ?2)  ",nativeQuery = true)
+	Account findByAccountName(int accountID,String accountName);
+	@Query(value = "SELECT * FROM TAI_KHOAN WHERE (MA_TAI_KHOAN != ?1) AND (EMAIL = ?2)  ",nativeQuery = true)
+	Account findByEmail(int accountID, String email);
+	@Query(value = "SELECT * FROM TAI_KHOAN WHERE (MA_TAI_KHOAN != ?1) AND (SDT = ?2)  ",nativeQuery = true)
+	Account findByPhoneNumber(int accountID, String phoneNumber);
+	@Query(value = "SELECT * FROM TAI_KHOAN WHERE (MA_TAI_KHOAN != ?1) AND (NICK_NAME = ?2)  ",nativeQuery = true)
+	Account findByNickName(int accountID, String nickName);
 }
