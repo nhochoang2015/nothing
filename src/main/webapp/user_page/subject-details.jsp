@@ -86,7 +86,7 @@
 						if (lessonCompleteList != null) {
 							if (chapter.isChapterComplete(lessonCompleteList)) {
 						%>
-						<a href="user_page/" class="btn btn-primary px-4 mx-auto mb-4">Kiểm
+						<a href="./test?chapterID=<%=chapter.getChapterID() %>" class="btn btn-primary px-4 mx-auto mb-4">Kiểm
 							tra</a>
 						<%
 						}

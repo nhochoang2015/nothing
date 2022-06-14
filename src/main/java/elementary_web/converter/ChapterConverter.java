@@ -26,7 +26,8 @@ public class ChapterConverter {
 		for (Lesson lesson : lessonList) {
 			lessonDTOList.add(lessonConverter.toDTO(lesson));
 		}
-		return new ChapterDTO(chaperID, chapterName, subjectID, active, lessonDTOList);
+		int score = entity.getScore();
+		return new ChapterDTO(chaperID, chapterName, subjectID, active, lessonDTOList, score);
 
 	}
 

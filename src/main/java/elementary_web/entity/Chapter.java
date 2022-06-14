@@ -28,6 +28,8 @@ public class Chapter {
 	private Subject subject;
 	@Column(name = "HOAT_DONG")
 	private boolean active;
+	@Column(name = "DIEM")
+	private int score;
 	@OneToMany(mappedBy = "chapter", fetch = FetchType.EAGER)
 	private List<Lesson> lessonList;
 	public int getChapterID() {
@@ -59,6 +61,12 @@ public class Chapter {
 	}
 	public void setActive(boolean active) {
 		this.active = active;
+	}
+	public int getScore() {
+		return score;
+	}
+	public void setScore(int score) {
+		this.score = score;
 	}
 	
 }

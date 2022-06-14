@@ -147,13 +147,25 @@ public class AccountDTO implements UserDetails {
 	public boolean isActive() {
 		return active;
 	}
-	
+
 	public void setRoleName(String roleName) {
 		this.roleName = roleName;
 	}
 
 	public void setActive(boolean active) {
 		this.active = active;
+	}
+
+	public void addCoin(int coin) {
+		this.coin += coin;
+	}
+
+	public void addWeeklyPoint(int point) {
+		this.weeklyPoint += point;
+	}
+
+	public void addMonthlyPoint(int point) {
+		this.monthlyPoint += point;
 	}
 
 	@Override

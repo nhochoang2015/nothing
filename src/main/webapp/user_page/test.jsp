@@ -20,18 +20,22 @@
 			</div>
 		</div>
 		<%
+		int subjectID = (int) request.getAttribute("subjectID");
+
+		int chapterID = (int) request.getAttribute("chapterID");
 		List<QuestionDTO> questionList = (List<QuestionDTO>) request.getAttribute("questionList");
 		%>
 		<div class="row pt-5">
 			<div class="col-lg-12" id="questions-slick">
 				<%
+				int index = 1;
 				for (QuestionDTO question : questionList) {
 				%>
 				<div class="page question">
 					<div class="col-lg-12 question-container">
 						<div class="row">
 							<div class="col-lg-12 question-number">
-								<span>Câu hỏi số 1</span>
+								<span>Câu hỏi số <%=index %></span>
 							</div>
 						</div>
 						<div class="row">
@@ -47,8 +51,9 @@
 								for (int i = 1; i < arrayAnswer.length; i++) {
 								%>
 								<div class="answer" onclick="answerQuestion(this)">
-									<input type="radio" name="<%=question.getQuestionID()%>" value="<%=i%>"
-										class="radioButton" disabled="disabled"> <label><%=arrayAnswer[i]%></label>
+									<input type="radio" name="<%=question.getQuestionID()%>"
+										value="<%=i%>" class="radioButton" disabled="disabled">
+									<label><%=arrayAnswer[i]%></label>
 								</div>
 								<%
 								}
@@ -62,6 +67,7 @@
 				</div>
 
 				<%
+				index++;
 				}
 				%>
 			</div>
@@ -88,10 +94,49 @@
 				</ul>
 			</div>
 		</div>
+		<div id="submit-button-container" class="col-lg-12 text-center">
+			<button id="submit-button" data-toggle="modal"
+				data-target="#submitTestModal">Nộp bài</button>
+		</div>
 
-
+		<!-- Modal Nộp bài-->
+		<div class="modal fade" id="submitTestModal" tabindex="-1"
+			role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title w-100 text-center">Thông báo</h4>
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>Bạn có chắc chắn là muốn nộp bài ?</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary"
+							data-dismiss="modal">Không</button>
+						<button type="button" class="btn btn-primary"
+							onclick="submitTest()">Có</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<%@include file="footer.jsp"%>
+	<script type="text/javascript">
+		var userAnswers = Array(10).fill(0); // Mảng câu trả lời của người dùng
+		var questionIDArray = Array(10); // Mảng id các câu hỏi
+		var chapterID =<%=chapterID%>;
+		var subjectID =<%=subjectID%>;
+	<%int i = 0;
+	for (QuestionDTO question : questionList) {%>
+		questionIDArray[<%=i%>] =<%=question.getQuestionID()%>;
+	<%i++;
+}%>
+		
+	</script>
 	<script type="text/javascript" src="user_page/lib/turnjs4/turn.js"></script>
 	<script type="text/javascript" src="user_page/js/test.js"></script>
 </body>

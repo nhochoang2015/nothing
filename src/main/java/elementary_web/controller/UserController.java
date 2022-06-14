@@ -111,11 +111,16 @@ public class UserController {
 		ChapterDTO chapter = chapterService.findByChapterID(chapterID);
 		boolean isChapterComplete = chapter
 				.isChapterComplete(lessonCompleteService.findByAccountID(account.getAccountID()));
+		// Kiểm tra xem tất cả bài học trong chương hoàn thành chưa
+		int subjectID = chapter.getSubjectID();
 		if (isChapterComplete) {
 			List<QuestionDTO> questionList = testService.getRandomQuestion(chapterID);
 			mav.addObject("questionList", questionList);
+			mav.addObject("chapterID", chapter.getChapterID());
+			mav.addObject("subjectID", subjectID);
 		} else {
-			mav = new ModelAndView("redirect:./subject-details?subjectID=" + chapter.getSubjectID());
+			//Nếu chưa hoàn thành thì chuyển về trang chi tiết môn học
+			mav = new ModelAndView("redirect:./subject-details?subjectID=" + subjectID);
 		}
 		return mav;
 	}
