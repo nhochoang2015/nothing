@@ -1,5 +1,8 @@
 package elementary_web.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,5 +29,14 @@ public class LessonService {
 		Lesson lesson = lessonRepository.findByLessonID(lessonID);
 		return lesson;
 
+	}
+
+	public List<LessonDTO> findLessonsByChapterID(int chapterID) {
+		List<Lesson> lessonList = lessonRepository.findByChapter_ChapterID(chapterID);
+		List<LessonDTO> lessonDTOList = new ArrayList<LessonDTO>();
+		for (Lesson lesson : lessonList) {
+			lessonDTOList.add(lessonConverter.toDTO(lesson));
+		}
+		return lessonDTOList;
 	}
 }

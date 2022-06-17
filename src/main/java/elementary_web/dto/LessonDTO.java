@@ -11,9 +11,10 @@ public class LessonDTO {
 	private Integer lessonBeforeID;
 	private List<QuestionDTO> questionList;
 	private int score;
+	private boolean active;
 
 	public LessonDTO(int lessonID, String lessonName, int chapterID, Integer lessonBeforeID,
-			List<QuestionDTO> questionList, int score) {
+			List<QuestionDTO> questionList, int score, boolean active) {
 		super();
 		this.lessonID = lessonID;
 		this.lessonName = lessonName;
@@ -21,6 +22,7 @@ public class LessonDTO {
 		this.lessonBeforeID = lessonBeforeID;
 		this.questionList = questionList;
 		this.score = score;
+		this.active = active;
 	}
 
 	public int getLessonID() {
@@ -97,4 +99,13 @@ public class LessonDTO {
 		return questionList.get(questionIndex- 1).getExplain();
 	}
 
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+
+	
 }

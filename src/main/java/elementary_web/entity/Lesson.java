@@ -16,6 +16,8 @@ public class Lesson {
 	private String lessonName;
 	@Column(name = "DIEM")
 	private int score;
+	@Column(name = "HOAT_DONG")
+	private boolean active;
 	@ManyToOne
 	@JoinColumn(name = "MA_CHUONG", nullable = false)
 	private Chapter chapter;
@@ -91,6 +93,14 @@ public class Lesson {
 
 	public void setScore(int score) {
 		this.score = score;
+	}
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 
 }
