@@ -29,7 +29,7 @@
 										class="fa fa-cube sub-icon-mg" aria-hidden="true"></i> <span
 										class="mini-sub-pro">Quản lý môn học</span></a></li>
 
-								<li class="list-group-item"><a title="Quản lý thông báo" href="Notification-list"><i
+								<li class="list-group-item"><a title="Quản lý thông báo" href="notification"><i
 										class="fa fa-female sub-icon-mg" aria-hidden="true"></i> <span
 										class="mini-sub-pro">Quản lý thông báo</span></a></li>
 

@@ -87,7 +87,7 @@
 						</div>
 					</div>
  --%>
-					<a href="/about" class="nav-item nav-link">About</a>
+					<a href="/about" class="nav-item nav-link">Thông báo</a>
 					<%
 					AccountDTO accountDTO = (AccountDTO) session.getAttribute("account");
 					if (accountDTO != null) {

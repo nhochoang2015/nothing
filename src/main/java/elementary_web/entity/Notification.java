@@ -15,6 +15,8 @@ public class Notification {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "MA_THONG_BAO")
 	private int notificationID;
+	@Column(name = "TIEU_DE")
+	private String title;
 	@Column(name = "NOI_DUNG")
 	private String content;
 	@Column(name = "AN")
@@ -37,5 +39,11 @@ public class Notification {
 	public void setShow(boolean isShow) {
 		this.isShow = isShow;
 	}
-
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
 }

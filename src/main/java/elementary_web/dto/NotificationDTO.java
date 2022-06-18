@@ -3,12 +3,14 @@ package elementary_web.dto;
 public class NotificationDTO {
 
 	private int notificationID;
+	private String title;
 	private String content;
 	private boolean isShow;
 
-	public NotificationDTO(int notificationID, String content, boolean isShow) {
+	public NotificationDTO(int notificationID, String title, String content, boolean isShow) {
 		super();
 		this.notificationID = notificationID;
+		this.title = title;
 		this.content = content;
 		this.isShow = isShow;
 	}
@@ -35,6 +37,14 @@ public class NotificationDTO {
 
 	public void setShow(boolean isShow) {
 		this.isShow = isShow;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 }
