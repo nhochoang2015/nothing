@@ -17,4 +17,8 @@ public class QuestionService {
 	public QuestionDTO findByQuestionID(int questionID) {
 		return questionConverter.toDTO(questionRepository.findByQuestionID(questionID));
 	}
+	public void save (QuestionDTO questionDTO) {
+		questionRepository.save(questionConverter.toEntity(questionDTO));
+		
+	}
 }

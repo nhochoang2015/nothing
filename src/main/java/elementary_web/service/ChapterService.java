@@ -66,10 +66,15 @@ public class ChapterService {
 		}
 		return chapterDTOtList;
 	}
-	
+
 	public ChapterDTO findByChapterID(int chapterID) {
 		Chapter chapter = chapterRepository.findByChapterID(chapterID);
 		ChapterDTO chapterDTO = chapterConverter.toDTO(chapter);
 		return chapterDTO;
+	}
+
+	public Chapter findEntityByChapterID(int chapterID) {
+		Chapter chapter = chapterRepository.findByChapterID(chapterID);
+		return chapter;
 	}
 }

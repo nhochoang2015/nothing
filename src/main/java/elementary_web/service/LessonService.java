@@ -39,4 +39,11 @@ public class LessonService {
 		}
 		return lessonDTOList;
 	}
+
+	public int save(LessonDTO lessonDTO) {
+		return lessonRepository.save(lessonConverter.toEntity(lessonDTO)).getLessonID();
+
+	}
+
+	
 }

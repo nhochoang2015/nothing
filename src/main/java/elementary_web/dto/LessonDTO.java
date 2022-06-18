@@ -25,6 +25,25 @@ public class LessonDTO {
 		this.active = active;
 	}
 
+	public LessonDTO(String lessonName, int chapterID, Integer lessonBeforeID, int score, boolean active) {
+		super();
+		this.lessonName = lessonName;
+		this.chapterID = chapterID;
+		this.lessonBeforeID = lessonBeforeID;
+		this.score = score;
+		this.active = active;
+	}
+
+	public LessonDTO(int lessonID,String lessonName, int chapterID, Integer lessonBeforeID, int score, boolean active) {
+		super();
+		this.lessonID = lessonID;
+		this.lessonName = lessonName;
+		this.chapterID = chapterID;
+		this.lessonBeforeID = lessonBeforeID;
+		this.score = score;
+		this.active = active;
+	}
+
 	public int getLessonID() {
 		return lessonID;
 	}
@@ -49,7 +68,7 @@ public class LessonDTO {
 		this.chapterID = chapterID;
 	}
 
-	public int getLessonBeforeID() {
+	public Integer getLessonBeforeID() {
 		return lessonBeforeID;
 	}
 
@@ -96,7 +115,7 @@ public class LessonDTO {
 	}
 
 	public String getExplain(int questionIndex) {
-		return questionList.get(questionIndex- 1).getExplain();
+		return questionList.get(questionIndex - 1).getExplain();
 	}
 
 	public boolean isActive() {
@@ -107,5 +126,4 @@ public class LessonDTO {
 		this.active = active;
 	}
 
-	
 }

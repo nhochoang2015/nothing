@@ -1,6 +1,7 @@
 package elementary_web.entity;
 
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -31,7 +32,7 @@ public class Chapter {
 	@Column(name = "DIEM")
 	private int score;
 	@OneToMany(mappedBy = "chapter", fetch = FetchType.EAGER)
-	private List<Lesson> lessonList;
+	private Set<Lesson> lessonList;
 	public int getChapterID() {
 		return chapterID;
 	}
@@ -50,10 +51,10 @@ public class Chapter {
 	public void setSubject(Subject subject) {
 		this.subject = subject;
 	}
-	public List<Lesson> getLessonList() {
+	public Set<Lesson> getLessonList() {
 		return lessonList;
 	}
-	public void setLessonList(List<Lesson> lessonList) {
+	public void setLessonList(Set<Lesson> lessonList) {
 		this.lessonList = lessonList;
 	}
 	public boolean isActive() {
