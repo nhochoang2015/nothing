@@ -24,7 +24,6 @@ public class SubjectService {
 
 	List<SubjectDTO> subjects = new ArrayList<SubjectDTO>();
 
-	
 	// Xóa môn học
 //	public void deleteSubjectBySubjectID(int subjectID) {
 //		for (SubjectDTO s : subjects) {
@@ -62,19 +61,26 @@ public class SubjectService {
 		subject.setActive(false);
 		subjectRepository.save(subject);
 	}
-	//tạo môn
+
+	// tạo môn
 	public void createSubject(String subjectName) {
-		Subject subject = new Subject();
-		subject.setSubjectName(subjectName);
-		subject.setActive(true);
-		subjectRepository.save(subject);
+		if (subjectName != null) {
+			Subject subject = new Subject();
+			subject.setSubjectName(subjectName);
+			subject.setActive(true);
+			subjectRepository.save(subject);
+		} else {
+			return;
+		}
 	}
-	//sửa tên môn học
-	public void renameSubject(int subjectID,String newSubjectName) {
+
+	// sửa tên môn học
+	public void renameSubject(int subjectID, String newSubjectName) {
 		Subject subject = subjectRepository.findBySubjectID(subjectID);
 		subject.setSubjectName(newSubjectName);
 		subjectRepository.save(subject);
 	}
+
 	// phục hồi môn
 	public void restoreSubjectByID(int subjectID) {
 		Subject subject = subjectRepository.findBySubjectID(subjectID);

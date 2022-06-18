@@ -9,9 +9,6 @@
 
 <head>
 <title></title>
-<!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="admin_page/http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 <%@ include file="menu-bar.jsp"%>
 <%@ include file="header.jsp"%>
 </head>
@@ -34,7 +31,6 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<%SubjectDTO subject = (SubjectDTO) request.getAttribute("subject"); %>
 						<div class="product-sales-chart">
 							<div class="portlet-title">
 								<div class="row">
@@ -50,22 +46,13 @@
 								</div>
 							</div>
 							<ul class="list-inline cus-product-sl-rp">
-								<li>
+								<li>			
 									<h5>Môn học: </h5>
 								</li>
 
 							</ul>
-
-						<div class="product-status-wrap">
-							<h4>QUẢN LÝ CHƯƠNG</h4>
-							<div class="col-lg-8">
-								<div class="form-group has-feedback has-search">
-									<span class="glyphicon glyphicon-search form-control-feedback"></span>
-									<input type="text" class="form-control"
-										placeholder="Nhập tên hoặc mã chương cần tìm">
-								</div>
-								<button type="button" class="btn btn-primary">Tìm kiếm</button>
-
+							<div class="product-status-wrap">
+								<h4>QUẢN LÝ CHƯƠNG</h4>
 							</div>
 
 						</div>
@@ -74,6 +61,17 @@
 								<div class="portlet-title">
 									<div class="row">
 										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+											<div class="col-lg-12">
+												<div class="form-group has-feedback has-search">
+													<span
+														class="glyphicon glyphicon-search form-control-feedback"></span>
+													<input type="text" class="form-control"
+														placeholder="Nhập tên hoặc mã chương cần tìm">
+												</div>
+												<button type="button" class="btn btn-primary">Tìm
+													kiếm</button>
+
+											</div>
 											<div class="caption pro-sl-hd">
 												<span class="caption-subject text-uppercase"><b>Danh
 														sách chương</b></span>
@@ -93,10 +91,10 @@
 									</div>
 								</div>
 								<%
-								List<ChapterDTO> chapterList = (ArrayList<ChapterDTO>) request.getAttribute("chapterList");
+								// Rồi ông
+								List<ChapterDTO> chapterList = (List<ChapterDTO>) request.getAttribute("chapterList");
 								for (ChapterDTO chapter : chapterList) {
-									
-									%>
+								%>
 								<ul class="list-group">
 									<li class="list-group-item">
 										<div class="portlet-title">
@@ -104,9 +102,7 @@
 												<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 													<div class="caption pro-sl-hd">
 														<span class="caption-subject text-uppercase"><b>
-																<%
-																chapter.getChapterName();
-																%>
+																<%=chapter.getChapterName()%>
 														</b></span>
 													</div>
 												</div>
@@ -142,7 +138,7 @@
 								%>
 								<!-- Modal -->
 								<form>
-									<div class="modal fade" id="deleteChapter" tabindex="-1"
+									<div class="modal fade in" id="deleteChapter" tabindex="-1"
 										role="dialog" aria-labelledby="exampleModalLabel"
 										aria-hidden="true">
 										<div class="modal-dialog" role="document">
@@ -167,7 +163,7 @@
 								</form>
 								<!-- Modal -->
 								<form>
-									<div class="modal fade" id="createChapter" tabindex="-1"
+									<div class="modal fade in" id="createChapter" tabindex="-1"
 										role="dialog" aria-labelledby="exampleModalLabel"
 										aria-hidden="true">
 										<div class="modal-dialog" role="document">
@@ -198,7 +194,7 @@
 								</form>
 								<!-- Modal -->
 								<form>
-									<div class="modal fade" id="updateChapterName" tabindex="-1"
+									<div class="modal fade in" id="updateChapterName" tabindex="-1"
 										role="dialog" aria-labelledby="exampleModalLabel"
 										aria-hidden="true">
 										<div class="modal-dialog" role="document">
@@ -228,44 +224,43 @@
 										</div>
 									</div>
 								</form>
-								
-							</div>
-						</div>
 
-					</div>
-				</div>
-				<div class="traffic-analysis-area">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
-							<!--                    ///////////////////////////////////////******* SITE TRAFFIC*-->
-
-						</div>
-					</div>
-				</div>
-
-				<div class="product-sales-area mg-tb-30">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
-
-						</div>
-					</div>
-				</div>
-				<div class="calender-area mg-tb-30">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="calender-inner">
-									<div id='calendar'></div>
-								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<%@ include file="footer.jsp"%>
-
 			</div>
+			<div class="traffic-analysis-area">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
+						<!--                    ///////////////////////////////////////******* SITE TRAFFIC*-->
+
+					</div>
+				</div>
+			</div>
+
+			<div class="product-sales-area mg-tb-30">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
+
+					</div>
+				</div>
+			</div>
+			<div class="calender-area mg-tb-30">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="calender-inner">
+								<div id='calendar'></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<%@ include file="footer.jsp"%>
+
 		</div>
 	</div>
 </body>

@@ -7,13 +7,11 @@
 <html class="no-js" lang="en">
 
 <head>
-<title></title>
-<!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="admin_page/http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+<title>Subject Management</title>
 <%@ include file="menu-bar.jsp"%>
 <%@ include file="header.jsp"%>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -37,11 +35,6 @@
 							<h4>QUẢN LÝ MÔN HỌC</h4>
 
 							<!--                            <h4>Products List</h4>-->
-							<div class="add-product">
-								<a href="admin_page/product-edit.html">Thêm vật phẩm</a> <a
-									href="admin_page/product-edit.html">Add Product</a> <a
-									href="admin_page/#">Xóa</a>
-							</div>
 
 							<div class="col-lg-8">
 								<div class="form-group has-feedback has-search">
@@ -54,7 +47,6 @@
 									môn học</button>
 
 							</div>
-
 							<table>
 
 								<tr>
@@ -79,22 +71,31 @@
 										</button></td>
 
 									<td id="hiddenResult"><%=subject.isActive()%></td>
-									<td><a  title="Đến trang quản lý chương" href="chapter"><button
+									<td><a title="Đến trang quản lý chương"
+										href="../admin/chapter?subjectID=<%=subject.getSubjectID()%>"><button
 												type="button" class="btn btn-primary">Xem</button></a></td>
-									<td><button type="button" class="btn btn-danger"
-											id="btnDelete"
+									<td>
+										<%
+										if (subject.isActive()) {
+										%>
+										<button type="button" class="btn btn-danger" id="btnDelete"
 											onclick="location.href='./unactiveSubject?subjectID=<%=subject.getSubjectID()%>'"
-											onclick="function();">Xóa</button>
+											onclick="function();">Xóa</button> <%
+ } else {
+ %>
 										<button type="button" class="btn btn-danger" id="btnRestore"
 											onclick="location.href='./activeSubject?subjectID=<%=subject.getSubjectID()%>'"
-											onclick="function();">Phục hồi</button></td>
-
+											onclick="function();">Phục hồi</button>
+									</td>
+									<%
+									}
+									%>
 									</td>
 								</tr>
 
 								<!-- Modal -->
 								<form action="./createSubject" method="post">
-									<div class="modal fade" id="createSubject" tabindex="-1"
+									<div class="modal fade in" id="createSubject" tabindex="-1"
 										role="dialog" aria-labelledby="exampleModalLabel"
 										aria-hidden="true">
 										<div class="modal-dialog" role="document">
@@ -122,10 +123,9 @@
 										</div>
 									</div>
 								</form>
-								<form
-									action="./renameSubject?subjectID=<%=subject.getSubjectID()%>&newSubjectName=''"
-									method="post">
-									<div class="modal fade" id="updateSubjectName" tabindex="-1"
+								
+								<form action="./renameSubject?subjectID=<%=subject.getSubjectID()%>&newSubjectName=''" method="post">
+									<div class="modal fade in" id="updateSubjectName" tabindex="-1"
 										role="dialog" aria-labelledby="exampleModalLabel"
 										aria-hidden="true">
 										<div class="modal-dialog" role="document">
@@ -157,6 +157,7 @@
 										</div>
 									</div>
 								</form>
+								
 								<%
 								}
 								%>
@@ -165,7 +166,7 @@
 
 							<!-- Modal -->
 							<form action="./unactiveSubject" method="post">
-								<div class="modal fade" id="deleteSubject" tabindex="-1"
+								<div class="modal fade in" id="deleteSubject" tabindex="-1"
 									role="dialog" aria-labelledby="exampleModalLabel"
 									aria-hidden="true">
 									<div class="modal-dialog" role="document">
@@ -189,6 +190,7 @@
 						</div>
 					</div>
 				</div>
+			</div>
 				<div class="traffic-analysis-area">
 					<div class="container-fluid">
 						<div class="row">
@@ -227,6 +229,7 @@
 					});
 				</script>
 
+			</div>
 			</div>
 </body>
 

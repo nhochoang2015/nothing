@@ -9,18 +9,26 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import elementary_web.dto.ChapterDTO;
+import elementary_web.dto.SubjectDTO;
 import elementary_web.service.ChapterService;
+import elementary_web.service.SubjectService;
 
 @Controller
 @RequestMapping("/admin")
 public class ChapterController {
 	@Autowired
 	private ChapterService chapterService;
+	@Autowired
+	private SubjectService subjectService;
 
 	@RequestMapping("/chapter")
 	public ModelAndView chapterPage(@RequestParam int subjectID) {
+		SubjectDTO subject = subjectService.findBySubjectID(subjectID);
+		List<ChapterDTO> chapterList = subject.getChapterList();
+		System.out.println("ID: " + subject.getSubjectID());
 
-		List<ChapterDTO> chapterList = chapterService.findAllChapter(subjectID);
+		System.out.println("SIZE: " + chapterList.size());
+		
 		ModelAndView mav = new ModelAndView("../admin_page/Chapter");
 		mav.addObject("chapterList", chapterList);
 		return mav;
