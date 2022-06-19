@@ -42,36 +42,114 @@
 						<div class="product-status-wrap">
 
 							<h4>Danh sách thông báo</h4>
-							<%List<NotificationDTO> notesDTOList =(ArrayList<NotificationDTO>) request.getAttribute("notesDTOList"); 
-							for(NotificationDTO note : notesDTOList){
-							
+							<%
+							List<NotificationDTO> notesDTOList = (ArrayList<NotificationDTO>) request.getAttribute("notesDTOList");
+							for (NotificationDTO note : notesDTOList) {
 							%>
 							<ul class="list-group">
 								<li class="list-group-item"><span
 									class="caption-subject text-uppercase pull-left"><b>
-											Tiêu đề: <%= note.getTitle() %> </b></span>
+											Tiêu đề: <%=note.getTitle()%>
+									</b></span>
 									<div class="portlet-title">
 										<div class="row">
 											<div class="actions graph-lp"></div>
 											<div class="actions graph-rp">
+
+
 												<a class="btn btn-primary" data-toggle="collapse"
-													href="#collapseExample<%=note.getNotificationID() %>" role="button" aria-expanded="false"
+													href="#collapseExample<%=note.getNotificationID()%>"
+													role="button" aria-expanded="false"
 													aria-controls="collapseExample"
 													title="Xem nội dung thông báo">Xem nội dung</a> <a
-													href="#updateNotification" class="btn btn-warning"
-													data-toggle="modal" title="Sửa nội dung thông báo"><span><i
+													href="#updateNotification<%=note.getNotificationID()%>"
+													class="btn btn-warning" data-toggle="modal"
+													title="Sửa nội dung thông báo"><span><i
 														class="glyphicon glyphicon-pencil" aria-pressed="false"></i></span></a>
-												<a href="#deleteNotification" class="btn btn-danger"
-													data-toggle="modal" title="Xóa thông báo"><span><i
+												<a
+													href="../admin/deleteNotification?notificationID=<%=note.getNotificationID()%>"
+													class="btn btn-danger" title="Xóa thông báo"><span><i
 														class="fa fa-trash-o" aria-pressed="false"></i></span></a>
 											</div>
 										</div>
-										<div class="collapse" id="collapseExample<%=note.getNotificationID() %>">
-											<div class="card card-body"><%=note.getContent() %></div>
+										<div class="collapse"
+											id="collapseExample<%=note.getNotificationID()%>">
+											<div class="card card-body"><%=note.getContent()%></div>
 										</div>
 									</div></li>
 							</ul>
-							<%} %>
+							<!-- model -->
+							<div id="addnotify" class="modal fade">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<form action="../admin/createNotification" method="post">
+											<div class="modal-header">
+												<h4 class="modal-title">Tạo thông báo</h4>
+												<button type="button" class="close" data-dismiss="modal"
+													aria-hidden="true">&times;</button>
+											</div>
+											<div class="modal-body">
+
+												<div class="form-group">
+													<label>Tên thông báo</label> <input name="title"
+														type="text" class="form-control" required>
+												</div>
+												<div class="form-group">
+													<label>Nội dung thông báo</label>
+													<textarea class="form-control" name="content"
+														id="exampleFormControlTextarea1" rows="3"></textarea>
+												</div>
+
+											</div>
+											<div class="modal-footer">
+												<input type="button" class="btn btn-default"
+													data-dismiss="modal" value="Cancel"> <input
+													type="submit" class="btn btn-success" value="Add">
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+
+							<!-- model -->
+
+							<div id="updateNotification<%=note.getNotificationID()%>"
+								class="modal fade">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<form
+											action="../admin/updateNotification?notificationID=<%=note.getNotificationID()%>"
+											method="post">
+											<div class="modal-header">
+												<h4 class="modal-title">Sửa thông báo</h4>
+												<button type="button" class="close" data-dismiss="modal"
+													aria-hidden="true">&times;</button>
+											</div>
+											<div class="modal-body">
+
+												<div class="form-group">
+													<label>Sửa tên thông báo</label> <input name="title"
+														type="text" class="form-control" required="required">
+												</div>
+												<div class="form-group">
+													<label>Sửa nội dung thông báo</label>
+													<textarea class="form-control"
+														id="exampleFormControlTextarea1" name="content" rows="3"
+														required="required"></textarea>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<input type="button" class="btn btn-default"
+													data-dismiss="modal" value="Cancel"> <input
+													type="submit" class="btn btn-success" value="Update">
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<%
+							}
+							%>
 							<div class="custom-pagination">
 								<nav aria-label="Page navigation example">
 									<ul class="pagination">
@@ -94,70 +172,8 @@
 		</div>
 		<%@ include file="footer.jsp"%>
 	</div>
-	<!-- model -->
-	<div id="addnotify" class="modal fade">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<form action="add" method="post">
-					<div class="modal-header">
-						<h4 class="modal-title">Thêm vật phẩm</h4>
-						<button type="button" class="close" data-dismiss="modal"
-							aria-hidden="true">&times;</button>
-					</div>
-					<div class="modal-body">
 
-						<div class="form-group">
-							<label>Tên thông báo</label> <input name="name" type="text"
-								class="form-control" required>
-						</div>
-						<div class="form-group">
-							<label>Nội dung thông báo</label>
-							<textarea class="form-control" id="exampleFormControlTextarea1"
-								rows="3"></textarea>
-						</div>
 
-					</div>
-					<div class="modal-footer">
-						<input type="button" class="btn btn-default" data-dismiss="modal"
-							value="Cancel"> <input type="submit"
-							class="btn btn-success" value="Add">
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	<!-- model -->
-	<div id="updateNotification" class="modal fade">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<form action="add" method="post">
-					<div class="modal-header">
-						<h4 class="modal-title">Sửa thông báo</h4>
-						<button type="button" class="close" data-dismiss="modal"
-							aria-hidden="true">&times;</button>
-					</div>
-					<div class="modal-body">
-
-						<div class="form-group">
-							<label>Sửa tên thông báo</label> <input name="name" type="text"
-								class="form-control" required>
-						</div>
-						<div class="form-group">
-							<label>Sửa nội dung thông báo</label>
-							<textarea class="form-control" id="exampleFormControlTextarea1"
-								rows="3"></textarea>
-						</div>
-
-					</div>
-					<div class="modal-footer">
-						<input type="button" class="btn btn-default" data-dismiss="modal"
-							value="Cancel"> <input type="submit"
-							class="btn btn-success" value="Update">
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
 </body>
 
 </html>

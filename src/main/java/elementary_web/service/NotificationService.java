@@ -27,5 +27,24 @@ public class NotificationService {
 		}
 		return notesDTOList;
 	}
-	
+	// tạo thông báo
+	public void createNotification(String title,String content) {
+		Notification note = new Notification();
+		note.setTitle(title);
+		note.setContent(content);
+		note.setShow(true);
+		notificationRepository.save(note);
+	}
+	// sửa thông báo
+	public void updateNotification(int notificationID, String title, String content ) {
+		Notification note = notificationRepository.findByNotificationID(notificationID);
+		note.setTitle(title);
+		note.setContent(content);
+		notificationRepository.save(note);
+	}
+	// xóa thông báo
+	public void deleteNotification(int notificationID) {
+		Notification note = notificationRepository.findByNotificationID(notificationID);
+		notificationRepository.delete(note);
+	}
 }
