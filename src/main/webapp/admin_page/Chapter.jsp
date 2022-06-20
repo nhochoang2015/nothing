@@ -46,8 +46,8 @@
 								</div>
 							</div>
 							<ul class="list-inline cus-product-sl-rp">
-								<li>			
-									<h5>Môn học: </h5>
+								<li>
+									<h5>Môn học:</h5>
 								</li>
 
 							</ul>
@@ -83,9 +83,8 @@
 												<button type="button" class="btn btn-success"
 													data-toggle="modal" data-target="#createChapter"
 													title="Tạo chương">
-													<i class="glyphicon glyphicon-plus-sign" aria-hidden="true"></i>
+													<i class="fa fa-plus-square"></i>
 												</button>
-
 											</div>
 										</div>
 									</div>
@@ -108,25 +107,23 @@
 												</div>
 												<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 													<div class="actions graph-rp">
-														<a href="admin_page/#"
-															class="btn btn-dark-blue btn-circle active tip-top"
-															data-toggle="tooltip" title="Chi tiết chương"> <!--                                            <a href="admin_page/#" class="btn btn-dark-blue btn-circle active tip-top" data-toggle="tooltip" title="Upload">-->
-															<i class="glyphicon glyphicon-info-sign"
-															aria-hidden="true"></i>s
+														<a href="#">
+															<button type="button" class="btn btn-primary"
+																title="Xem bài tập">
+																<i class="fa-solid fa-circle-info"></i>
+															</button>
 														</a>
+
 														<button type="button" class="btn btn-primary"
 															data-toggle="modal" data-target="#updateChapterName"
 															title="Sủa tên chương">
-															<i class="glyphicon glyphicon-pencil"
-																aria-pressed="false"></i>
+															<i class="fa-solid fa-pen-to-square"></i>
 														</button>
 														<button type="button" class="btn btn-danger"
 															data-toggle="modal" data-target="#deleteChapter"
 															title="Xóa chương">
-															<i class="fa fa-trash-o" aria-pressed="false"></i>
+															<i class="fa-solid fa-trash"></i>
 														</button>
-
-														<span title="Số bài tập" class="badge">14</span>
 													</div>
 												</div>
 											</div>

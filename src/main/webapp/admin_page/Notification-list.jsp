@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<%@ include file="menu-bar.jsp"%>s
+	<%@ include file="menu-bar.jsp"%>
 	<!-- Start Welcome area -->
 	<div class="all-content-wrapper">
 		<%@ include file="header.jsp"%>
@@ -40,8 +40,6 @@
 										<div class="row">
 											<div class="actions graph-lp"></div>
 											<div class="actions graph-rp">
-
-
 												<a class="btn btn-primary" data-toggle="collapse"
 													href="#collapseExample<%=note.getNotificationID()%>"
 													role="button" aria-expanded="false"
@@ -50,8 +48,7 @@
 													href="#updateNotification<%=note.getNotificationID()%>"
 													class="btn btn-warning" data-toggle="modal"
 													title="Sửa nội dung thông báo"><span><i
-														class="glyphicon glyphicon-pencil" aria-pressed="false"></i></span></a>
-												<a
+														class="fa-solid fa-pen-to-square"></i></span></a> <a
 													href="../admin/deleteNotification?notificationID=<%=note.getNotificationID()%>"
 													class="btn btn-danger" title="Xóa thông báo"><span><i
 														class="fa fa-trash-o" aria-pressed="false"></i></span></a>
@@ -135,21 +132,22 @@
 							<%
 							}
 							%>
-							<div class="custom-pagination">
+							<!-- <div class="custom-pagination">
 								<nav aria-label="Page navigation example">
 									<ul class="pagination">
 										<li class="page-item disabled"><a class="page-link"
 											href="#">trước</a></li>
-										<!--                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>-->
-										<li class="page-item active"><a class="page-link"
-											href="#">1</a></li>
-										<li class="page-item"><a class="page-link" href="#">2</a></li>
-										<li class="page-item"><a class="page-link" href="#">3</a></li>
-										<li class="page-item"><a class="page-link" href="#">Tiếp</a></li>
-										<!--                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>-->
-									</ul>
-								</nav>
-							</div>
+										                                 <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+							<li class="page-item active"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item"><a class="page-link" href="#">Tiếp</a></li>
+							                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+							</ul>
+							</nav>
+						</div>
+						-->
+
 						</div>
 					</div>
 				</div>

@@ -10,8 +10,6 @@
 <title>Subject Management</title>
 <%@ include file="menu-bar.jsp"%>
 <%@ include file="header.jsp"%>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -39,7 +37,8 @@
 							<div class="col-lg-8">
 								<div class="form-group has-feedback has-search">
 									<span class="glyphicon glyphicon-search form-control-feedback"></span>
-									<input type="text" class="form-control"
+									<input type="text" class="form-control id="
+										myInput"
 										placeholder="Nhập tên hoặc mã môn học cần tìm">
 								</div>
 								<button type="button" class="btn btn-primary"
@@ -48,51 +47,52 @@
 
 							</div>
 							<table>
+								<thead>
+									<tr>
+										<th>Mã môn học</th>
+										<th>Tên môn học</th>
+										<th>Active</th>
+										<th>Chi tiết</th>
+										<th>Xóa môn học</th>
 
-								<tr>
-									<th class="text-center">Mã môn học</th>
-									<th class="text-center">Tên môn học</th>
-									<th class="text-center">Active</th>
-									<th class="text-center">Chi tiết</th>
-									<th class="text-center">Xóa môn học</th>
-
-								</tr>
+									</tr>
+								</thead>
 								<%
 								List<SubjectDTO> subjectList = (ArrayList<SubjectDTO>) request.getAttribute("subjectList");
 								for (SubjectDTO subject : subjectList) {
 								%>
-								<tr>
+								<tbody id="myTable">
+									<tr>
 									<td><%=subject.getSubjectID()%></td>
 									<td><%=subject.getSubjectName()%>
 										<button type="button" class="btn btn-primary"
-											data-toggle="modal" data-target="#updateSubjectName"
-											title="Sủa tên môn">
-											<i class="glyphicon glyphicon-pencil" aria-pressed="false"></i>
+												data-toggle="modal" data-target="#updateSubjectName"
+												title="Sủa tên môn">
+											<i class="fa-solid fa-pen-to-square"></i>
 										</button></td>
 
 									<td id="hiddenResult"><%=subject.isActive()%></td>
 									<td><a title="Đến trang quản lý chương"
-										href="../admin/chapter?subjectID=<%=subject.getSubjectID()%>"><button
-												type="button" class="btn btn-primary">Xem</button></a></td>
+											href="../admin/chapter?subjectID=<%=subject.getSubjectID()%>"><button
+													type="button" class="btn btn-primary">Xem</button></a></td>
 									<td>
 										<%
 										if (subject.isActive()) {
 										%>
 										<button type="button" class="btn btn-danger" id="btnDelete"
-											onclick="location.href='./unactiveSubject?subjectID=<%=subject.getSubjectID()%>'"
-											onclick="function();">Xóa</button> <%
+												onclick="location.href='./unactiveSubject?subjectID=<%=subject.getSubjectID()%>'"
+												onclick="function();">Xóa</button> <%
  } else {
  %>
 										<button type="button" class="btn btn-danger" id="btnRestore"
-											onclick="location.href='./activeSubject?subjectID=<%=subject.getSubjectID()%>'"
-											onclick="function();">Phục hồi</button>
+												onclick="location.href='./activeSubject?subjectID=<%=subject.getSubjectID()%>'"
+												onclick="function();">Phục hồi</button>
 									</td>
 									<%
 									}
 									%>
-									</td>
 								</tr>
-
+									</tbody>
 								<!-- Modal -->
 								<form action="./createSubject" method="post">
 									<div class="modal fade in" id="createSubject" tabindex="-1"
@@ -123,8 +123,10 @@
 										</div>
 									</div>
 								</form>
-								
-								<form action="./renameSubject?subjectID=<%=subject.getSubjectID()%>&newSubjectName=''" method="post">
+
+								<form
+									action="./renameSubject?subjectID=<%=subject.getSubjectID()%>&newSubjectName=''"
+									method="post">
 									<div class="modal fade in" id="updateSubjectName" tabindex="-1"
 										role="dialog" aria-labelledby="exampleModalLabel"
 										aria-hidden="true">
@@ -157,11 +159,11 @@
 										</div>
 									</div>
 								</form>
-								
+
 								<%
 								}
 								%>
-							</table>
+								</table>
 							<!-- Modal -->
 
 							<!-- Modal -->
@@ -191,46 +193,44 @@
 					</div>
 				</div>
 			</div>
-				<div class="traffic-analysis-area">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
-						</div>
+			<div class="traffic-analysis-area">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
 					</div>
 				</div>
-				<div class="product-new-list-area">
-					<div class="container-fluid"></div>
-				</div>
-				<div class="product-sales-area mg-tb-30">
-					<div class="container-fluid"></div>
-				</div>
-				<div class="calender-area mg-tb-30">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="calender-inner">
-									<div id='calendar'></div>
-								</div>
+			</div>
+			<div class="product-new-list-area">
+				<div class="container-fluid"></div>
+			</div>
+			<div class="product-sales-area mg-tb-30">
+				<div class="container-fluid"></div>
+			</div>
+			<div class="calender-area mg-tb-30">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="calender-inner">
+								<div id='calendar'></div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<%@ include file="footer.jsp"%>
-				<script type="text/javascript">
-					$(button).ready(function() {
-						$("btnDelete").show();
-						$("btnRestore").show();
-						$("#btnDelete").click(function() {
-							$("btnRestore").show();
-						});
-						$("#btnRestore").click(function() {
-							$("btnDelete").show();
-						});
-					});
-				</script>
+			</div>
+			<%@ include file="footer.jsp"%>
 
-			</div>
-			</div>
+		</div>
+	</div>
+	<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 </body>
 
 </html>
