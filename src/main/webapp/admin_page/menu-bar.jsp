@@ -29,21 +29,16 @@
 									href="../admin/subjectmanagement"><i
 										class="fa-solid fa-book"></i> <span class="mini-sub-pro">Quản
 											lý môn học</span></a></li>
-
-
 								<li class="list-group-item"><a title="Quản lý thông báo"
-									href="notification"><i class="fa fa-female sub-icon-mg"
-										aria-hidden="true"></i> <span>
-										<li class="list-group-item"><a title="Quản lý thông báo"
-											href="Notification-list"><i class="fa-solid fa-bell"></i>
-												<span> class="mini-sub-pro">Quản lý thông báo</span></a></li>
-										<li class="list-group-item "><a title="Quản lý tài khoản"
-											href="../admin/accountManagement"><i
-												class="fa-solid fa-users"></i> <span class="mini-sub-pro">Quản
-													lý tài khoản</span></a></li>
-										<li class="list-group-item"><a title="Quản lý vật phẩm"
-											href="ADM-User"><i class="fa-solid fa-shop"></i> <span
-												class="mini-sub-pro">Quản lý vật phẩm</span></a></li>
+									href="notification"><i class="fa-solid fa-bell"></i> <span
+										class="mini-sub-pro">Quản lý thông báo</span></a></li>
+								<li class="list-group-item "><a title="Quản lý tài khoản"
+									href="../admin/accountManagement"><i
+										class="fa-solid fa-users"></i> <span class="mini-sub-pro">Quản
+											lý tài khoản</span></a></li>
+								<li class="list-group-item"><a title="Quản lý vật phẩm"
+									href="ADM-User"><i class="fa-solid fa-shop"></i> <span
+										class="mini-sub-pro">Quản lý vật phẩm</span></a></li>
 							</ul></li>
 						<li><a class="has-arrow" href="../admin_page/mailbox.html"
 							aria-expanded="false"><i
