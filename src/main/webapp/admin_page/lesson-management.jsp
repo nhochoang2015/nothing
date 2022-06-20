@@ -85,7 +85,7 @@
 													class="btn btn-success"><i
 														class="fa-solid fa-pen-to-square"></i></a></td>
 												<td><a
-													href="../admin/editAccount?accountID=<%=lesson.getLessonID()%>"
+													href="../admin/questionManagement?lessonID=<%=lesson.getLessonID()%>"
 													class="btn btn-success"><i
 														class="fa-solid fa-circle-question"></i></a></td>
 											</tr>
