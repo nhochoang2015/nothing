@@ -20,6 +20,14 @@ public class QuestionDTO {
 		this.explain = explain;
 	}
 
+	public QuestionDTO(String content, int lessonID, String answers, String explain) {
+		super();
+		this.content = content;
+		this.lessonID = lessonID;
+		this.answers = answers;
+		this.explain = explain;
+	}
+
 	public int getQuestionID() {
 		return questionID;
 	}

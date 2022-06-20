@@ -379,9 +379,7 @@ body {}
    width:330px;
    background:#343434;
    text-align:left;
-   opacity:0;
    transition: all 0.5s ease 0s;
-   visibility:hidden;
    z-index:999;
 }
 .header-right-info ul.header-right-menu li .dropdown-header-top.author-log{

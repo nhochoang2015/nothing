@@ -107,7 +107,7 @@
 												<td><a
 													href="../admin/editAccount?accountID=<%=accountdto.getAccountID()%>"
 													class="btn btn-success"><i
-														class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+														class="fa-solid fa-square-pen" aria-hidden="true"></i></a></td>
 											</tr>
 											<%
 											}

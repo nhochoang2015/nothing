@@ -56,20 +56,25 @@ public class ChapterService {
 		chapter.setChapterName(chapterName);
 		chapterRepository.save(chapter);
 	}
-//
-//	public List<ChapterDTO> findAllChapter(int SubjectID) {
-//		SubjectDTO subject = subjectService.findBySubjectID(SubjectID);
-//		List<ChapterDTO> chapterDTOList = new ArrayList<Chapter>();
-//		List<ChapterDTO> chapte = subject.getChapterList();
-//		for (Chapter chapter : chapterList) {
-//			chapterDTOtList.add(chapterConverter.toDTO(chapter));
-//		}
-//		return chapterDTOtList;
-//	}
-	
+
+	public List<ChapterDTO> findAllChapter(int SubjectID) {
+		SubjectDTO subject = subjectService.findBySubjectID(SubjectID);
+		List<Chapter> chapterList = chapterRepository.findAll();
+		List<ChapterDTO> chapterDTOtList = subject.getChapterList();
+		for (Chapter chapter : chapterList) {
+			chapterDTOtList.add(chapterConverter.toDTO(chapter));
+		}
+		return chapterDTOtList;
+	}
+
 	public ChapterDTO findByChapterID(int chapterID) {
 		Chapter chapter = chapterRepository.findByChapterID(chapterID);
 		ChapterDTO chapterDTO = chapterConverter.toDTO(chapter);
 		return chapterDTO;
+	}
+
+	public Chapter findEntityByChapterID(int chapterID) {
+		Chapter chapter = chapterRepository.findByChapterID(chapterID);
+		return chapter;
 	}
 }
