@@ -29,7 +29,7 @@ class MyUploadAdapter {
 		// integration to choose the right communication channel. This example uses
 		// a POST request with JSON as a data structure but your configuration
 		// could be different.
-		xhr.open('POST', './imageUpload', true);
+		xhr.open('POST', './questionImageUpload', true);
 		xhr.responseType = 'text';
 	}
 
@@ -114,23 +114,137 @@ function MyCustomUploadAdapterPlugin(editor) {
 	}
 
 }*/
-
+var contentEditors = [];
+var contentEditorsIndex = 0;
+var explainEditors = [];
+var explainEditorsIndex = 0;
 $(document).ready(function() {
-	$('.editor').each(function() {
+	$('.content-editor').each(function() {
 		id = $(this).attr('id');
 		ClassicEditor
-			.create(document.querySelector( '#' + id ), {
+			.create(document.querySelector('#' + id), {
 				extraPlugins: [MyCustomUploadAdapterPlugin],
 				// ...
 			})
-			//.then(editor => {
-			//window.editor = editor;
-			//myEditor = editor;
-			//})
+			.then(editor => {
+				contentEditors.push(editor);
+			})
 			.catch(error => {
 				console.log(error);
 			});
-
+		contentEditorsIndex++;
+	})
+	$('.explain-editor').each(function() {
+		id = $(this).attr('id');
+		ClassicEditor
+			.create(document.querySelector('#' + id), {
+				extraPlugins: [MyCustomUploadAdapterPlugin],
+				// ...
+			})
+			.then(editor => {
+				explainEditors.push(editor);
+			})
+			.catch(error => {
+				console.log(error);
+			});
+		explainEditorsIndex++;
 	})
 })
 
+//Phương thức cập nhật câu hỏi
+function updateQuestion(button) {
+	console.log(explainEditors[0].getData());
+	var questionContainerDiv = $(button).closest('.question-container');
+	var answerDivArray = questionContainerDiv.find('.answer');
+	var name = $(answerDivArray[0]).find("input[type='radio']").attr("name");
+	var inputAnswerArray = $('input[name=' + name + ']');
+	var questionID = questionContainerDiv.find(".questionID").val();
+	var questionNumber = parseInt(questionContainerDiv.find(".questionID").attr("name"));
+	console.log(questionNumber - 1);
+	var answers = "";
+	// Tổng hợp đáp án
+	for (i = 0; i < answerDivArray.length; i++) {
+		var inputText = $(answerDivArray[i]).find("input[type='text']");
+		var answerContent = inputText.val().replace(";", "");
+		if (!answerContent.trim()) {
+			alert("Các đáp án không được bỏ trống hoặc có dấu chấm phẩy (;)");
+			return;
+		}
+		answers += ";" + answerContent;
+		var radioButton = $(answerDivArray[i]).find("input[type='radio']");
+		if ($(radioButton).is(':checked')) {
+			answers = i + 1 + answers;
+		}
+	}
+
+
+	var explain = explainEditors[questionNumber - 1].getData();
+	var content = contentEditors[questionNumber - 1].getData();
+	console.log(explain);
+	console.log(content);
+	console.log(questionID);
+	console.log(answers);
+	if (!content.trim() || !explain.trim()) {
+		alert("Nội dung và giải thích không được bỏ trống");
+		return;
+	} else {
+
+
+
+		$.ajax({
+			url: '../admin/updateQuestion',
+			type: 'POST',
+			data: {
+				explain: explain,
+				content: content,
+				questionID: questionID,
+				answers: answers,
+			},
+
+			success: (function(result) {
+				if (result === "true") {
+					alert("Cập nhật thành công");
+				} else {
+					alert("Có lỗi xảy ra khi cập nhật câu hỏi");
+
+				}
+			})
+		})
+	}
+
+}
+// Phương thức thêm đáp án
+function addAnswer(button) {
+	var answerContainerDiv = $(button).closest('.answer-container');
+	var answerDivArray = answerContainerDiv.find('.answer');
+	var name = $(answerDivArray[0]).find("input[type='radio']").attr("name");
+	var newsAnswerDiv = '<div class="answer list-group-item text-center">' +
+		'<div class="row">' +
+		'<div class="col-8">' +
+		'<input type="text"/></div>' +
+		'<div class="col-2"><input type="radio" name="' + name + '"></div>' +
+		'<div class="col-2"><button onclick="deleteAnswer(this)"><i class="fa-solid fa-ban"></i></button></div>'
+		+ '</div ></div >';
+	$(answerDivArray[answerDivArray.length - 1]).after(newsAnswerDiv);
+}
+// phương thức xóa đáp án
+function deleteAnswer(button) {
+	var answerDiv = $(button).closest('.answer');
+	var radioButton = answerDiv.find("input[type='radio']");
+	var radionButtonName = radioButton.attr("name");
+	var radioButtonArray = $('input[name=' + radionButtonName + ']');
+
+	if (radioButtonArray.length <= 2) {
+		alert("Một câu hỏi cần có tối thiểu 2 đáp án");
+	} else {
+		// Kiểm tra xem câu trả lời bị xóa có đang được chọn là câu trả lời đúng hay không
+		if ($(radioButton).is(':checked')) {
+			answerDiv.remove();
+			radioButtonArray = $('input[name=' + radionButtonName + ']');
+			$(radioButtonArray[0]).prop("checked", true)
+		} else {
+			answerDiv.remove();
+		}
+
+	}
+}

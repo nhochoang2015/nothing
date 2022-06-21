@@ -49,6 +49,8 @@
 										for (QuestionDTO question : questionList) {
 										%>
 										<div class="question-container">
+											<input class="questionID" name="<%=index%>" type="text" value="<%=question.getQuestionID()%>"
+												hidden="true">
 											<div class="question-number text-center">
 												<a data-toggle="collapse" href="#collapse<%=index%>"><h3>
 														Câu số<%=index%></h3></a>
@@ -60,7 +62,7 @@
 														<h5>Nội Dung Câu Hỏi</h5>
 													</div>
 													<div class="col-12">
-														<textarea name="content" class="editor"
+														<textarea name="content" class="editor content-editor"
 															id="content_<%=index%>"><%=question.getContent()%></textarea>
 													</div>
 
@@ -70,7 +72,7 @@
 														<h5>Giải thích</h5>
 													</div>
 													<div class="col-12">
-														<textarea name="explain" class="editor"
+														<textarea name="explain" class="editor explain-editor"
 															id="explain_<%=index%>"><%=question.getExplain()%></textarea>
 													</div>
 
@@ -96,7 +98,7 @@
 																	<%if (correctAnswer == i) {%> checked <%}%>>
 															</div>
 															<div class="col-2">
-																<button>
+																<button onclick="deleteAnswer(this)">
 																	<i class="fa-solid fa-ban"></i>
 																</button>
 															</div>
@@ -105,15 +107,24 @@
 													<%
 													}
 													%>
-													<div class="row">
+													<div class="row add-button-container">
 														<div class="col-12 text-center">
-															<button>
+															<button onclick="addAnswer(this)">
 																<i class="fa-solid fa-plus"></i>THÊM CÂU HỎI
 															</button>
 														</div>
 													</div>
 												</div>
+
+
+												<div class="row update-button-container">
+													<div class="col-12 text-center">
+														<button onclick="updateQuestion(this)">CẬP NHẬT</button>
+													</div>
+												</div>
+
 											</div>
+
 										</div>
 										<%
 										index++;
