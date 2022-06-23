@@ -27,6 +27,13 @@ public class NotificationService {
 		}
 		return notesDTOList;
 	}
+	//
+	public NotificationDTO findNotificationByID(int notificationID) {
+		Notification note = notificationRepository.findByNotificationID(notificationID);
+		note.getTitle();
+		note.getContent();
+		return notificationConverter.toDTO(note);
+	}
 	// tạo thông báo
 	public void createNotification(String title,String content) {
 		Notification note = new Notification();

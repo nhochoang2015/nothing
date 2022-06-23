@@ -9,7 +9,7 @@
 		<nav id="sidebar" class="">
 			<div class="sidebar-header">
 
-				<a href="../admin_page/index-2.html"><img class="main-logo"
+				<a href="/elementary_web/"><img class="main-logo"
 					src="../admin_page/img/logo/LOGO_TTY_LTWEB.png" height="205"
 					width="150" alt="TTY chào mọi người" /></a>
 

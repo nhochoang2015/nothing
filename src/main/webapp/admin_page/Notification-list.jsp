@@ -4,7 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="vi">
 
 <head>
 <title>Notification Management | Admin Page</title>
@@ -27,6 +27,7 @@
 						<div class="product-status-wrap">
 
 							<h4>Danh sách thông báo</h4>
+
 							<%
 							List<NotificationDTO> notesDTOList = (ArrayList<NotificationDTO>) request.getAttribute("notesDTOList");
 							for (NotificationDTO note : notesDTOList) {
@@ -51,7 +52,7 @@
 														class="fa-solid fa-pen-to-square"></i></span></a> <a
 													href="../admin/deleteNotification?notificationID=<%=note.getNotificationID()%>"
 													class="btn btn-danger" title="Xóa thông báo"><span><i
-														class="fa fa-trash-o" aria-pressed="false"></i></span></a>
+														class="fa-solid fa-trash"></i></span></a>
 											</div>
 										</div>
 										<div class="collapse"

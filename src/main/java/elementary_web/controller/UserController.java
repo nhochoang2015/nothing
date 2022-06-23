@@ -18,11 +18,13 @@ import elementary_web.dto.AccountDTO;
 import elementary_web.dto.ChapterDTO;
 import elementary_web.dto.LessonCompleteDTO;
 import elementary_web.dto.LessonDTO;
+import elementary_web.dto.NotificationDTO;
 import elementary_web.dto.QuestionDTO;
 import elementary_web.dto.SubjectDTO;
 import elementary_web.service.ChapterService;
 import elementary_web.service.LessonCompleteService;
 import elementary_web.service.LessonService;
+import elementary_web.service.NotificationService;
 import elementary_web.service.LessonService;
 import elementary_web.service.RankingService;
 import elementary_web.service.SubjectService;
@@ -42,12 +44,24 @@ public class UserController {
 	private TestService testService;
 	@Autowired
 	private ChapterService chapterService;
+	@Autowired
+	private NotificationService notificationService;
 
 	@RequestMapping("/")
 	public ModelAndView homePage() {
 		ModelAndView mav = new ModelAndView("user_page/index");
 		List<SubjectDTO> subjectList = subjectService.findAllSubject();
+		List<NotificationDTO> notesDTOList = notificationService.findAllNotification();
 		mav.addObject("subjectList", subjectList);
+		mav.addObject("notesDTOList", notesDTOList);
+		return mav;
+	}
+
+	@RequestMapping("/notificationPage")
+	public ModelAndView notifiactionPage(@RequestParam int notificationID) {
+		ModelAndView mav = new ModelAndView("./user_page/NotificationPage");
+		NotificationDTO note = notificationService.findNotificationByID(notificationID);
+		mav.addObject("note", note);
 		return mav;
 	}
 
@@ -119,7 +133,7 @@ public class UserController {
 			mav.addObject("chapterID", chapter.getChapterID());
 			mav.addObject("subjectID", subjectID);
 		} else {
-			//Nếu chưa hoàn thành thì chuyển về trang chi tiết môn học
+			// Nếu chưa hoàn thành thì chuyển về trang chi tiết môn học
 			mav = new ModelAndView("redirect:./subject-details?subjectID=" + subjectID);
 		}
 		return mav;

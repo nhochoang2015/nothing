@@ -25,10 +25,6 @@ public class ChapterController {
 	public ModelAndView chapterPage(@RequestParam int subjectID) {
 		SubjectDTO subject = subjectService.findBySubjectID(subjectID);
 		List<ChapterDTO> chapterList = subject.getChapterList();
-		System.out.println("ID: " + subject.getSubjectID());
-
-		System.out.println("SIZE: " + chapterList.size());
-		
 		ModelAndView mav = new ModelAndView("../admin_page/Chapter");
 		mav.addObject("chapterList", chapterList);
 		return mav;
