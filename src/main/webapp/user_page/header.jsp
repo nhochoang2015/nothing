@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@page import="elementary_web.dto.AccountDTO"%>
+<%@page import="booking.dto.AccountDTO"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="elementary_web.dto.SubjectDTO"%>
+<%@page import="booking.dto.SubjectDTO"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>KidKinder - Kindergarten Website Template</title>
+<title>Booking Hotel - Đặt phòng khách sạn</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="Free HTML Templates" name="keywords">
 <meta content="Free HTML Templates" name="description">
@@ -56,7 +56,7 @@
 			<div>
 				<a href="./" class="navbar-brand font-weight-bold text-secondary"
 					style="font-size: 50px;"> <i class="fa-solid fa-book-open"></i>
-					<span class="text-primary">LEARN</span>
+					<span class="text-primary">Booking Hotel</span>
 				</a>
 			</div>
 			<button type="button" class="navbar-toggler" data-toggle="collapse"
@@ -68,7 +68,7 @@
 				id="navbarCollapse">
 				<div class="navbar-nav font-weight-bold mx-auto py-0">
 					<a href="./" class="nav-item nav-link active">Home</a> <a
-						href="/monthly-ranking" class="nav-item nav-link">Leaderboard</a>
+						href="/monthly-ranking" class="nav-item nav-link">OurTour</a>
 					<%-- <div class="nav-item dropdown">
 						<a href="user_page/#" class="nav-link dropdown-toggle"
 							data-toggle="dropdown">Môn học</a>
@@ -101,30 +101,47 @@
 					if (accountDTO.getRoleName().equals("ADMIN")) {
 					%>
 
-					<a href="./admin/accountManagement" class="nav-item nav-link">Amin Page</a>
+					<a href="./admin/accountManagement" class="nav-item nav-link">Amin
+						Page</a>
 
 					<%
 					}
 					%>
+					<div class="dropdown show" style="margin:auto">
+						<a class="btn btn-secondary dropdown-toggle" href="#"
+							role="button" id="dropdownMenuLink" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false"> <%=accountDTO.getNickName()%></a>
 
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+							<a class="dropdown-item" href="#">Action</a> <a
+								class="dropdown-item" href="#">Another action</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="./logout">Logout</a>
+						</div>
+					</div>
+					<!--  
 					<div id="login-container">
 						<i class="fa-solid fa-user fa-2xl" id="user-icon"></i> <br>
-						<p id="account-name"><%=accountDTO.getNickName()%></p>
+						<p id="account-name"></p>
 						<p id="point">
+							
 							ĐIỂM HIỆN CÓ:
-							<%=accountDTO.getCoin()%></p>
+							<%//=accountDTO.getCoin()%></p>
+						
 					</div>
+					
 					<div id="logout-container">
-						<a id="logout-button" href="./logout"
+						<a id="logout-button" href=""
 							class="fa-solid fa-arrow-right-from-bracket fa-3x"></a>
 					</div>
+					-->
 					<%
 					} else {
 					%>
 					<div id="login-container">
 
-						<i class="fa-solid fa-user fa-2xl" id="user-icon"></i> <a
-							href="./login" class="btn btn-primary px-4" id="login-button">Đăng
+						<!--  <i class="fa-solid fa-user fa-2xl" id="user-icon"></i>-->
+						<a href="./login" class="btn btn-primary px-4" id="login-button">Đăng
 							nhập</a> <a href="user_page/" class="btn btn-primary px-4"
 							id="sign-in-button">Đăng ký</a>
 					</div>

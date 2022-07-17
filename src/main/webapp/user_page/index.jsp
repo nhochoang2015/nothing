@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="elementary_web.dto.SubjectDTO"%>
-<%@page import="elementary_web.dto.ChapterDTO"%>
+<%@page import="booking.dto.SubjectDTO"%>
+<%@page import="booking.dto.ChapterDTO"%>
 
 
 <!DOCTYPE html>
@@ -13,319 +13,182 @@
 
 <body>
 	<%@include file="header.jsp"%>
-	<%@include file="banner.jsp" %>
-	<!-- Banner Start -->
-	
-	<!-- Banner End -->
-
-	<!--
-	<div class="container-fluid pt-5">
-		<div class="container pb-3">
-			<div class="row">
-				<div class="col-lg-4 col-md-6 pb-1">
-					<div class="d-flex bg-light shadow-sm border-top rounded mb-4"
-						style="padding: 30px;">
-						<i
-							class="flaticon-050-fence h1 font-weight-normal text-primary mb-3"></i>
-						<div class="pl-4">
-							<h4>Play Ground</h4>
-							<p class="m-0">Kasd labore kasd et dolor est rebum dolor ut,
-								clita dolor vero lorem amet elitr vero...</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 pb-1">
-					<div class="d-flex bg-light shadow-sm border-top rounded mb-4"
-						style="padding: 30px;">
-						<i
-							class="flaticon-022-drum h1 font-weight-normal text-primary mb-3"></i>
-						<div class="pl-4">
-							<h4>Music and Dance</h4>
-							<p class="m-0">Kasd labore kasd et dolor est rebum dolor ut,
-								clita dolor vero lorem amet elitr vero...</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 pb-1">
-					<div class="d-flex bg-light shadow-sm border-top rounded mb-4"
-						style="padding: 30px;">
-						<i
-							class="flaticon-030-crayons h1 font-weight-normal text-primary mb-3"></i>
-						<div class="pl-4">
-							<h4>Arts and Crafts</h4>
-							<p class="m-0">Kasd labore kasd et dolor est rebum dolor ut,
-								clita dolor vero lorem amet elitr vero...</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 pb-1">
-					<div class="d-flex bg-light shadow-sm border-top rounded mb-4"
-						style="padding: 30px;">
-						<i
-							class="flaticon-017-toy-car h1 font-weight-normal text-primary mb-3"></i>
-						<div class="pl-4">
-							<h4>Safe Transportation</h4>
-							<p class="m-0">Kasd labore kasd et dolor est rebum dolor ut,
-								clita dolor vero lorem amet elitr vero...</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 pb-1">
-					<div class="d-flex bg-light shadow-sm border-top rounded mb-4"
-						style="padding: 30px;">
-						<i
-							class="flaticon-025-sandwich h1 font-weight-normal text-primary mb-3"></i>
-						<div class="pl-4">
-							<h4>Healthy food</h4>
-							<p class="m-0">Kasd labore kasd et dolor est rebum dolor ut,
-								clita dolor vero lorem amet elitr vero...</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 pb-1">
-					<div class="d-flex bg-light shadow-sm border-top rounded mb-4"
-						style="padding: 30px;">
-						<i
-							class="flaticon-047-backpack h1 font-weight-normal text-primary mb-3"></i>
-						<div class="pl-4">
-							<h4>Educational Tour</h4>
-							<p class="m-0">Kasd labore kasd et dolor est rebum dolor ut,
-								clita dolor vero lorem amet elitr vero...</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
-	<!-- Bảng xếp hạng -->
-	<div class="container-fluid py-5" id="leader-board-container">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12" id="leader-board-title">
-					<span>BẢNG XẾP HẠNG</span>
-				</div>
-			</div>
-			<div class="row align-items-center">
-				<div class="col-lg-5 leader-board">
-					<div class="row leader-board-title-row">
-						<div class="col-sm-12 leader-board-title">
-							<span>TUẦN</span>
-						</div>
-					</div>
-					<div class="row leader-board-row">
-						<div class="col-sm-1 leader-board-rank">
-							<p class="col-sm-12">1</p>
-
-						</div>
-						<div class="col-sm-3 leader-board-avatar ">
-							<img src="user_page/img/user_image.png">
-						</div>
-						<div class="col-sm-6 leader-board-name">
-							<p class="col-sm-12">Nguyen van A</p>
-
-						</div>
-						<div class="col-sm-2 leader-board-point">
-							<p class="col-sm-12">1000</p>
-						</div>
-
-					</div>
-
-					<div class="row leader-board-row">
-						<div class="col-sm-1 leader-board-rank">
-							<p class="col-sm-12">1</p>
-
-						</div>
-						<div class="col-sm-3 leader-board-avatar">
-							<img src="user_page/img/user_image.png">
-						</div>
-						<div class="col-sm-6 leader-board-name">
-							<p class="col-sm-12">Nguyen van A</p>
-
-						</div>
-						<div class="col-sm-2 leader-board-point">
-							<p class="col-sm-12">1000</p>
-						</div>
-
-					</div>
-
-					<div class="row leader-board-row">
-						<div class="col-sm-1 leader-board-rank">
-							<p class="col-sm-12">1</p>
-
-						</div>
-						<div class="col-sm-3 leader-board-avatar">
-							<img src="user_page/img/user_image.png">
-						</div>
-						<div class="col-sm-6 leader-board-name">
-							<p class="col-sm-12">Nguyen van A</p>
-
-						</div>
-						<div class="col-sm-2 leader-board-point">
-							<p class="col-sm-12">1000</p>
-						</div>
-
-					</div>
-
-
-				</div>
-
-				<div class="col-lg-2" id="leader-board-divider"></div>
-
-				<div class="col-lg-5 leader-board">
-					<div class="row leader-board-title-row">
-						<div class="col-sm-12 leader-board-title">
-							<span>THÁNG</span>
-						</div>
-					</div>
-					<div class="row leader-board-row">
-						<div class="col-sm-1 leader-board-rank">
-							<p class="col-sm-12">1</p>
-
-						</div>
-						<div class="col-sm-3 leader-board-avatar ">
-							<img src="user_page/img/user_image.png">
-						</div>
-						<div class="col-sm-6 leader-board-name">
-							<p class="col-sm-12">Nguyen van A</p>
-
-						</div>
-						<div class="col-sm-2 leader-board-point">
-							<p class="col-sm-12">1000</p>
-						</div>
-
-					</div>
-
-					<div class="row leader-board-row">
-						<div class="col-sm-1 leader-board-rank">
-							<p class="col-sm-12">1</p>
-
-						</div>
-						<div class="col-sm-3 leader-board-avatar">
-							<img src="user_page/img/user_image.png">
-						</div>
-						<div class="col-sm-6 leader-board-name">
-							<p class="col-sm-12">Nguyen van A</p>
-
-						</div>
-						<div class="col-sm-2 leader-board-point">
-							<p class="col-sm-12">1000</p>
-						</div>
-
-					</div>
-
-					<div class="row leader-board-row">
-						<div class="col-sm-1 leader-board-rank">
-							<p class="col-sm-12">1</p>
-
-						</div>
-						<div class="col-sm-3 leader-board-avatar">
-							<img src="user_page/img/user_image.png">
-						</div>
-						<div class="col-sm-6 leader-board-name">
-							<p class="col-sm-12">Nguyen van A</p>
-
-						</div>
-						<div class="col-sm-2 leader-board-point">
-							<p class="col-sm-12">1000</p>
-						</div>
-
-					</div>
-
-
-				</div>
-
-
-
-			</div>
-
-			<div class="row">
-				<div class="col-lg-12" id="leader-board-button">
-					<button>Xem Thêm</button>
-				</div>
-			</div>
-			<!-- <div class="col-lg-7">
-				<p class="section-title pr-5">
-					<span class="pr-2">Learn About Us</span>
-				</p>
-				<h1 class="mb-4">Best School For Your Kids</h1>
-				<p>Invidunt lorem justo sanctus clita. Erat lorem labore ea,
-					justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea
-					justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum
-					est dolor</p>
-				<div class="row pt-2 pb-4">
-					<div class="col-6 col-md-4">
-						<img class="img-fluid rounded" src="user_page/img/about-2.jpg" alt="">
-					</div>
-					<div class="col-6 col-md-8">
-						<ul class="list-inline m-0">
-							<li class="py-2 border-top border-bottom"><i
-								class="fa fa-check text-primary mr-3"></i>Labore eos amet dolor
-								amet diam</li>
-							<li class="py-2 border-bottom"><i
-								class="fa fa-check text-primary mr-3"></i>Etsea et sit dolor
-								amet ipsum</li>
-							<li class="py-2 border-bottom"><i
-								class="fa fa-check text-primary mr-3"></i>Diam dolor diam
-								elitripsum vero.</li>
-						</ul>
-					</div>
-				</div>
-				<a href="user_page/" class="btn btn-primary mt-2 py-2 px-4">Learn More</a>
-			</div> -->
-		</div>
-	</div>
-
-
-
-
-
-
-	<!-- Môn học -->
+	<%@include file="banner.jsp"%>
+	<!-- Đặt tour -->
 	<div class="container-fluid pt-5">
 		<div class="container">
 			<div class="text-center pb-2">
 				<p class="section-title px-5">
-					<span class="px-2">MÔN HỌC</span>
+					<span class="px-2">Đặt Khách Sạn</span>
 				</p>
 			</div>
 			<div class="row">
-				<%
-				ArrayList<SubjectDTO> subjectList = (ArrayList<SubjectDTO>) request.getAttribute("subjectList");
-				for (SubjectDTO subject : subjectList) {
-				%>
+
 				<div class="col-lg-4 mb-5">
 					<div class="card border-0 bg-light shadow-sm pb-2">
-						<img class="card-img-top mb-2" src="user_page/img/class-1.jpg"
-							alt="">
+
 						<div class="card-body text-center">
-							<h4 class="card-title"><%=subject.getSubjectName()%></h4>
+							<h4 class="card-title">Tìm khách sạn</h4>
 						</div>
-						<div class="card-footer bg-transparent py-4 px-5">
-							<%
-							ArrayList<ChapterDTO> chaperDTOList = (ArrayList<ChapterDTO>) subject.getChapterList();
-							for (ChapterDTO chapter : chaperDTOList) {
-							%>
-							<div class="row border-bottom">
-								<div class="col-12 py-1">
-									<a><%=chapter.getChapterName()%></a>
+						<form class="needs-validation" novalidate>
+							<div class="form-row">
+								<div class="col-md-9 mb-3" style="margin: auto">
+									<label for="validationCustom01">Tên chỗ nghỉ, điểm đến:
+									</label>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="basic-addon1"><i
+												class="fa-solid fa-magnifying-glass"></i> </span>
+										</div>
+										<input type="text" class="form-control"
+											id="validationCustom01" placeholder="nhập địa điểm" required>
+									</div>
+									<div class="valid-feedback">Hoàn thành!</div>
 								</div>
 							</div>
-							<%
-							}
-							%>
-						</div>
-						<a href="./subject-details?subjectID=<%=subject.getSubjectID()%>"
-							class="btn btn-primary px-4 mx-auto mb-4">Xem thêm</a>
+							<div class="form-row">
+								<div class="col-md-9 mb-3" style="margin: auto">
+									<label for="validationCustom03">Ngày nhận phòng:</label> <input
+										type="date" class="form-control" id="validationCustom03"
+										placeholder="City" value="">
+									<div class="invalid-feedback">Vui lòng nhập ngày nhận
+										phòng.</div>
+								</div>
+								<div class="col-md-9 mb-3" style="margin: auto">
+									<label for="validationCustom04">Ngày trả phòng:</label> <input
+										type="date" class="form-control" id="validationCustom04"
+										placeholder="State" required>
+									<div class="invalid-feedback">Vui lòng nhập ngày trả
+										phòng.</div>
+								</div>
+								<div class="col-md-9 mb-3" style="margin: auto">
+									<label for="validationCustom05">Nhập số người: </label>
+									<div class="dropdown show ">
+										<a class="btn dropdown-toggle col-md-12 mb-3 "
+											style="border-color: #ced4da; background-color: #fff; border-radius: 5px;"
+											href="#" role="button" id="dropdownMenuLink1"
+											data-toggle="dropdown" aria-haspopup="true"
+											aria-expanded="false">Số người: 0 - Số phòng: 0 </a>
+
+										<div class="dropdown-menu form-group row"
+											aria-labelledby="dropdownMenuLink1">
+											<div>
+												<label for="validationCustom06">Số người lớn: </label> <input
+													name="" id="soNguoi" type="number" value="0"
+													class="form-control" required min=0 max=20>
+												<div class="invalid-feedback">Vui lòng nhập số người</div>
+											</div>
+											<div>
+												<label for="validationCustom07">Số phòng: </label> <input
+													name="" id="soPhong" type="number" value="0"
+													class="form-control" required min=0 max=20>
+												<div class="invalid-feedback">Vui lòng nhập số phòng</div>
+											</div>
+											<button class="btn btn-success" type="button"
+												onclick="myFunction()">Xác nhận</button>
+											<script>
+												function myFunction() {
+													var x = document
+															.getElementById("soNguoi").value;
+													var y = document
+															.getElementById("soPhong").value;
+													document
+															.getElementById("dropdownMenuLink1").innerHTML = 'Số Người: '
+															+ x
+															+ ' - Số Phòng: '
+															+ y;
+												}
+											</script>
+										</div>
+									</div>
+
+
+
+								</div>
+							</div>
+							<button class="btn btn-primary" type="submit">Tìm</button>
+						</form>
+
+						<script>
+							// Example starter JavaScript for disabling form submissions if there are invalid fields
+							(function() {
+								'use strict';
+								window
+										.addEventListener(
+												'load',
+												function() {
+													// Fetch all the forms we want to apply custom Bootstrap validation styles to
+													var forms = document
+															.getElementsByClassName('needs-validation');
+													// Loop over them and prevent submission
+													var validation = Array.prototype.filter
+															.call(
+																	forms,
+																	function(
+																			form) {
+																		form
+																				.addEventListener(
+																						'submit',
+																						function(
+																								event) {
+																							if (form
+																									.checkValidity() === false) {
+																								event
+																										.preventDefault();
+																								event
+																										.stopPropagation();
+																							}
+																							form.classList
+																									.add('was-validated');
+																						},
+																						false);
+																	});
+												}, false);
+							})();
+						</script>
+
 					</div>
 				</div>
+				<div class="col">Đã tìm thấy khách sạn</div>
+				<div class="col">
+					<div class="col-lg-12 mb-5">
+						<div class="card border-0 bg-light shadow-sm pb-2">
+							<div class="row">
+								<div class="col">
+									<img src="user_page/img/pic_hoi_an1.jpg" alt="#"
+										class="img-thumbnail">
+								</div>
+								<div class="col">
+									<div class="row">
+										<div class="col">
+										<strong>KHÁCH SẠN MAKKE </strong>
+										<a> <span> Vũng tàu</span>  </a> - <a> <span> Vũng tàu</span>  </a> - <span>Ưu điểm vị trí</span>
+										</div>
+										<div class="col">
+										Chất lượng: 
+										Số lượng đánh giá
+										
+										</div>
+									</div>
+									<div class="row">
+										<div class="row">
+										
+										</div>
+									</div>
+									<a><h3>Hội An Department</h3></a> <a href="#">Hội An </a> <a
+										href="#">Xem trên bản đồ </a>
+								</div>
 
-				<%
-				}
-				%>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
+
+
+
 
 
 

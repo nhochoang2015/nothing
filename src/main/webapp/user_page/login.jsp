@@ -8,9 +8,6 @@
 <body>
 	<!-- Header -->
 	<jsp:include page="header.jsp" />
-
-
-
 	<div class="limiter">
 
 		<div class="container-login100"

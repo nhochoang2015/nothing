@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
-<%@page import="elementary_web.dto.AccountDTO"%>
+<%@page import="booking.dto.AccountDTO"%>
 
 <!DOCTYPE html>
 <html>

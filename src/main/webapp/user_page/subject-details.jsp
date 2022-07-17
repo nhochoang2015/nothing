@@ -1,9 +1,9 @@
-<%@page import="elementary_web.dto.SubjectDTO"%>
-<%@page import="elementary_web.dto.ChapterDTO"%>
-<%@page import="elementary_web.dto.LessonDTO"%>
+<%@page import="booking.dto.SubjectDTO"%>
+<%@page import="booking.dto.ChapterDTO"%>
+<%@page import="booking.dto.LessonDTO"%>
 
 <%@page import="java.util.ArrayList"%>
-<%@page import="elementary_web.dto.LessonCompleteDTO"%>
+<%@page import="booking.dto.LessonCompleteDTO"%>
 <%@page import="java.util.List"%>
 
 

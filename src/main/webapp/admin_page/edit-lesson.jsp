@@ -1,6 +1,6 @@
 <%@page import="java.util.List"%>
-<%@page import="elementary_web.dto.LessonDTO"%>
-<%@page import="elementary_web.dto.RoleDTO"%>
+<%@page import="booking.dto.LessonDTO"%>
+<%@page import="booking.dto.RoleDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <!doctype html>
 <html class="no-js" lang="en">

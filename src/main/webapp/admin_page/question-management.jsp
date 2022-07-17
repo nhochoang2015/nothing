@@ -1,8 +1,8 @@
 <%@page import="java.util.List"%>
-<%@page import="elementary_web.dto.AccountDTO"%>
-<%@page import="elementary_web.dto.LessonDTO"%>
-<%@page import="elementary_web.dto.ChapterDTO"%>
-<%@page import="elementary_web.dto.QuestionDTO"%>
+<%@page import="booking.dto.AccountDTO"%>
+<%@page import="booking.dto.LessonDTO"%>
+<%@page import="booking.dto.ChapterDTO"%>
+<%@page import="booking.dto.QuestionDTO"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <!doctype html>

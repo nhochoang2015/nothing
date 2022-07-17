@@ -1,6 +1,6 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
-<%@page import="elementary_web.dto.SubjectDTO"%>
+<%@page import="booking.dto.SubjectDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 
 <!doctype html>
