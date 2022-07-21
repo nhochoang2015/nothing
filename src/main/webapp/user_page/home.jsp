@@ -9,12 +9,57 @@
 <html lang="en">
 <head>
 <link href="user_page/css/index.css" rel="stylesheet">
+<link href="user_page/css/home.css" rel="stylesheet">
+
 </head>
 
 <body>
 	<%@include file="header.jsp"%>
 	<%@include file="banner.jsp"%>
+	<form class="form-inline d-flex justify-content-center">
+		<div class="input-group">
+			<div class="input-group-prepend">
+				<span class="input-group-text"><i class="fa-solid fa-hotel"></i></span>
+			</div>
+			<input type="text" class="form-control"
+				placeholder="Nhập địa điểm bạn muốn tới.">
+		</div>
+		<div class="input-group">
+			<input type="date" class="form-control" id="txtDate" onclick="date()"
+				placeholder="">
+		</div>
+		<script type="text/javascript">
+	 function date(){
+		var dtToday = new Date();
+		var month = dtToday.getMonth() + 1;
+		var day = dtToday.getDate();
+		var year = dtToday.getFullYear();
+		if (month < 10)
+			month = '0' + month.toString();
+		if (day < 10)
+			day = '0' + day.toString();
+		var minDate = year + '-' + month + '-' + day;
 
+		$('#txtDate').attr('min', minDate);
+	};
+</script>
+		
+		<div class="input-group">
+			<input type="date" class="form-control" id ="txtDateNo" onclick="dateNo()"
+				placeholder=""><script type="text/javascript">
+	 function dateNo(){
+		mindate1= minDate.val('#txtDate');
+		$('#txtDateNo').attr('min', mindate1);
+	};
+</script>
+		</div>
+		
+	
+		<input type="text" class="form-control" id="inputZip"> <label
+			for="inputZip">Ngày về</label> <input type="text"
+			class="form-control" id="inputZip">
+		<button type="submit" class="btn btn-secondary align-bottom">submit</button>
+	</form>
 	<div class="row">
 		<div class="col">
 			<form class="needs-validation" novalidate>

@@ -142,7 +142,7 @@
 
 						<!--  <i class="fa-solid fa-user fa-2xl" id="user-icon"></i>-->
 						<a href="./login" class="btn btn-primary px-4" id="login-button">Đăng
-							nhập</a> <a href="user_page/" class="btn btn-primary px-4"
+							nhập</a> <a href="./signup" class="btn btn-primary px-4"
 							id="sign-in-button">Đăng ký</a>
 					</div>
 
